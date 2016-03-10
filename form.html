@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__wrapper">
+        <div class="main-header__top-menu">
+          <a class="main-header__logo" href="#">
+            <img src="" width="102" height="83" alt="Sedona">
+          </a>
+          <span class="main-header__toggle main-header__toggle--closed">Открыть меню</span>
+          <nav class="main-nav">
+            <div class="main-nav__wrapper">              
+              <ul class="main-nav__items">
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="photo.html">Фото и видео</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="form.html">Форма отзыва</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">HTML Academy</a>
+                </li>
+              </ul>
+              <span class="main-nav__btn main-nav__btn--close">Закрыть меню</span>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="main-content__wrapper">
+        <div class="main-intro">
+          <div class="main-intro__image"></div>
+          <h1 class="main-intro__title">Оставьте свой отзыв</h1>
+          <p class="main-intro__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>  
+        </div> 
+        <form action="https://echo.htmlacademy.ru" class="review" method="post">
+          <div class="review__wrapper">
+            <fieldset class="review__item">
+              <legend class="review__title">Представьтесь, пожалуйста:</legend>
+              <label for="name">Имя:</label>
+              <input type="text" id="name" name="name">
+              <label for="surname">Фамилия:</label>
+              <input type="text" id="surname" name="surname">
+              <label for="middle-name">Отчество:</label>
+              <input type="text" id="middle-name" name="middle-name">
+            </fieldset>
+            <fieldset class="review__item">
+              <legend class="review__title">Контактная информация:</legend>
+              <label for="tel">Контактный телефон</label>
+              <input type="text" id="tel" placeholder="Введите телефон" name="tel">
+
+              <label for="email">Электронная почта:</label>
+              <input type="email" id="email" placeholder="Введите email" name="email">
+            </fieldset>
+            <fieldset class="review__item">
+              <legend class="review__title">Ваше общее впечатление:</legend>
+              <input type="radio" id="positive" name="radio" value="positive">
+              <label for="positive">Скорее положительное</label>
+              <input type="radio" id="negative" name="radio" value="negative">
+              <label for="negative">Скорее отрицательное</label>
+              <input type="radio" id="no-answer" name="radio" value="no-answer">
+              <label for="no-answer">Затрудняюсь ответить</label>
+            </fieldset>
+            <fieldset class="review__item">
+              <legend class="review__title">Посещенные достопримечательности:</legend>
+              <input type="checkbox" id="devils-bridge" name="checkbox" value="Devils Bridge">
+              <label for="devils-bridge">Мост Дьявола</label>
+              <input type="checkbox" id="slide-park" name="checkbox" value="Slide Park">
+              <label for="slide-park">Слайд-парк</label>
+              <input type="checkbox" id="bell-mountain" name="checkbox" value="Bell-Mountain">
+              <label for="bell-mountain">Гора-Колокол</label>
+              <input type="checkbox" id="red-rocks" name="checkbox" value="Red Rocks">
+              <label for="red-rocks">Красные скалы</label>
+            </fieldset>
+            <fieldset class="review__item">
+              <legend class="review__title">Опишите свои эмоции:</legend>
+              <textarea name="review-text" placeholder="Опишите подробно все свои восторги"></textarea>            
+            </fieldset>
+            <button class="review__btn" type="submit">Отправить отзыв</button>  
+          </div>
+        </form>
+      </div> 
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <a class="main-footer__vizit-sedona" href="#">#vizitsedona</a>
+        <div class="main-footer__social">
+          <div class="social-links">
+            <a class="social-link social-link--tw" href="#">Twitter</a>
+            <a class="social-link social-link--fb" href="#">Facebook</a>
+            <a class="social-link social-link--yt" href="#">Youtube</a>
+          </div>    
+        </div>
+        <div class="main-footer__developers">
+          Разработано
+          <a class="main-footer__developers-link" href="#">HTML Academy</a>
+        </div>  
+      </div>
+    </footer>
+  </body>
+</html>
