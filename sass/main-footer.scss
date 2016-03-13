@@ -1,5 +1,26 @@
 .main-footer {
-  background: red;
   min-height: 100px;
   outline: 1px solid black;
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    outline: 1px solid black;
+  }
+
+  &__vizit-sedona {
+    outline: 1px solid black;
+  }
+
+  &__social {
+    outline: 1px solid black;
+  }
+
+  &__developers {
+    outline: 1px solid black;
+  }
+
+  &__developers-link {
+    outline: 1px solid black;
+  }
 }

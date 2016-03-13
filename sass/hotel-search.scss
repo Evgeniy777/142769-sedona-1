@@ -1,0 +1,21 @@
+.hotel-search {
+  outline: 1px solid black;
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    outline: 1px solid black;
+  }
+
+  &__title {
+    outline: 1px solid black;
+  }
+
+  &__text {
+    outline: 1px solid black;
+  }
+
+  & button {
+    outline: 1px solid black;
+  }
+}
