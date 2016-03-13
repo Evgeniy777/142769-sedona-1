@@ -1,0 +1,26 @@
+.main-nav {
+  outline: 1px solid black;
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    outline: 1px solid black;
+  }
+
+  &__items {
+    outline: 1px solid black;
+  }
+
+  &__item {
+    outline: 1px solid black;
+  }
+
+  &__link {
+    outline: 1px solid black;
+  }
+
+  &__btn {
+    outline: 1px solid black;
+  }
+}
+

@@ -1,0 +1,25 @@
+.main-header {
+  min-height: 100px;
+  outline: 1px solid red;
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    outline: 1px solid yellow;
+  }
+
+  &__top-menu {
+    outline: 1px solid orange;
+  }
+
+  &__logo {
+    display: block;
+    width: 102px;
+    height: 83px;
+    background-color: #491213;
+  }
+
+  &__toggle {
+    outline: 1px solid black;
+  }
+}

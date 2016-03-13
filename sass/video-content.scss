@@ -1,0 +1,31 @@
+.video-content {
+  outline: 1px solid black;
+
+  &__item {
+    outline: 1px solid black;
+  }
+
+  &__item video {
+    outline: 1px solid black;
+  }
+
+  &__wrapper {
+    outline: 1px solid black;
+  }
+
+  &__controls-bar {
+    outline: 1px solid black;
+  }
+
+  &__play-again {
+    outline: 1px solid black;
+  }
+
+  &__cc {
+    outline: 1px solid black;
+  }
+
+  &__full-screen {
+    outline: 1px solid black;
+  }
+}
