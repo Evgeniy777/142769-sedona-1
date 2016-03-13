@@ -1,1 +1,17 @@
-body { background: cyan; }
+@import "main-header";
+@import "main-nav";
+@import "main-content";
+@import "main-intro";
+@import "reason-block";
+@import "features";
+@import "reasons";
+@import "hotel-search";
+@import "social-links";
+@import "social-link";
+@import "review";
+@import "photo-content";
+@import "video-content";
+@import "main-footer";
+@import "normalize";
+@import "variables";
+@import "fonts";

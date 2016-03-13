@@ -1,0 +1,13 @@
+.main-header {
+  background: purple;
+  min-height: 100px;
+  outline: 1px solid red;
+
+  @__wrapper {
+
+  }
+
+  @__top-menu {
+      outline: 1px solid orange;
+  }
+}
