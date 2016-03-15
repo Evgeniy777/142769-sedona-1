@@ -28,7 +28,7 @@
     font-size: 18px;
     line-height: 40px;
     font-weight: bold;
-    color: #ffffff;    
+    color: #ffffff;
     text-transform: uppercase;
     text-decoration: none;
   }
@@ -39,16 +39,16 @@
     border: none;
     outline: 1px solid black;
   }
-  
+
   &__btn--close {
     position: absolute;
     top: 0;
     right: 0;
     width: 23px;
     height: 22px;
-    
+
   }
-  
+
   &__btn--close::before {
     position: absolute;
     content: "";
@@ -59,7 +59,7 @@
     background-color: #fff;
     transform: rotate(45deg);
   }
-  
+
   &__btn--close::after {
     position: absolute;
     content: "";

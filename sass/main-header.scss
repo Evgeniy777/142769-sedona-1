@@ -1,5 +1,4 @@
 .main-header {
-  min-height: 100px;
   outline: 1px solid red;
 
   &__wrapper {
@@ -8,17 +7,36 @@
   }
 
   &__top-menu {
+    position: relative;
     outline: 1px solid orange;
   }
 
   &__logo {
+    position: relative;
     display: block;
+    margin: 0 auto;
     width: 102px;
-    height: 83px;
-    background-color: #491213;
+    height: 56px;
+  }
+
+  &__logo img {
+    position: absolute;
   }
 
   &__toggle {
+    font-size: 0;
+    background: none;
+    border: none;
     outline: 1px solid black;
+  }
+
+  &__toggle--closed {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 23px;
+    height: 22px;
+    outline: 1px solid black;
+    background-color: #000;
   }
 }
