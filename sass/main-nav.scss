@@ -2,25 +2,73 @@
   outline: 1px solid black;
 
   &__wrapper {
-    width: 320px;
-    margin: 0 auto;
+    @include container;
+    position: relative;
     outline: 1px solid black;
   }
 
   &__items {
     outline: 1px solid black;
+    list-style-type: none;
+    padding: 0;
+    font-size: 0;
+    margin: 0;
+//    display: flex;
+//    flex-direction: column;
   }
 
   &__item {
-    outline: 1px solid black;
+    text-align: center;
+    background-color: $light-blue;
+    box-shadow: 0 -1px 0 1px #9ac2db,
+                0 -2px 0 1px #678fa8;
   }
 
   &__link {
-    outline: 1px solid black;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #ffffff;    
+    text-transform: uppercase;
+    text-decoration: none;
   }
 
   &__btn {
+    font-size: 0;
+    background: none;
+    border: none;
     outline: 1px solid black;
+  }
+  
+  &__btn--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 23px;
+    height: 22px;
+    
+  }
+  
+  &__btn--close::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 23px;
+    height: 5px;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+  
+  &__btn--close::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 23px;
+    height: 5px;
+    background-color: #fff;
+    transform: rotate(-45deg);
   }
 }
 
