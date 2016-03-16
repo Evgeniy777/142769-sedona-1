@@ -1,25 +1,144 @@
 .reason-block {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $light-blue;
   outline: 1px solid black;
 
   &__wrapper {
-    width: 320px;
-    margin: 0 auto;
-    outline: 1px solid black;
+    @include container;
   }
 
   &__information {
-    outline: 1px solid black;
+    padding: 20px 20px;
   }
 
   &__title {
-    outline: 1px solid black;
+    margin: 0 0 9px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
   }
 
   &__information span {
-    outline: 1px solid black;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+  }
+  
+  &__information span:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-right: 6px;
+    width: 9px;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  &__information span:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 6px;
+    width: 9px;
+    height: 2px;
+    background-color: #fff;
   }
 
   &__text {
-    outline: 1px solid black;
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+  }
+  
+  & img {
+    display: block;
+    width: auto;
+    height: 260px;
+    color: #000;
+    background-color: #c5cab6;
+  }
+}
+
+@media ($tablet-widths) {
+  .reason-block {
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      outline: 1px solid black;
+    }
+
+    &__information {
+      flex-basis: 156px;
+      padding: 44px 50px;
+      outline: 1px solid black;
+    }
+
+    &__title {
+      margin: 0 0 11px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__information span {
+      margin-bottom: 21px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: normal;
+    }
+
+    & img {
+      flex-grow: 1;
+      height: 256px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .reason-block {
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      outline: 1px solid red;
+    }
+
+    &__information {
+      flex-basis: 260px;
+      padding: 50px 70px 60px;
+    }
+
+    &__title {
+      margin: 0 40px 11px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__information span {
+      margin-bottom: 21px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: normal;
+    }
+
   }
 }

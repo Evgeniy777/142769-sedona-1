@@ -47,26 +47,27 @@
       padding: 36px 0;
       display: flex;
       flex-direction: row;
+      justify-content: space-around;
       outline: 1px solid black;
     }
 
     &__vizit-sedona {
+      flex-basis: 100%;
       text-align: center;
       margin: 0;
-      flex-grow: 1;
       outline: 1px solid black;
     }
 
     &__social {
+      flex-basis: 100%;
       margin: 0;
-     // flex-grow: 1;
       outline: 1px solid black;
     }
 
     &__developers {
+      flex-basis: 100%;
       text-align: center;
       margin: 0;
-      flex-grow: 1;
       outline: 1px solid black;
     }
 
@@ -76,29 +77,29 @@
   }
 }
 
-@media ($desktop-widths) {
-  .main-footer {
-    outline: 1px solid black;
-
-    &__wrapper {
-      @include container;
-      outline: 1px solid black;
-    }
-
-    &__vizit-sedona {
-      outline: 1px solid black;
-    }
-
-    &__social {
-      outline: 1px solid black;
-    }
-
-    &__developers {
-      outline: 1px solid black;
-    }
-
-    &__developers-link {
-      outline: 1px solid black;
-    }
-  }
-}
+//@media ($desktop-widths) {
+//  .main-footer {
+//    outline: 1px solid black;
+//
+//    &__wrapper {
+//      @include container;
+//      outline: 1px solid black;
+//    }
+//
+//    &__vizit-sedona {
+//      outline: 1px solid black;
+//    }
+//
+//    &__social {
+//      outline: 1px solid black;
+//    }
+//
+//    &__developers {
+//      outline: 1px solid black;
+//    }
+//
+//    &__developers-link {
+//      outline: 1px solid black;
+//    }
+//  }
+//}
