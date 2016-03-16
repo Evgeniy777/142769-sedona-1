@@ -1,26 +1,104 @@
 .main-footer {
-  min-height: 100px;
+  background-color: #fff;
   outline: 1px solid black;
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 320px;
     margin: 0 auto;
     outline: 1px solid black;
   }
 
   &__vizit-sedona {
+    display: block;
+    margin: 36px 0;
+    color: #000;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
     outline: 1px solid black;
   }
 
   &__social {
+    margin-bottom: 40px;
     outline: 1px solid black;
   }
 
   &__developers {
+    margin-bottom: 23px;
     outline: 1px solid black;
   }
 
   &__developers-link {
     outline: 1px solid black;
+  }
+}
+
+@media ($tablet-widths) {
+  .main-footer {
+    outline: 1px solid black;
+
+    &__wrapper {
+      @include container;
+      padding: 36px 0;
+      display: flex;
+      flex-direction: row;
+      outline: 1px solid black;
+    }
+
+    &__vizit-sedona {
+      text-align: center;
+      margin: 0;
+      flex-grow: 1;
+      outline: 1px solid black;
+    }
+
+    &__social {
+      margin: 0;
+     // flex-grow: 1;
+      outline: 1px solid black;
+    }
+
+    &__developers {
+      text-align: center;
+      margin: 0;
+      flex-grow: 1;
+      outline: 1px solid black;
+    }
+
+    &__developers-link {
+      outline: 1px solid black;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .main-footer {
+    outline: 1px solid black;
+
+    &__wrapper {
+      @include container;
+      outline: 1px solid black;
+    }
+
+    &__vizit-sedona {
+      outline: 1px solid black;
+    }
+
+    &__social {
+      outline: 1px solid black;
+    }
+
+    &__developers {
+      outline: 1px solid black;
+    }
+
+    &__developers-link {
+      outline: 1px solid black;
+    }
   }
 }
