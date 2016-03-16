@@ -20,6 +20,10 @@
     font-weight: bold;
   }
 
+  & br {
+    display: none;
+  }  
+  
   &__information span {
     position: relative;
     display: inline-block;
@@ -51,7 +55,7 @@
   }
 
   &__text {
-    margin: 0;
+    margin: 0 12px;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
@@ -66,6 +70,16 @@
   }
 }
 
+.reason-block--reasons {
+  color: #000;
+  background-color: #fff;
+}
+
+.reason-block--reasons span:before,
+.reason-block--reasons span:after {
+  background-color: #000;
+}
+
 @media ($tablet-widths) {
   .reason-block {
 
@@ -74,11 +88,62 @@
       flex-direction: row;
       outline: 1px solid black;
     }
+    
+    &__information {
+      flex-basis: 160px;
+      padding: 44px 48px;
+      outline: 1px solid black;
+    }
+
+    &__title {
+      margin: 0 0 11px;
+      font-size: 18px;
+      line-height: 26px;
+      outline: 1px solid red;
+    }
+    
+    & br {
+      display: inline;
+    } 
+
+    &__information span {
+      margin-bottom: 21px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: normal;
+      
+      outline: 1px solid red;
+    }
+
+    & img {
+      flex-grow: 1;
+      height: 256px;
+    }
+  }
+  
+  .reason-block--reasons .reason-block__information:first-child {
+    hyphens: auto;
+  }
+}
+
+@media ($desktop-widths) {
+  .reason-block {
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      outline: 1px solid red;
+    }
 
     &__information {
-      flex-basis: 156px;
-      padding: 44px 50px;
-      outline: 1px solid black;
+      flex-basis: 260px;
+      padding: 50px 70px 60px;
     }
 
     &__title {
@@ -99,46 +164,10 @@
       line-height: 21px;
       font-weight: normal;
     }
-
+    
     & img {
       flex-grow: 1;
       height: 256px;
     }
-  }
-}
-
-@media ($desktop-widths) {
-  .reason-block {
-
-    &__wrapper {
-      display: flex;
-      flex-direction: row;
-      outline: 1px solid red;
-    }
-
-    &__information {
-      flex-basis: 260px;
-      padding: 50px 70px 60px;
-    }
-
-    &__title {
-      margin: 0 40px 11px;
-      font-size: 18px;
-      line-height: 26px;
-    }
-
-    &__information span {
-      margin-bottom: 21px;
-      font-size: 14px;
-      line-height: 21px;
-    }
-
-    &__text {
-      margin: 0;
-      font-size: 14px;
-      line-height: 21px;
-      font-weight: normal;
-    }
-
   }
 }

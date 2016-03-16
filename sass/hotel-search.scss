@@ -1,9 +1,9 @@
 .hotel-search {
+  text-align: center;
   outline: 1px solid black;
 
   &__wrapper {
-    width: 320px;
-    margin: 0 auto;
+    @include container
     outline: 1px solid black;
   }
 

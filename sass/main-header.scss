@@ -11,16 +11,11 @@
   }
 
   &__logo {
-    position: relative;
     display: block;
     margin: 0 auto;
     width: 102px;
     height: 56px;
   }
-//
-//  &__logo img {
-//    position: absolute;
-//  }
 }
 
 @media ($tablet-widths) {
