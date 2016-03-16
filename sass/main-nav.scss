@@ -1,14 +1,11 @@
 .main-nav {
-  outline: 1px solid black;
 
   &__wrapper {
     @include container;
     position: relative;
-    outline: 1px solid black;
   }
 
   &__items {
-    outline: 1px solid black;
     list-style-type: none;
     padding: 0;
     font-size: 0;
@@ -20,41 +17,40 @@
   &__item {
     text-align: center;
     background-color: $light-blue;
-    box-shadow: 0 -1px 0 1px #9ac2db,
-                0 -2px 0 1px #678fa8;
   }
 
   &__link {
+    display: block;
+    padding: 7px 0;
     font-size: 18px;
     line-height: 40px;
     font-weight: bold;
     color: #ffffff;
     text-transform: uppercase;
     text-decoration: none;
+    border-top: 1px solid #9ac2db;
+    border-bottom: 1px solid #678fa8;
   }
-
+    
   &__btn {
     font-size: 0;
     background: none;
     border: none;
-    outline: 1px solid black;
   }
 
   &__btn--close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 24px;
+    right: 20px;
     width: 23px;
-    height: 22px;
-
   }
 
   &__btn--close::before {
     position: absolute;
     content: "";
     top: 0;
-    right: 0;
-    width: 23px;
+    right: -1px;
+    width: 25px;
     height: 5px;
     background-color: #fff;
     transform: rotate(45deg);
@@ -64,11 +60,81 @@
     position: absolute;
     content: "";
     top: 0;
-    right: 0;
-    width: 23px;
+    right: -1px;
+    width: 25px;
     height: 5px;
     background-color: #fff;
     transform: rotate(-45deg);
   }
+
+  &__toggle {
+    font-size: 0;
+    background: none;
+    border: none;
+  }
+
+  &__toggle--closed {
+    position: absolute;
+    bottom: -38px;
+    right: 20px;
+    width: 23px;
+    height: 21px;
+    background-color: $light-blue;
+  }
 }
 
+@media ($tablet-widths) {
+  .main-nav {
+
+    &__wrapper {
+      @include container;
+      @include clearfix;
+    }
+
+    &__items {
+      list-style-type: none;
+      padding: 0;
+      font-size: 0;
+      margin: 0;
+    }
+
+    &__item {
+      float: left;
+      width: 20%;
+      text-align: center;
+      background-color: #fff;
+    }
+    
+    &__item:nth-child(2) {
+      margin-right: 20%;
+    }
+
+    &__link {
+      display: block;
+      padding: 15px 0;
+      font-size: 14px;
+      line-height: 26px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: none;
+      border: none;
+    }
+
+    &__btn {
+      display: none;
+      font-size: 0;
+      background: none;
+      border: none;
+    }
+
+    &__toggle {
+      display: none;
+    }
+  } 
+}
+
+@media ($desktop-widths) {
+  
+}

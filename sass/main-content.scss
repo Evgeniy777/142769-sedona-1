@@ -7,3 +7,15 @@
     outline: 1px solid black;
   }
 }
+
+@media ($tablet-widths) {
+  .main-content {
+    outline: 1px solid yellow;
+
+    &__wrapper {
+      @include container;
+      @include clearfix;
+      outline: 1px solid black;
+    }
+  }
+}
