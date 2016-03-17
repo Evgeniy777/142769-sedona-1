@@ -1,9 +1,6 @@
 .main-header {
   outline: 1px solid red;
 
-  &__wrapper {
-  }
-
   &__top-menu {
     position: relative;
     background-color: #fff;
@@ -19,16 +16,6 @@
 
 @media ($tablet-widths) {
   .main-header {
-    outline: 1px solid red;
-
-    &__wrapper {
-      outline: 1px solid red;
-    }
-
-    &__top-menu {
-      position: relative;
-      background-color: #fff;
-    }
 
     &__logo {
       position: absolute;
@@ -44,16 +31,6 @@
 
 @media ($desktop-widths) {
   .main-header {
-    outline: 1px solid red;
-
-    &__wrapper {
-      outline: 1px solid red;
-    }
-
-    &__top-menu {
-      position: relative;
-      background-color: #fff;
-    }
 
     &__logo {
       position: absolute;

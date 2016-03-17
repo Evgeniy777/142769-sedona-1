@@ -4,7 +4,6 @@
   outline: 1px solid black;
 
   &__wrapper {
-    @include container;
     padding: 20px 0;
     background-color: #fff;
   }
@@ -43,7 +42,6 @@
   .features {
 
     &__wrapper {
-      @include container;
       padding: 60px 0;
       display: flex;
       flex-direction: row;
@@ -90,45 +88,11 @@
   .features {
 
     &__wrapper {
-      @include container;
       padding: 60px 0 83px;
-      display: flex;
-      flex-direction: row;
-      background-color: #fff;
     }
 
     &__item {
       padding: 0 65px;
-      flex-basis: 100%;
-      text-align: center;
-      outline: 1px solid black;
-    }
-
-    &__title {
-      position: relative;
-      margin: 0 0 14px;
-      padding-top: 98px;
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: bold;
-    }
-
-    &__title:before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 50%;
-      margin-left: -39px;
-      width: 77px;
-      height: 75px;
-      background-color: $light-blue;
-    }
-
-    &__text {
-      margin: 0;
-      font-size: 14px;
-      line-height: 21px;
-      font-weight: normal;
     }
   }  
 }
