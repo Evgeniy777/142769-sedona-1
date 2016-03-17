@@ -1,17 +1,5 @@
 .main-content {
-  outline: 1px solid yellow;
 
   &__wrapper {
-    outline: 1px solid black;
-  }
-}
-
-@media ($tablet-widths) {
-  .main-content {
-    outline: 1px solid yellow;
-
-    &__wrapper {
-      outline: 1px solid black;
-    }
   }
 }

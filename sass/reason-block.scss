@@ -2,7 +2,6 @@
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  outline: 1px solid black;
 
   &__item {       
     background-color: $light-blue;
@@ -72,7 +71,7 @@
 
 .reason-block--reasons .reason-block__item {
   color: #000;
-  background-color: #fff;
+  background-color: #eeeeee;
 }
 
 .reason-block--reasons .reason-block__wrapper {
@@ -82,11 +81,6 @@
 .reason-block--reasons span:before,
 .reason-block--reasons span:after {
   background-color: #000;
-}
-
-.reason-block--reasons .reason-block__information {
-  background-color: #eeeeee;
-  border-bottom: 1px solid #d6d6d6;
 }
 
 @media ($tablet-widths) {
@@ -134,6 +128,10 @@
   
   .reason-block--reasons .reason-block__item:first-child {
     hyphens: auto;
+  }
+  
+  .reason-block--reasons .reason-block__wrapper {
+    border:none;
   }
 }
 
