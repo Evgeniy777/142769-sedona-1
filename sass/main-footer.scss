@@ -6,18 +6,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 320px;
-    margin: 0 auto;
+    padding: 36px 0;
     outline: 1px solid black;
   }
 
   &__vizit-sedona {
     display: block;
-    margin: 36px 0;
     color: #000;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
+    margin-bottom: 36px;
     text-decoration: none;
     text-transform: uppercase;
     outline: 1px solid black;
@@ -43,8 +42,6 @@
     outline: 1px solid black;
 
     &__wrapper {
-      @include container;
-      padding: 36px 0;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -70,36 +67,5 @@
       margin: 0;
       outline: 1px solid black;
     }
-
-    &__developers-link {
-      outline: 1px solid black;
-    }
   }
 }
-
-//@media ($desktop-widths) {
-//  .main-footer {
-//    outline: 1px solid black;
-//
-//    &__wrapper {
-//      @include container;
-//      outline: 1px solid black;
-//    }
-//
-//    &__vizit-sedona {
-//      outline: 1px solid black;
-//    }
-//
-//    &__social {
-//      outline: 1px solid black;
-//    }
-//
-//    &__developers {
-//      outline: 1px solid black;
-//    }
-//
-//    &__developers-link {
-//      outline: 1px solid black;
-//    }
-//  }
-//}

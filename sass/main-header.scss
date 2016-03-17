@@ -2,7 +2,6 @@
   outline: 1px solid red;
 
   &__wrapper {
-    @include container;
   }
 
   &__top-menu {
@@ -23,7 +22,6 @@
     outline: 1px solid red;
 
     &__wrapper {
-      @include container;
       outline: 1px solid red;
     }
 
@@ -49,7 +47,6 @@
     outline: 1px solid red;
 
     &__wrapper {
-      @include container;
       outline: 1px solid red;
     }
 

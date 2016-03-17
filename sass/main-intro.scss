@@ -31,10 +31,6 @@
 @media ($tablet-widths) {
   .main-intro {
     padding-bottom: 50px;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: #fff;
-    outline: 1px solid black;
 
     &__image {
       width: 100%;
@@ -54,12 +50,6 @@
 
 @media ($desktop-widths) {
   .main-intro {
-
-    &__image {
-      width: 100%;
-      height: 518px;
-      background-color: #e1eff8;
-    }
 
     &__title {
       padding: 0 370px;
