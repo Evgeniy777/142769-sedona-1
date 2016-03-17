@@ -44,35 +44,39 @@
             <p class="main-intro__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </div>
           <form action="https://echo.htmlacademy.ru" class="review" method="post">
-            <fieldset class="review__item">
+            <fieldset class="review__item review__item--personal">
               <div class="review__wrapper">
                 <legend class="review__title">Представьтесь, пожалуйста:</legend>
                 <div class="review__group">
                   <label for="name">Имя:</label>
-                  <input type="text" id="name" name="name">  
+                  <input type="text" id="name" name="name">
                 </div>
                 <div class="review__group">
                   <label for="surname">Фамилия:</label>
-                  <input type="text" id="surname" name="surname">  
+                  <input type="text" id="surname" name="surname">
                 </div>
                 <div class="review__group">
                   <label for="middle-name">Отчество:</label>
-                  <input type="text" id="middle-name" name="middle-name">  
+                  <input type="text" id="middle-name" name="middle-name">
                 </div>
               </div>
-            </fieldset> 
-            <fieldset class="review__item">
+            </fieldset>
+            <fieldset class="review__item review__item--contacts">
               <div class="review__wrapper">
                 <legend class="review__title">Контактная информация:</legend>
-                <label for="tel">Контактный телефон</label>
-                <input type="text" id="tel" placeholder="Введите телефон" name="tel">
-                <label for="email">Электронная почта:</label>
-                <input type="email" id="email" placeholder="Введите email" name="email">
+                <div class="review__group">
+                  <label for="tel">Контактный телефон</label>
+                  <input type="text" id="tel" placeholder="Введите телефон" name="tel">
+                </div>
+                <div class="review__group">
+                  <label for="email">Электронная почта:</label>
+                  <input type="email" id="email" placeholder="Введите email" name="email">
+                </div>
               </div>
             </fieldset>
-            <fieldset class="review__item">
+            <fieldset class="review__item review__item--impressions">
               <div class="review__wrapper">
-                <legend class="review__title">Ваше общее впечатление:</legend>                
+                <legend class="review__title">Ваше общее впечатление:</legend>
                 <input type="radio" id="positive" name="radio" value="positive">
                 <label for="positive">Скорее положительное</label>
                 <input type="radio" id="negative" name="radio" value="negative">
@@ -81,7 +85,7 @@
                 <label for="no-answer">Затрудняюсь ответить</label>
               </div>
             </fieldset>
-            <fieldset class="review__item">
+            <fieldset class="review__item review__item--attractions">
               <div class="review__wrapper">
                 <legend class="review__title">Посещенные достопримечательности:</legend>
                 <input type="checkbox" id="devils-bridge" name="checkbox" value="Devils Bridge">
@@ -94,7 +98,7 @@
                 <label for="red-rocks">Красные скалы</label>
               </div>
             </fieldset>
-            <fieldset class="review__item">
+            <fieldset class="review__item review__item--emotions">
               <div class="review__wrapper">
                 <legend class="review__title">Опишите свои эмоции:</legend>
                 <textarea name="review-text" placeholder="Опишите подробно все свои восторги"></textarea>
@@ -119,7 +123,7 @@
             <a class="main-footer__developers-link" href="#">HTML Academy</a>
           </div>
         </div>
-      </footer>  
+      </footer>
     </div>
   </body>
 </html>

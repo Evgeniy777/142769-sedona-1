@@ -1,55 +1,104 @@
 .review {
-  outline: 1px solid black;
+  background-color: coral;
 
   &__item {
     padding: 0;
     margin: 0;
     background-color: #fff;
+    border: none;
     border-top: 1px solid #e5e5e5;
-    outline: 1px solid black;
   }
-  
+
   &__wrapper {
-    outline: 1px solid red;
+    @include container;
   }
-  
+
   &__title {
-    margin: 0;
+    margin: 0 0 21px;
     display: block;
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    outline: 1px solid black;
   }
-  
+
   &__group {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-//    margin: 0 20px;
+    margin: 0 20px;
+    outline: 1px solid red;
   }
-  
+
   & label {
+    display: inline-block;
+    vertical-align: middle;
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
     text-transform: uppercase;
     color: #333333;
-    margin-right: 20px;
-    outline: 1px solid black;
   }
-  & input[type="text"] {
-    width: 100px;
-    padding: 16px 0;
+
+  & input {
+    min-width: 50px;
+    padding: 16px 20px;
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
     border: none;
     background-color: #f2f2f2;
-    outline: 1px solid black;
   }
+
+  &__item--personal {
+    padding: 18px 0 25px;
+  }
+
+  &__item--personal &__group {
+    margin: 0 20px 20px;
+  }
+
+  &__item--personal &__group {
+    align-items: center;
+  }
+
+  &__item--personal &__group:last-child {
+    margin-bottom: 0;
+  }
+
+  &__item--personal label {
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  &__item--personal input {
+    flex-grow: 1;
+  }
+
+  &__item--contacts {
+    padding: 18px 0 28px;
+  }
+
+  &__item--contacts &__group {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  &__item--contacts &__group:last-child {
+    margin-bottom: 0;
+  }
+
+  &__item--contacts label {
+    margin-bottom: 13px;
+  }
+
+  &__item--contacts input[type="text"],
+  &__item--contacts input[type="email"] {
+    flex-basis: 100%;
+  }
+//  & input[name="email"],
+//  & input[name="tel"] {
+//    flex-grow: 1;
+//  }
 
   &__btn {
     outline: 1px solid black;
