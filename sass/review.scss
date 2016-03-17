@@ -1,15 +1,53 @@
 .review {
   outline: 1px solid black;
 
-  &__wrapper {
-    outline: 1px solid black;
-  }
-
   &__item {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
     outline: 1px solid black;
   }
-
+  
+  &__wrapper {
+    outline: 1px solid red;
+  }
+  
   &__title {
+    margin: 0;
+    display: block;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    outline: 1px solid black;
+  }
+  
+  &__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+//    margin: 0 20px;
+  }
+  
+  & label {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #333333;
+    margin-right: 20px;
+    outline: 1px solid black;
+  }
+  & input[type="text"] {
+    width: 100px;
+    padding: 16px 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    border: none;
+    background-color: #f2f2f2;
     outline: 1px solid black;
   }
 
