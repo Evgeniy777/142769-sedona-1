@@ -1,14 +1,12 @@
 .review {
   background-color: #fff;
-  padding-bottom: 36px;
   outline: 1px dotted #59ff86;
 
   &__item {
-    padding: 18px 0 0;
+    padding: 0;
     margin: 0;
     background-color: #fff;
     border: none;
-    border-top: 1px solid #e5e5e5;
   }
 
   &__wrapper {
@@ -25,8 +23,7 @@
     text-transform: uppercase;
   }
 
-  &__group {
-    display: flex;    
+  &__group {   
     padding: 0 20px;
     outline: 1px dotted red;
   }
@@ -41,9 +38,7 @@
     color: #333333;
   }
 
-  & input {    
-    flex-grow: 1;
-    min-width: 50px;
+  & input {
     padding: 16px 20px;
     font-size: 18px;
     line-height: 26px;
@@ -65,27 +60,16 @@
     margin-bottom: 20px;
   }
 
-  &__item--personal &__group {
-    align-items: center;
-  }
-
   &__item--personal &__group:last-child {
     margin-bottom: 0;
   }
 
   &__item--personal label {
     margin-right: 20px;
-    flex-shrink: 0;
   }
 
   &__item--contacts {
     padding: 18px 0 28px;
-  }
-
-  &__item--contacts &__group,
-  &__item--impressions &__group,
-  &__item--attractions &__group {
-    flex-direction: column;
   }
   
   &__item--contacts label {
@@ -93,16 +77,10 @@
     margin-bottom: 13px;
   }
 
-  &__item--contacts input[type="text"],
-  &__item--contacts input[type="email"] {
-    flex-basis: 100%;
-  }
-
   input[type="radio"] + label,
   input[type="checkbox"] + label {
     position: relative;
     padding: 15px 0 15px 80px;
-    flex-grow: 1;
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
@@ -147,7 +125,6 @@
   }
 
   &__item--emotions textarea {
-    flex-grow: 1;
     border: none;
     resize: none;
     font-size: 18px;
@@ -170,5 +147,96 @@
     background-color: $light-blue;
     border: none;
     outline: 1px solid black;
+  }
+}
+
+@media ($mobile-widths-only) {
+  .review {
+    padding-bottom: 36px;
+
+    &__item {
+      padding: 18px 0 0;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    &__group {
+      display: flex;
+    }
+
+    & input {    
+      flex-grow: 1;
+      min-width: 50px;
+    }
+
+    &__item--personal &__group {
+      align-items: center;
+    }
+
+    &__item--personal label {
+      flex-shrink: 0;
+    }
+
+    &__item--contacts &__group,
+    &__item--impressions &__group,
+    &__item--attractions &__group {
+      flex-direction: column;
+    }
+
+    &__item--contacts input[type="text"],
+    &__item--contacts input[type="email"] {
+      flex-basis: 100%;
+    }
+
+    input[type="radio"] + label,
+    input[type="checkbox"] + label {
+      flex-grow: 1;
+    }
+    
+    &__item--emotions textarea {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media ($tablet-widths) {
+  .review {
+    display: flex;
+    flex-wrap: wrap;
+//    justify-content: center;
+//    align-items: center;
+
+    &__item {
+      
+    }
+
+    &__item--impressions {
+      order: -1;
+      flex-basis: 50%;
+      flex-grow: 1;
+    }
+
+    &__item--personal {
+      flex-basis: 50%;
+      flex-grow: 1;
+    }
+  
+    &__item--contacts {
+      flex-basis: 100%;
+//      flex-grow: 1;
+    }
+    
+    &__item--attractions {
+      flex-basis: 100%;
+//      flex-grow: 1;
+    }
+    
+    &__wrapper {
+      margin: 0;
+      width: 100%;
+    }
+ 
+    &__group {
+      display: block;
+    }
   }
 }
