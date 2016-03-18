@@ -2,7 +2,7 @@
   background-color: coral;
 
   &__item {
-    padding: 0;
+    padding: 18px 0 0;
     margin: 0;
     background-color: #fff;
     border: none;
@@ -11,6 +11,7 @@
 
   &__wrapper {
     @include container;
+    outline: 2px dashed pink;
   }
 
   &__title {
@@ -26,7 +27,6 @@
   &__group {
     display: flex;
     margin: 0 20px;
-    outline: 1px solid red;
   }
 
   & label {
@@ -37,6 +37,7 @@
     font-weight: normal;
     text-transform: uppercase;
     color: #333333;
+    outline: 2px dotted red;
   }
 
   & input {
@@ -48,9 +49,14 @@
     border: none;
     background-color: #f2f2f2;
   }
+  
+  & input[type="checkbox"],
+  & input[type="radio"] {
+    display: none;
+  }
 
   &__item--personal {
-    padding: 18px 0 25px;
+    padding-bottom: 25px;
   }
 
   &__item--personal &__group {
@@ -80,14 +86,10 @@
 
   &__item--contacts &__group {
     flex-direction: column;
-    margin-bottom: 16px;
-  }
-
-  &__item--contacts &__group:last-child {
-    margin-bottom: 0;
   }
 
   &__item--contacts label {
+    margin-left: 20px;
     margin-bottom: 13px;
   }
 
@@ -95,10 +97,59 @@
   &__item--contacts input[type="email"] {
     flex-basis: 100%;
   }
-//  & input[name="email"],
-//  & input[name="tel"] {
-//    flex-grow: 1;
-//  }
+
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    position: relative;
+    padding: 15px 0 15px 80px;
+    flex-grow: 1;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: none;
+    color: #000;
+  }
+  
+  &__item--impressions &__group,
+  &__item--attractions &__group {
+    flex-direction: column;
+  }
+  
+  &__item--impressions label,
+  &__item--attractions label {
+    margin-bottom: 10px;
+  }
+  
+  &__item--impressions label:last-child,
+  &__item--attractions label:last-child {
+    margin-bottom: 0;
+  }
+  
+  input[type="radio"] + label::before,
+  input[type="checkbox"] + label::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 17px solid #f2f2f2;
+    border-radius: 50%;
+    background-color: #f2f2f2;    
+  }
+  
+  input[type="radio"] + label::before {
+    border-radius: 50%; 
+  }
+  
+  input[type="checkbox"] + label::before {
+    border-radius: 5px;  
+  }
+  
+  input[type="radio"]:checked + label::before,
+  input[type="checkbox"]:checked + label::before {
+    background-color: #333333;    
+  }
 
   &__btn {
     outline: 1px solid black;
