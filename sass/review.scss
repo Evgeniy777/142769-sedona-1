@@ -1,16 +1,11 @@
 .review {
   background-color: #fff;
-  outline: 1px dotted #59ff86;
 
   &__item {
     padding: 0;
     margin: 0;
     background-color: #fff;
     border: none;
-  }
-
-  &__wrapper {
-    @include container;
   }
 
   &__title {
@@ -23,14 +18,11 @@
     text-transform: uppercase;
   }
 
-  &__group {   
-    padding: 0 20px;
-    outline: 1px dotted red;
+  &__group {
   }
 
   & label {
-    display: inline-block;
-    vertical-align: middle;
+    min-width: 122px;
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
@@ -38,7 +30,10 @@
     color: #333333;
   }
 
-  & input {
+  & input[type="text"],
+  & input[type="email"],
+  & input[type="tel"]{
+    min-width: 50px;
     padding: 16px 20px;
     font-size: 18px;
     line-height: 26px;
@@ -46,7 +41,7 @@
     border: none;
     background-color: #f2f2f2;
   }
-  
+
   & input[type="checkbox"],
   & input[type="radio"] {
     display: none;
@@ -69,9 +64,9 @@
   }
 
   &__item--contacts {
-    padding: 18px 0 28px;
+    padding-bottom: 28px;
   }
-  
+
   &__item--contacts label {
     margin-left: 20px;
     margin-bottom: 13px;
@@ -87,17 +82,17 @@
     text-transform: none;
     color: #000;
   }
-  
+
   &__item--impressions label,
   &__item--attractions label {
     margin-bottom: 10px;
   }
-  
+
   &__item--impressions label:last-child,
   &__item--attractions label:last-child {
     margin-bottom: 0;
   }
-  
+
   input[type="radio"] + label::before,
   input[type="checkbox"] + label::before {
     position: absolute;
@@ -108,20 +103,20 @@
     height: 22px;
     border: 17px solid #f2f2f2;
     border-radius: 50%;
-    background-color: #f2f2f2;    
+    background-color: #f2f2f2;
   }
-  
+
   input[type="radio"] + label::before {
-    border-radius: 50%; 
+    border-radius: 50%;
   }
-  
+
   input[type="checkbox"] + label::before {
-    border-radius: 5px;  
+    border-radius: 5px;
   }
-  
+
   input[type="radio"]:checked + label::before,
   input[type="checkbox"]:checked + label::before {
-    background-color: #333333;    
+    background-color: #333333;
   }
 
   &__item--emotions textarea {
@@ -135,7 +130,7 @@
     margin-bottom: 51px;
     background-color: #f2f2f2;
   }
-  
+
   &__btn {
     width: 100%;
     padding: 16px 0;
@@ -146,7 +141,6 @@
     text-transform: uppercase;
     background-color: $light-blue;
     border: none;
-    outline: 1px solid black;
   }
 }
 
@@ -159,11 +153,16 @@
       border-top: 1px solid #e5e5e5;
     }
 
+    &__wrapper {
+      @include container;
+    }
+
     &__group {
+      padding: 0 20px;
       display: flex;
     }
 
-    & input {    
+    & input {
       flex-grow: 1;
       min-width: 50px;
     }
@@ -191,7 +190,7 @@
     input[type="checkbox"] + label {
       flex-grow: 1;
     }
-    
+
     &__item--emotions textarea {
       flex-grow: 1;
     }
@@ -202,41 +201,118 @@
   .review {
     display: flex;
     flex-wrap: wrap;
-//    justify-content: center;
-//    align-items: center;
+    flex-direction: row;
+    padding: 0 60px;
+
 
     &__item {
-      
+      display: flex;
+      flex-basis: 100%;
     }
 
     &__item--impressions {
       order: -1;
       flex-basis: 50%;
-      flex-grow: 1;
     }
 
     &__item--personal {
+
       flex-basis: 50%;
-      flex-grow: 1;
     }
-  
-    &__item--contacts {
-      flex-basis: 100%;
-//      flex-grow: 1;
-    }
-    
-    &__item--attractions {
-      flex-basis: 100%;
-//      flex-grow: 1;
-    }
-    
+
     &__wrapper {
-      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__item--impressions &__title,
+    &__item--personal &__title {
+      text-align: left;
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item--personal &__group {
+      flex-direction: row;
+      align-items: center;
       width: 100%;
     }
- 
-    &__group {
-      display: block;
+
+    &__item--personal &__wrapper {
+      margin-left: 60px;
+    }
+
+    &__item--personal input {
+      width: 60px;
+      background: red;
+      flex-grow: 1;
+    }
+
+    &__item--personal label {
+      flex-shrink: 0;
+    }
+
+    &__item--attractions {
+    }
+
+    &__item--attractions &__group {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item--attractions &__wrapper {
+      margin: 0 95px;
+    }
+
+    &__item--attractions label {
+//      white-space: nowrap;
+      flex-basis: 121px;
+    }
+
+    &__item--attractions label[for="slide-park"] {
+      order: 2;
+    }
+
+    &__item--attractions label[for="devils-bridge"] {
+      order: -1;
+    }
+
+    &__item--attractions label[for="bell-mountain"] {
+      order: 1;
+    }
+
+    &__item--attractions label[for="red-rocks"] {
+      order: 3;
     }
   }
 }
+
+@media ($desktop-widths) {
+  .review {
+
+    &__item--impressions &__title {
+      text-align: center;
+    }
+
+    &__item--attractions &__group {
+      justify-content: space-between;
+    }
+
+    &__item--attractions &__wrapper {
+      margin: 0 120px;
+    }
+
+    &__item--attractions label {
+      flex-basis: 0;
+    }
+
+    }
+  }
+

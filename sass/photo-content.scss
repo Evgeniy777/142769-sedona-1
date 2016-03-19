@@ -1,23 +1,152 @@
 .photo-content {
   outline: 1px solid black;
-
-  &__wrapper {
-    outline: 1px solid black;
-  }
+  background-color: #fff;
 
   &__item {
-    outline: 1px solid black;
+    padding: 20px;
+  }
+
+  &__wrapper {
+  }
+
+  & img {
+    display: block;
+    background-color: antiquewhite;
+  }
+
+  &__item-info {
+
   }
 
   &__title {
-    outline: 1px solid black;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   &__author {
-    outline: 1px solid black;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #333333;
   }
 
   &__like {
-    outline: 1px solid black;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+  }
+}
+
+@media ($mobile-widths-only) {
+  .photo-content {
+
+    &__item {
+      padding: 0;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    &__wrapper {
+//      margin: 23px 20px 0;
+    }
+
+    & img {
+      width: 280px;
+      height: 280px;
+    }
+
+    &__item-info {
+      background-color: #fff;
+    }
+  }
+}
+
+@media ($tablet-widths) {
+  .photo-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      padding: 0;
+      border: 0;
+      flex-basis: 50%;
+      outline: 2px dotted red;
+    }
+
+    &__item:first-child {
+      flex-basis: 100%;
+    }
+
+
+    &__wrapper {
+      margin: 20px;
+    }
+
+    & img {
+      width: 100%;
+      height: 267px;
+    }
+
+    &__item:first-child img {
+      height: 400px;
+    }
+
+    &__item-info {
+      background-color: #f2f2f2;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .photo-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      position: relative;
+      border: 0;
+      flex-basis: 50%;
+      outline: 2px dotted red;
+    }
+
+    &__item:first-child {
+      flex-basis: 100%;
+    }
+
+    & img {
+      width: 100%;
+      height: 267px;
+    }
+
+    &__item:first-child img {
+      height: 400px;
+    }
+
+    &__item-info {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.2);
+    }
+
+    &__wrapper {
+    }
+
+    &__title {
+      color: #fff;
+    }
+
+    &__author {
+      color: #fff;
+    }
+
+    &__like {
+      color: #fff;
+    }
   }
 }
