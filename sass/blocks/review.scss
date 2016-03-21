@@ -22,7 +22,6 @@
   }
 
   & label {
-    min-width: 122px;
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
@@ -171,10 +170,6 @@
       align-items: center;
     }
 
-    &__item--personal label {
-      flex-shrink: 0;
-    }
-
     &__item--contacts &__group,
     &__item--impressions &__group,
     &__item--attractions &__group {
@@ -255,6 +250,10 @@
     &__item--personal label {
       flex-shrink: 0;
     }
+    
+    &__item--personal &__title span {
+      display: none;
+    }
 
     &__item--attractions {
     }
@@ -272,7 +271,6 @@
     }
 
     &__item--attractions label {
-//      white-space: nowrap;
       flex-basis: 121px;
     }
 
@@ -297,22 +295,57 @@
 @media ($desktop-widths) {
   .review {
 
-    &__item--impressions &__title {
-      text-align: center;
-    }
+      &__item--impressions &__title {
+        text-align: center;
+      }
 
-    &__item--attractions &__group {
-      justify-content: space-between;
-    }
+      &__item--attractions &__group {
+        justify-content: space-between;
+      }
 
-    &__item--attractions &__wrapper {
-      margin: 0 120px;
-    }
+      &__item--attractions &__wrapper {
+        margin: 0 120px;
+      }
 
-    &__item--attractions label {
-      flex-basis: 0;
-    }
-
+      &__item--attractions label {
+        flex-basis: 0;
+      }    
+      
+      &__item--personal &__title span {
+        display: inline;
+      }
+    
+      &__item--contacts &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+          
+      &__item--contacts &__title {
+        flex-basis: 100%;
+      }
+    
+      &__item--contacts &__group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-basis: 50%;
+      }
+    
+      &__item--contacts &__group:first-of-type {
+        flex-basis: 0;
+        padding-right: 80px;
+        flex-grow: 1;
+      }
+    
+      &__item--contacts input {
+        flex-grow: 1;
+      }
+    
+      &__item--contacts label{
+        margin: 0 20px 0 0;
+      }
     }
   }
 

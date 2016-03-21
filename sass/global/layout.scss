@@ -1,5 +1,4 @@
 body {
-  background-color: aquamarine;
   
   & .page-wrapper {
     @include container;
@@ -8,13 +7,11 @@ body {
 
 @media ($tablet-widths) {
   body {
-    background-color: bisque;
   }
 }
 
 @media ($desktop-widths) {
   body {
-    background: #f2f2f2;
     
     & .page-wrapper {
       box-shadow: 0 0 15px 5px rgba(0,1,1,0.2);

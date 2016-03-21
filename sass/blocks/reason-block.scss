@@ -74,13 +74,22 @@
   background-color: #eeeeee;
 }
 
-.reason-block--reasons .reason-block__wrapper {
-  border-bottom: 1px solid #d6d6d6;
-}
-
 .reason-block--reasons span:before,
 .reason-block--reasons span:after {
   background-color: #000;
+}
+
+@media ($mobile-widths-only) {
+  .reason-block {
+    
+    .reason-block--reasons &__item &__wrapper {
+      border-bottom: 1px solid #d6d6d6;
+    }
+    
+    .reason-block--reasons &__item:last-child &__wrapper {
+      border: none;
+    }
+  }
 }
 
 @media ($tablet-widths) {

@@ -1,5 +1,4 @@
 .main-intro {
-  padding-bottom: 13px;
   text-align: center;
   text-transform: uppercase;
   background-color: #fff;
@@ -14,48 +13,61 @@
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
-    padding: 0 30px;
-    margin: 39px 0 28px;
+    margin: 0;
   }
 
   &__description {
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
-    padding: 0 30px;
     margin: 0;
+  }
+}
+
+@media ($mobile-widths-only) {
+  .main-intro {
+    
+    &__title {      
+      padding: 38px 20px 25px;
+    }
+    
+    &__description {
+      padding: 0 20px 28px;
+    }
   }
 }
 
 @media ($tablet-widths) {
   .main-intro {
-    padding-bottom: 50px;
 
     &__image {
       width: 100%;
-      height: 518px;
-      background-color: #e1eff8;
+      height: 290px;
     }
 
-    &__title {
-      padding: 0 160px;
+    &__title {      
+      padding: 74px 163px 31px;
     }
-
+    
     &__description {
-      padding: 0 140px;
+      padding: 0 163px 69px;
     }
   } 
 }
 
 @media ($desktop-widths) {
   .main-intro {
-
-    &__title {
-      padding: 0 370px;
+    
+    &__image {
+      height: 301px;
     }
 
+    &__title {      
+      padding: 113px 378px 30px;
+    }
+    
     &__description {
-      padding: 0 350px;
+      padding: 0 378px 71px;
     }
   } 
 }
