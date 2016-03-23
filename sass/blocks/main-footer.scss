@@ -2,32 +2,42 @@
   text-transform: uppercase;
   background-color: #fefefe;
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 36px 0;
-  }
-
   &__vizit-sedona {
     display: block;
     color: #000;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
-    margin-bottom: 36px;
     text-decoration: none;
   }
-
-  &__social {
-    margin-bottom: 40px;
-  }
-
-  &__developers {
-    margin-bottom: 23px;
-  }
-
+  
   &__developers-link {
+    display: inline-block;
+    vertical-align: middle;
+    width: 27px;
+    height: 34px;
+    font-size: 0;
+    background-color: #000;
+  }
+}
+
+@media ($mobile-widths-only) {
+  .main-footer {
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 36px 0 23px;
+    }
+
+    &__vizit-sedona {
+      margin-bottom: 36px;
+    }
+
+    &__social {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -35,26 +45,25 @@
   .main-footer {
 
     &__wrapper {
+      padding: 36px 0;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
     }
 
     &__vizit-sedona {
       flex-basis: 100%;
       text-align: center;
-      margin: 0;
     }
 
     &__social {
       flex-basis: 100%;
-      margin: 0;
     }
 
     &__developers {
       flex-basis: 100%;
       text-align: center;
-      margin: 0;
     }
   }
 }

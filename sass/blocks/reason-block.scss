@@ -7,27 +7,16 @@
     background-color: $light-blue;
   }
 
-  &__wrapper {
-    padding: 20px 0;
-    margin: 0 20px;
-  }
-
   &__title {
-    margin: 0 0 9px;
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
   }
-
-  & br {
-    display: none;
-  }  
   
   &__item span {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    margin-bottom: 15px;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
@@ -82,14 +71,36 @@
 @media ($mobile-widths-only) {
   .reason-block {
     
-    .reason-block--reasons &__item &__wrapper {
-      border-bottom: 1px solid #d6d6d6;
+    &__item {       
+      background-color: $light-blue;
     }
-    
-    .reason-block--reasons &__item:last-child &__wrapper {
-      border: none;
+
+    &__wrapper {
+      padding: 40px 0 40px;
+      margin: 0 20px;
+    }
+
+    &__title {
+      margin: 0 0 9px;
+    }
+
+    & br {
+      display: none;
+    }  
+
+    &__item span {
+      margin-bottom: 15px;
     }
   }
+  
+  .reason-block--reasons .reason-block__wrapper {
+    border-bottom: 1px solid #d6d6d6;
+    padding: 27px 0 27px;
+  }
+    
+  .reason-block--reasons .reason-block__item:last-child .reason-block__wrapper {
+    border: none;
+  } 
 }
 
 @media ($tablet-widths) {

@@ -3,19 +3,13 @@
   text-align: center;
   background-color: #fff;
 
-  &__wrapper {
-    padding: 27px 20px 49px;
-  }
 
   &__title {
-    margin: 0 0 20px;
-    font-size: 21px;
     line-height: 26px;
     font-weight: bold;
   }
 
   &__text {
-    margin: 0 0 35px;
     font-size: 14px;
     line-height: 24px;
     font-weight: normal;
@@ -32,6 +26,24 @@
     text-transform: uppercase;
     background-color: $light-blue;
     border: none;
+  }
+}
+
+@media ($mobile-widths-only) {
+  .hotel-search {    
+
+    &__wrapper {
+      padding: 27px 20px 49px;
+    }
+    
+    &__title {
+      margin: 0 0 20px;
+      font-size: 21px;
+    }
+
+    &__text {
+      margin: 0 0 35px;
+    }
   }
 }
 
