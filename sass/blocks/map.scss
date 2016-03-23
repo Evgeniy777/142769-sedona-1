@@ -1,0 +1,13 @@
+.map {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #cadfaa;
+}
+
+@media ($tablet-widths) {
+  .map {
+    height: 350px;    
+  }
+}

@@ -1,0 +1,14 @@
+.social-link {
+  margin-right: 20px;
+  width: 46px;
+  height: 48px;
+  font-size: 0;
+  color: #fff;
+  text-decoration: none;
+  background-color: $light-blue;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+

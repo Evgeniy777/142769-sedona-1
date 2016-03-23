@@ -1,0 +1,351 @@
+.review {
+  background-color: #fff;
+
+  &__item {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border: none;
+  }
+
+  &__title {
+    margin: 0 0 21px;
+    display: block;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__group {
+  }
+
+  & label {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #333333;
+  }
+
+  & input[type="text"],
+  & input[type="email"],
+  & input[type="tel"]{
+    min-width: 50px;
+    padding: 16px 20px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    border: none;
+    background-color: #f2f2f2;
+  }
+
+  & input[type="checkbox"],
+  & input[type="radio"] {
+    display: none;
+  }
+
+  &__item--personal {
+    padding-bottom: 25px;
+  }
+
+  &__item--personal &__group {
+    margin-bottom: 20px;
+  }
+
+  &__item--personal &__group:last-child {
+    margin-bottom: 0;
+  }
+
+  &__item--personal label {
+    margin-right: 20px;
+  }
+
+  &__item--contacts {
+    padding-bottom: 28px;
+  }
+
+  &__item--contacts label {
+    margin-left: 20px;
+    margin-bottom: 13px;
+  }
+
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    position: relative;
+    padding: 15px 0 15px 80px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: none;
+    color: #000;
+  }
+
+  &__item--impressions label,
+  &__item--attractions label {
+    margin-bottom: 10px;
+  }
+
+  &__item--impressions label:last-child,
+  &__item--attractions label:last-child {
+    margin-bottom: 0;
+  }
+
+  input[type="radio"] + label::before,
+  input[type="checkbox"] + label::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 17px solid #f2f2f2;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+  }
+
+  input[type="radio"] + label::before {
+    border-radius: 50%;
+  }
+
+  input[type="checkbox"] + label::before {
+    border-radius: 5px;
+  }
+
+  input[type="radio"]:checked + label::before,
+  input[type="checkbox"]:checked + label::before {
+    background-color: #333333;
+  }
+
+  &__item--emotions textarea {
+    border: none;
+    resize: none;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    min-height: 120px;
+    padding: 20px;
+    margin-bottom: 51px;
+    background-color: #f2f2f2;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 16px 0;
+    color: #fff;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: $light-blue;
+    border: none;
+  }
+}
+
+@media ($mobile-widths-only) {
+  .review {
+    padding-bottom: 36px;
+
+    &__item {
+      padding: 18px 0 0;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    &__wrapper {
+      @include container;
+    }
+
+    &__group {
+      padding: 0 20px;
+      display: flex;
+    }
+
+    & input {
+      flex-grow: 1;
+      min-width: 50px;
+    }
+
+    &__item--personal &__group {
+      align-items: center;
+    }
+
+    &__item--contacts &__group,
+    &__item--impressions &__group,
+    &__item--attractions &__group {
+      flex-direction: column;
+    }
+
+    &__item--contacts input[type="text"],
+    &__item--contacts input[type="email"] {
+      flex-basis: 100%;
+    }
+
+    input[type="radio"] + label,
+    input[type="checkbox"] + label {
+      flex-grow: 1;
+    }
+
+    &__item--emotions textarea {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media ($tablet-widths) {
+  .review {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 60px;
+
+
+    &__item {
+      display: flex;
+      flex-basis: 100%;
+    }
+
+    &__item--impressions {
+      order: -1;
+      flex-basis: 50%;
+    }
+
+    &__item--personal {
+
+      flex-basis: 50%;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__item--impressions &__title,
+    &__item--personal &__title {
+      text-align: left;
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item--personal &__group {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__item--personal &__wrapper {
+      margin-left: 60px;
+    }
+
+    &__item--personal input {
+      width: 60px;
+      background: red;
+      flex-grow: 1;
+    }
+
+    &__item--personal label {
+      flex-shrink: 0;
+    }
+    
+    &__item--personal &__title span {
+      display: none;
+    }
+
+    &__item--attractions {
+    }
+
+    &__item--attractions &__group {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item--attractions &__wrapper {
+      margin: 0 95px;
+    }
+
+    &__item--attractions label {
+      flex-basis: 121px;
+    }
+
+    &__item--attractions label[for="slide-park"] {
+      order: 2;
+    }
+
+    &__item--attractions label[for="devils-bridge"] {
+      order: -1;
+    }
+
+    &__item--attractions label[for="bell-mountain"] {
+      order: 1;
+    }
+
+    &__item--attractions label[for="red-rocks"] {
+      order: 3;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .review {
+
+      &__item--impressions &__title {
+        text-align: center;
+      }
+
+      &__item--attractions &__group {
+        justify-content: space-between;
+      }
+
+      &__item--attractions &__wrapper {
+        margin: 0 120px;
+      }
+
+      &__item--attractions label {
+        flex-basis: 0;
+      }    
+      
+      &__item--personal &__title span {
+        display: inline;
+      }
+    
+      &__item--contacts &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+          
+      &__item--contacts &__title {
+        flex-basis: 100%;
+      }
+    
+      &__item--contacts &__group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-basis: 50%;
+      }
+    
+      &__item--contacts &__group:first-of-type {
+        flex-basis: 0;
+        padding-right: 80px;
+        flex-grow: 1;
+      }
+    
+      &__item--contacts input {
+        flex-grow: 1;
+      }
+    
+      &__item--contacts label{
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+

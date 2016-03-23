@@ -6,103 +6,133 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
-      <div class="main-header__wrapper">
-        <div class="main-header__top-menu">
-          <a class="main-header__logo" href="#">
-            <img src="" width="102" height="83" alt="Sedona">
-          </a>
-          <span class="main-header__toggle main-header__toggle--closed">Открыть меню</span>
-          <nav class="main-nav">
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__items">
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="index.html">Главная</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="photo.html">Фото и видео</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="form.html">Форма отзыва</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">HTML Academy</a>
-                </li>
-              </ul>
-              <span class="main-nav__btn main-nav__btn--close">Закрыть меню</span>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <main class="main-content">
-      <div class="main-content__wrapper">
-        <div class="main-intro">
-          <div class="main-intro__image"></div>
-          <h1 class="main-intro__title">Фото и видео</h1>
-          <p class="main-intro__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-        </div>
-        <div class="photo-content">
-          <div class="photo-content__wrapper">
-            <div class="photo-content__item">
-              <img src="" alt="Неродные просторы" width="280" height="281">
-              <h2 class="photo-content__title">Неродные просторы</h2>
-              <p class="photo-content__author">Автор фото: Борис</p>
-              <div class="photo-content__like"><b>1350</b></div>
-            </div>
-            <div class="photo-content__item">
-              <img src="" alt="Неродные просторы" width="280" height="281">
-              <h2 class="photo-content__title">Местная растительность</h2>
-              <p class="photo-content__author">Автор фото: Сергей</p>
-              <div class="photo-content__like"><b>143</b></div>
-            </div>
-            <div class="photo-content__item">
-              <img src="" alt="Неродные просторы" width="280" height="281">
-              <h2 class="photo-content__title">Дорога на север</h2>
-              <p class="photo-content__author">Автор фото: Петр</p>
-              <div class="photo-content__like"><b>96</b></div>
-            </div>
-            <div class="photo-content__item">
-              <img src="" alt="Неродные просторы" width="280" height="281">
-              <h2 class="photo-content__title">Мост Дьявола</h2>
-              <p class="photo-content__author">Автор фото: Антон</p>
-              <div class="photo-content__like"><b>254</b></div>
-            </div>
+    <div class="page-wrapper">
+      <header class="main-header">
+        <div class="main-header__wrapper">
+          <div class="main-header__top-menu">
+            <nav class="main-nav">
+              <div class="main-nav__wrapper">
+                <ul class="main-nav__items">
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="index.html">Главная</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="photo.html">Фото и видео</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="form.html">Форма отзыва</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">HTML Academy</a>
+                  </li>
+                </ul>
+                <button class="main-nav__btn main-nav__btn--close" type="button">Закрыть меню</button>
+                <button class="main-nav__toggle main-nav__toggle--closed" type="button">Открыть меню</button>
+              </div>
+            </nav>
+            <a class="main-header__logo" href="#">
+              <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona">
+            </a>
           </div>
         </div>
-        <div class="main-intro">
-          <h1 class="main-intro__title">Все еще сомневаетесь?</h1>
-          <p class="main-intro__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        </div>
-        <div class="video-content">
-          <div class="video-content__item">
-            <video src=""></video>
-            <div class="video-content__wrapper">
+      </header>
+      <main class="main-content">
+        <div class="main-content__wrapper">
+          <div class="main-intro">
+            <div class="main-intro__image"></div>
+            <h1 class="main-intro__title">Фото и видео</h1>
+            <p class="main-intro__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
+          </div>
+          <div class="photo-content">
+            <div class="photo-content__item">
+              <img src="" alt="Неродные просторы" width="280" height="280">
+              <div class="photo-content__item-info">
+                <div class="photo-content__wrapper">
+                  <div class="photo-content__group">
+                    <h2 class="photo-content__title">Неродные просторы</h2>
+                    <p class="photo-content__author">Автор фото: Борис</p>
+                  </div>
+                  <div class="photo-content__like"><b>1350</b></div>
+                </div>
+              </div>
+            </div>
+            <div class="photo-content__item">
+              <img src="" alt="Неродные просторы" width="280" height="280">
+              <div class="photo-content__item-info">
+                <div class="photo-content__wrapper">
+                  <div class="photo-content__group">
+                    <h2 class="photo-content__title">Местная растительность</h2>
+                    <p class="photo-content__author">Автор фото: Сергей</p>
+                  </div>
+                  <div class="photo-content__like"><b>143</b></div>
+                </div>
+              </div>
+            </div>
+            <div class="photo-content__item">
+              <img src="" alt="Неродные просторы" width="280" height="280">
+              <div class="photo-content__item-info">
+                <div class="photo-content__wrapper">
+                  <div class="photo-content__group">
+                    <h2 class="photo-content__title">Дорога на север</h2>
+                    <p class="photo-content__author">Автор фото: Петр</p>
+                  </div>
+                  <div class="photo-content__like"><b>96</b></div>
+                </div>
+              </div>
+            </div>
+            <div class="photo-content__item">
+                <img src="" alt="Неродные просторы" width="280" height="280">
+                <div class="photo-content__item-info">
+                  <div class="photo-content__wrapper">
+                    <div class="photo-content__group">
+                      <h2 class="photo-content__title">Мост Дьявола</h2>
+                      <p class="photo-content__author">Автор фото: Антон</p>
+                    </div>
+                    <div class="photo-content__like"><b>254</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-intro">
+            <h1 class="main-intro__title">Все еще сомневаетесь?</h1>
+            <p class="main-intro__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          </div>
+          <div class="video-content">
+            <div class="video-content__item">
+              <video src=""></video>
               <div class="video-content__controls-bar">
-                <div class="video-content__play-again"></div>
-                <div class="video-content__cc"></div>
-                <div class="video-content__full-screen"></div>
+                <div class="video-content__wrapper">
+                  <div class="video-content__range-controls">
+                    <div class="video-content__scale">
+                      <div class="video-content__bar"></div>
+                      <div class="video-content__toggle"></div>
+                    </div>
+                  </div>
+                  <div class="video-content__replay">r</div>
+                  <div class="video-content__cc">cc</div>
+                  <div class="video-content__full-screen"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer class="main-footer">
-      <div class="main-footer__wrapper">
-        <a class="main-footer__vizit-sedona" href="#">#vizitsedona</a>
-        <div class="main-footer__social">
-          <div class="social-links">
-            <a class="social-link social-link--tw" href="#">Twitter</a>
-            <a class="social-link social-link--fb" href="#">Facebook</a>
-            <a class="social-link social-link--yt" href="#">Youtube</a>
+      </main>
+      <footer class="main-footer">
+        <div class="main-footer__wrapper">
+          <a class="main-footer__vizit-sedona" href="#">#vizitsedona</a>
+          <div class="main-footer__social">
+            <div class="social-links">
+              <a class="social-link social-link--tw" href="#">Twitter</a>
+              <a class="social-link social-link--fb" href="#">Facebook</a>
+              <a class="social-link social-link--yt" href="#">Youtube</a>
+            </div>
+          </div>
+          <div class="main-footer__developers">
+            Разработано
+            <a class="main-footer__developers-link" href="#">HTML Academy</a>
           </div>
         </div>
-        <div class="main-footer__developers">
-          Разработано
-          <a class="main-footer__developers-link" href="#">HTML Academy</a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

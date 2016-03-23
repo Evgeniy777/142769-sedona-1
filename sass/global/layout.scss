@@ -1,0 +1,20 @@
+body {
+  
+  & .page-wrapper {
+    @include container;
+  }
+}
+
+@media ($tablet-widths) {
+  body {
+  }
+}
+
+@media ($desktop-widths) {
+  body {
+    
+    & .page-wrapper {
+      box-shadow: 0 0 15px 5px rgba(0,1,1,0.2);
+    }
+  }
+}

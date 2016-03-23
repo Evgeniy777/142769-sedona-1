@@ -1,0 +1,44 @@
+.main-header {
+
+  &__top-menu {
+    position: relative;
+    background-color: #fff;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    width: 102px;
+    height: 56px;
+  }
+}
+
+@media ($tablet-widths) {
+  .main-header {
+
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: block;
+      margin-left: -51px;
+      width: 102px;
+      height: 56px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .main-header {
+
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: block;
+      margin-left: -51px;
+      width: 102px;
+      height: 56px;
+    }
+  }
+}
