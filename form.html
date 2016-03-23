@@ -36,17 +36,19 @@
           </div>
         </div>
       </header>
-      <main class="main-content">
-        <div class="main-content__wrapper">
-          <div class="main-intro">
-            <div class="main-intro__image"></div>
-            <h1 class="main-intro__title">Оставьте свой отзыв</h1>
-            <p class="main-intro__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <main class="page-content">
+        <div class="page-content__wrapper">
+          <div class="page-intro">
+            <div class="page-intro__image"></div>
+            <div class="page-intro__wrapper">
+              <h1 class="page-intro__title">Оставьте свой отзыв</h1>
+              <p class="page-intro__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+            </div>
           </div>
           <form action="https://echo.htmlacademy.ru" class="review" method="post">
             <fieldset class="review__item review__item--personal">
               <div class="review__wrapper">
-                <legend class="review__title">Представьтесь<span> ,пожалуйста:</span></legend>
+                <legend class="review__title">Представьтесь<span>:</span><span>, пожалуйста:</span></legend>
                 <div class="review__group">
                   <label for="name">Имя:</label>
                   <input type="text" id="name" name="name" placeholder="Петр">
@@ -62,8 +64,8 @@
               </div>
             </fieldset>
             <fieldset class="review__item review__item--contacts">
+              <legend class="review__title">Контактная информация:</legend>
               <div class="review__wrapper">
-                <legend class="review__title">Контактная информация:</legend>
                 <div class="review__group">
                   <label for="tel">Контактный телефон</label>
                   <input type="tel" id="tel" placeholder="Введите телефон" name="tel">
@@ -75,8 +77,8 @@
               </div>
             </fieldset>
             <fieldset class="review__item review__item--impressions">
+              <legend class="review__title">Ваше общее впечатление:</legend>
               <div class="review__wrapper">
-                <legend class="review__title">Ваше общее впечатление:</legend>
                 <div class="review__group">
                   <input type="radio" id="positive" name="radio" value="positive">
                   <label for="positive">Скорее положительное</label>
@@ -88,8 +90,8 @@
               </div>
             </fieldset>
             <fieldset class="review__item review__item--attractions">
+              <legend class="review__title">Посещенные достопримечательности:</legend>
               <div class="review__wrapper">
-                <legend class="review__title">Посещенные достопримечательности:</legend>
                 <div class="review__group">
                   <input type="checkbox" id="devils-bridge" name="checkbox" value="Devils Bridge">
                   <label for="devils-bridge">Мост Дьявола</label>
@@ -103,8 +105,8 @@
               </div>
             </fieldset>
             <fieldset class="review__item review__item--emotions">
+              <legend class="review__title">Опишите свои эмоции:</legend>
               <div class="review__wrapper">
-                <legend class="review__title">Опишите свои эмоции:</legend>
                 <div class="review__group">
                   <textarea name="review-text" placeholder="Опишите подробно все свои восторги"></textarea>
                 </div>

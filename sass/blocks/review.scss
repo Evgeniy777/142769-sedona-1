@@ -9,16 +9,13 @@
   }
 
   &__title {
-    margin: 0 0 21px;
     display: block;
+    margin: 0;
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-  }
-
-  &__group {
   }
 
   & label {
@@ -27,6 +24,11 @@
     font-weight: normal;
     text-transform: uppercase;
     color: #333333;
+  }
+
+  & input[type="checkbox"],
+  & input[type="radio"] {
+    display: none;
   }
 
   & input[type="text"],
@@ -41,38 +43,8 @@
     background-color: #f2f2f2;
   }
 
-  & input[type="checkbox"],
-  & input[type="radio"] {
-    display: none;
-  }
-
-  &__item--personal {
-    padding-bottom: 25px;
-  }
-
-  &__item--personal &__group {
-    margin-bottom: 20px;
-  }
-
-  &__item--personal &__group:last-child {
-    margin-bottom: 0;
-  }
-
-  &__item--personal label {
-    margin-right: 20px;
-  }
-
-  &__item--contacts {
-    padding-bottom: 28px;
-  }
-
-  &__item--contacts label {
-    margin-left: 20px;
-    margin-bottom: 13px;
-  }
-
-  input[type="radio"] + label,
-  input[type="checkbox"] + label {
+  &__item--impressions label,
+  &__item--attractions label {
     position: relative;
     padding: 15px 0 15px 80px;
     font-size: 18px;
@@ -82,18 +54,13 @@
     color: #000;
   }
 
-  &__item--impressions label,
-  &__item--attractions label {
-    margin-bottom: 10px;
-  }
-
   &__item--impressions label:last-child,
   &__item--attractions label:last-child {
     margin-bottom: 0;
   }
 
-  input[type="radio"] + label::before,
-  input[type="checkbox"] + label::before {
+  &__item--impressions label::before,
+  &__item--attractions label::before {
     position: absolute;
     content: "";
     top: 0;
@@ -105,17 +72,30 @@
     background-color: #f2f2f2;
   }
 
-  input[type="radio"] + label::before {
+  &__item--impressions label::before {
     border-radius: 50%;
   }
 
-  input[type="checkbox"] + label::before {
+  &__item--attractions label::before {
     border-radius: 5px;
   }
 
-  input[type="radio"]:checked + label::before,
-  input[type="checkbox"]:checked + label::before {
+  &__item--impressions input[type="radio"]:checked + label::before,
+  &__item--attractions input[type="checkbox"]:checked + label::before {
     background-color: #333333;
+  }
+
+  &__item--personal label {
+    margin-right: 20px;
+  }
+
+
+  &__item--personal &__group {
+    margin-bottom: 20px;
+  }
+
+  &__item--personal &__group:last-child {
+    margin-bottom: 0;
   }
 
   &__item--emotions textarea {
@@ -126,7 +106,6 @@
     font-weight: bold;
     min-height: 120px;
     padding: 20px;
-    margin-bottom: 51px;
     background-color: #f2f2f2;
   }
 
@@ -148,17 +127,21 @@
     padding-bottom: 36px;
 
     &__item {
-      padding: 18px 0 0;
       border-top: 1px solid #e5e5e5;
     }
 
     &__wrapper {
       @include container;
+      padding-top: 18px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
     }
 
     &__group {
-      padding: 0 20px;
       display: flex;
+      margin: 0 20px;
     }
 
     & input {
@@ -186,8 +169,41 @@
       flex-grow: 1;
     }
 
+    &__item--attractions label {
+      margin-bottom: 24px;
+    }
+
+    &__item--impressions label {
+      margin-bottom: 13px;
+    }
+
     &__item--emotions textarea {
       flex-grow: 1;
+    }
+
+    &__item--emotions {
+      margin-bottom: 51px;
+    }
+
+    &__item--personal {
+      padding-bottom: 25px;
+    }
+
+    &__item--contacts {
+      padding-bottom: 28px;
+    }
+
+    &__item--contacts label {
+      margin-left: 20px;
+      margin-bottom: 13px;
+    }
+
+    &__item--personal &__title span:first-child {
+      display: none;
+    }
+
+    &__item--personal &__title span {
+      display: inline;
     }
   }
 }
@@ -205,14 +221,26 @@
       flex-basis: 100%;
     }
 
+    &__title {
+      position: relative;
+    }
+
     &__item--impressions {
       order: -1;
       flex-basis: 50%;
     }
 
-    &__item--personal {
+    &__item--impressions label {
+      margin-bottom: 20px;
+    }
 
+    &__item--personal {
       flex-basis: 50%;
+    }
+
+    &__item--contacts {
+      margin-top: 69px;
+      margin-bottom: 52px;
     }
 
     &__wrapper {
@@ -224,6 +252,20 @@
     &__item--impressions &__title,
     &__item--personal &__title {
       text-align: left;
+    }
+
+    &__item--impressions &__title,
+    &__item--personal &__title,
+    &__item--emotions &__title {
+      margin-bottom: 57px;
+    }
+
+    &__item--contacts label {
+      margin-bottom: 7px;
+    }
+
+    &__item--contacts &__group {
+      margin-top: 24px;
     }
 
     &__group {
@@ -238,24 +280,33 @@
     }
 
     &__item--personal &__wrapper {
-      margin-left: 60px;
+      padding-left: 60px;
+      border-left: 1px solid #dbdbdb;
     }
 
     &__item--personal input {
       width: 60px;
-      background: red;
       flex-grow: 1;
     }
 
     &__item--personal label {
       flex-shrink: 0;
     }
-    
+
+    &__item--personal &__title span:first-child {
+      display: inline;
+    }
+
     &__item--personal &__title span {
       display: none;
     }
 
-    &__item--attractions {
+    &__item--attractions  {
+      margin-bottom: 68px;
+    }
+
+    &__item--attractions &__title {
+      margin-bottom: 43px;
     }
 
     &__item--attractions &__group {
@@ -271,7 +322,12 @@
     }
 
     &__item--attractions label {
-      flex-basis: 121px;
+      margin-bottom: 32px;
+      flex-basis: 125px;
+    }
+
+    &__item--attractions label:nth-of-type(2n) {
+      margin-bottom: 0;
     }
 
     &__item--attractions label[for="slide-park"] {
@@ -289,6 +345,40 @@
     &__item--attractions label[for="red-rocks"] {
       order: 3;
     }
+
+    &__item--emotions {
+      margin-bottom: 51px;
+    }
+
+    &__btn {
+      margin-bottom: 61px;
+    }
+
+//    &__item--contacts &__title:before,
+//    &__item--attractions &__title:before,
+//    &__item--emotions &__title:before {
+//      display: inline-block;
+//      vertical-align: middle;
+//      content: "";
+//      width: 100px;
+//      height: 2px;
+//      left: 0;
+//      top: 0;
+//      background: #000;
+//    }
+//
+//    &__item--contacts &__title:after,
+//    &__item--attractions &__title:after,
+//    &__item--emotions &__title:after {
+//      display: inline-block;
+//      vertical-align: middle;
+//      content: "";
+//      width: 100px;
+//      height: 2px;
+//      right: 0;
+//      top: 0;
+//      background: #000;
+//    }
   }
 }
 
@@ -308,41 +398,46 @@
       }
 
       &__item--attractions label {
-        flex-basis: 0;
-      }    
-      
+        flex-basis: auto;
+        margin-bottom: 0;
+      }
+
+      &__item--personal &__title span:first-child {
+        display: none;
+      }
+
       &__item--personal &__title span {
         display: inline;
       }
-    
+
       &__item--contacts &__wrapper {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
       }
-          
+
       &__item--contacts &__title {
         flex-basis: 100%;
       }
-    
+
       &__item--contacts &__group {
         display: flex;
         flex-direction: row;
         align-items: center;
         flex-basis: 50%;
       }
-    
+
       &__item--contacts &__group:first-of-type {
         flex-basis: 0;
         padding-right: 80px;
         flex-grow: 1;
       }
-    
+
       &__item--contacts input {
         flex-grow: 1;
       }
-    
+
       &__item--contacts label{
         margin: 0 20px 0 0;
       }
