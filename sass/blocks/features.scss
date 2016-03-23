@@ -1,19 +1,10 @@
 .features {
-  text-align: left;
   text-transform: uppercase;
-
-  &__wrapper {
-    padding: 20px 0;
-    background-color: #fff;
-  }
-
-  &__item {
-    padding: 15px 20px 13px 70px;
-  }
+  background-color: #fff;
 
   &__title {
     position: relative;
-    margin: 0 0 14px;
+    margin: 0;
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
@@ -22,10 +13,6 @@
   &__title:before {
     position: absolute;
     content: "";
-    top: 0;
-    left: -50px;
-    width: 42px;
-    height: 48px;
     background-color: $light-blue;
   }
 
@@ -37,56 +24,72 @@
   }
 }
 
-@media ($tablet-widths) {
+@media ($mobile-widths-only) {
   .features {
+    text-align: left;
 
     &__wrapper {
-      padding: 60px 0;
-      display: flex;
-      flex-direction: row;
-      background-color: #fff;
+      padding: 20px 0;
     }
 
     &__item {
-      padding: 0 45px;
-      flex-basis: 100%;
-      text-align: center;
+      padding: 15px 20px 13px 70px;
     }
 
     &__title {
       position: relative;
-      margin: 0 0 14px;
-      padding-top: 98px;
+      margin-bottom: 14px;
       font-size: 18px;
       line-height: 26px;
       font-weight: bold;
     }
 
     &__title:before {
-      position: absolute;
-      content: "";
+      top: 0;
+      left: -50px;
+      width: 42px;
+      height: 48px;
+      background-color: $light-blue;
+    }
+  }
+}
+
+@media ($tablet-widths) {
+  .features {
+
+    &__wrapper {
+      padding: 57px 0 61px;
+      display: flex;
+      flex-direction: row;
+      background-color: #fff;
+    }
+
+    &__item {
+      padding: 0 47px;
+      flex-basis: 100%;
+      text-align: center;
+    }
+
+    &__title {
+      padding-top: 102px;
+      margin-bottom: 21px;
+    }
+
+    &__title:before {
       top: 0;
       left: 50%;
       margin-left: -39px;
       width: 77px;
       height: 75px;
-      background-color: $light-blue;
-    }
-
-    &__text {
-      margin: 0;
-      font-size: 14px;
-      line-height: 21px;
-      font-weight: normal;
     }
   }  
 }
 
 @media ($desktop-widths) {
   .features {
-
+    
     &__wrapper {
-      padding: 60px 0 83px;
+      padding: 57px 0 82px;
     }
 
     &__item {
