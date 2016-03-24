@@ -101,7 +101,18 @@
   &__item--personal &__group:last-child {
     margin-bottom: 0;
   }
-
+  
+  &__item--contacts input[type="tel"],
+  &__item--contacts input[type="email"] {
+    padding-right: 76px;
+//    box-shadow: inset -56px 0 0 #e6e6e6;
+    background-image: linear-gradient(#e6e6e6, #e6e6e6);
+//    background-image: #e6e6e6, url("");
+    background-size: 56px 56px;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  
   &__item--emotions textarea {
     border: none;
     resize: none;
@@ -215,10 +226,10 @@
       margin-bottom: 51px;
     }
         
-    &__item--contacts input[type="text"],
-    &__item--contacts input[type="email"] {
-      flex-basis: 100%;
-    }
+//    &__item--contacts input[type="tel"],
+//    &__item--contacts input[type="email"] {
+//      flex-basis: 100%;
+//    }
 
     &__item--contacts {
       padding-bottom: 28px;
@@ -504,9 +515,9 @@
       flex-grow: 1;
     }
 
-    &__item--contacts input {
-      flex-grow: 1;
-    }
+//    &__item--contacts input {
+//      flex-grow: 1;
+//    }
 
     &__item--contacts label {
       margin: 0 20px 0 0;
