@@ -64,7 +64,6 @@
 
 @media ($mobile-widths-only) {
   .video-content {
-    padding-top: 18px;
     padding-bottom: 49px;
     
     & video {
@@ -113,12 +112,17 @@
 @media ($tablet-widths) {
   .video-content {
     padding: 0 60px 41px;
+    
+    &__item {
+      position: relative;      
+    }
 
     & video {
       height: 499px;
     }
 
     &__controls-bar {
+      position: absolute;
       width: 100%;
       bottom: 0;
       margin: 0;
