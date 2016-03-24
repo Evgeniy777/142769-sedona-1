@@ -2,6 +2,7 @@
   background-color: #fff;
 
   &__item {
+    display: block;
     padding: 0;
     margin: 0;
     background-color: #fff;
@@ -9,13 +10,16 @@
   }
 
   &__title {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     margin: 0;
+    padding: 0;
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+    border: 0;
   }
 
   & label {
@@ -33,7 +37,7 @@
 
   & input[type="text"],
   & input[type="email"],
-  & input[type="tel"]{
+  & input[type="tel"] {
     min-width: 50px;
     padding: 16px 20px;
     font-size: 18px;
@@ -127,16 +131,20 @@
     padding-bottom: 36px;
 
     &__item {
-      border-top: 1px solid #e5e5e5;
+//      outline: 1px solid red;
     }
 
     &__wrapper {
       @include container;
-      padding-top: 18px;
+//      outline: 1px solid cyan;
     }
 
     &__title {
+      width: 100%;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 18px;
       margin-bottom: 20px;
+//      outline: 1px solid green;
     }
 
     &__group {
@@ -152,6 +160,18 @@
     &__item--personal &__group {
       align-items: center;
     }
+        
+    &__item--personal &__title span:first-child {
+      display: none;
+    }
+
+    &__item--personal &__title span {
+      display: inline-block;
+    }    
+    
+    &__item--personal {
+      padding-bottom: 25px;
+    }
 
     &__item--contacts &__group,
     &__item--impressions &__group,
@@ -159,13 +179,8 @@
       flex-direction: column;
     }
 
-    &__item--contacts input[type="text"],
-    &__item--contacts input[type="email"] {
-      flex-basis: 100%;
-    }
-
-    input[type="radio"] + label,
-    input[type="checkbox"] + label {
+    &__item--impressions label,
+    &__item--attractions label {
       flex-grow: 1;
     }
 
@@ -184,9 +199,10 @@
     &__item--emotions {
       margin-bottom: 51px;
     }
-
-    &__item--personal {
-      padding-bottom: 25px;
+        
+    &__item--contacts input[type="text"],
+    &__item--contacts input[type="email"] {
+      flex-basis: 100%;
     }
 
     &__item--contacts {
@@ -196,14 +212,6 @@
     &__item--contacts label {
       margin-left: 20px;
       margin-bottom: 13px;
-    }
-
-    &__item--personal &__title span:first-child {
-      display: none;
-    }
-
-    &__item--personal &__title span {
-      display: inline;
     }
   }
 }
@@ -354,36 +362,44 @@
       margin-bottom: 61px;
     }
 
-//    &__item--contacts &__title:before,
-//    &__item--attractions &__title:before,
-//    &__item--emotions &__title:before {
-//      display: inline-block;
-//      vertical-align: middle;
-//      content: "";
-//      width: 100px;
-//      height: 2px;
-//      left: 0;
-//      top: 0;
-//      background: #000;
-//    }
-//
-//    &__item--contacts &__title:after,
-//    &__item--attractions &__title:after,
-//    &__item--emotions &__title:after {
-//      display: inline-block;
-//      vertical-align: middle;
-//      content: "";
-//      width: 100px;
-//      height: 2px;
-//      right: 0;
-//      top: 0;
-//      background: #000;
-//    }
+    &__item--contacts &__title,
+    &__item--attractions &__title,
+    &__item--emotions &__title {
+      width: 400px;
+      padding: 0 125px;
+    }
+    
+    &__item--contacts &__title:before,
+    &__item--attractions &__title:before,
+    &__item--emotions &__title:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 125px;
+      height: 1px;
+      left: 0;      
+      top: 50%;
+      background: #dbdbdb;
+    }
+
+    &__item--contacts &__title:after,
+    &__item--attractions &__title:after,
+    &__item--emotions &__title:after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 125px;
+      height: 1px;
+      right: 0;
+      top: 50%;
+      background: #dbdbdb;
+    }
   }
 }
 
 @media ($desktop-widths) {
   .review {
+    margin: 0 120px;
 
       &__item--impressions &__title {
         text-align: center;
@@ -441,6 +457,23 @@
       &__item--contacts label{
         margin: 0 20px 0 0;
       }
+    
+      &__item--contacts &__title,
+      &__item--attractions &__title,
+      &__item--emotions &__title {
+        padding: 0 280px;
+      }
+    
+      &__item--contacts &__title:before,
+      &__item--attractions &__title:before,
+      &__item--emotions &__title:before {
+        width: 280px;
+      }
+
+      &__item--contacts &__title:after,
+      &__item--attractions &__title:after,
+      &__item--emotions &__title:after {
+        width: 280px;
+      }
     }
   }
-
