@@ -67,3 +67,16 @@
     }
   }
 }
+
+@media ($desktop-widths) {
+  .main-footer {
+    
+    &__developers {
+      text-align: right;
+    }
+
+    &__developers-link {
+      margin-right: 44px;
+    }
+  }
+}

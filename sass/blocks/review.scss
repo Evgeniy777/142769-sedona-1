@@ -124,19 +124,27 @@
     background-color: $light-blue;
     border: none;
   }
+  
+  &__required-fields {
+    display: none;
+    width: 50%;
+    padding: 16px 0;
+    margin: 0;
+    color: #000;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+  }
 }
 
 @media ($mobile-widths-only) {
   .review {
     padding-bottom: 36px;
 
-    &__item {
-//      outline: 1px solid red;
-    }
-
     &__wrapper {
       @include container;
-//      outline: 1px solid cyan;
     }
 
     &__title {
@@ -144,7 +152,6 @@
       border-top: 1px solid #e5e5e5;
       padding-top: 18px;
       margin-bottom: 20px;
-//      outline: 1px solid green;
     }
 
     &__group {
@@ -182,6 +189,14 @@
     &__item--impressions label,
     &__item--attractions label {
       flex-grow: 1;
+    }
+    
+    &__item--impressions {
+      margin-bottom: 27px;
+    }
+
+    &__item--attractions {
+      margin-bottom: 25px;
     }
 
     &__item--attractions label {
@@ -243,9 +258,20 @@
     }
 
     &__item--personal {
+      position: relative;
       flex-basis: 50%;
     }
-
+    
+    &__item--personal::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      height: 292px;      
+      background-color: #dbdbdb;
+    }
+    
     &__item--contacts {
       margin-top: 69px;
       margin-bottom: 52px;
@@ -265,11 +291,12 @@
     &__item--impressions &__title,
     &__item--personal &__title,
     &__item--emotions &__title {
-      margin-bottom: 57px;
+      margin-bottom: 58px;
     }
 
     &__item--contacts label {
       margin-bottom: 7px;
+      margin-left: 20px;
     }
 
     &__item--contacts &__group {
@@ -289,7 +316,6 @@
 
     &__item--personal &__wrapper {
       padding-left: 60px;
-      border-left: 1px solid #dbdbdb;
     }
 
     &__item--personal input {
@@ -300,7 +326,14 @@
     &__item--personal label {
       flex-shrink: 0;
     }
+    
+        &__item--personal &__wrapper {
+    }
 
+    &__item--personal &__title {
+      margin-left: 60px;
+    }
+    
     &__item--personal &__title span:first-child {
       display: inline;
     }
@@ -355,18 +388,14 @@
     }
 
     &__item--emotions {
-      margin-bottom: 51px;
+      margin-bottom: 58px;
     }
-
-    &__btn {
-      margin-bottom: 61px;
-    }
-
+        
     &__item--contacts &__title,
     &__item--attractions &__title,
     &__item--emotions &__title {
-      width: 400px;
-      padding: 0 125px;
+      width: 298px;
+      padding: 0 175px;
     }
     
     &__item--contacts &__title:before,
@@ -394,86 +423,120 @@
       top: 50%;
       background: #dbdbdb;
     }
+
+    &__btn {
+      width: 50%;
+      margin-bottom: 61px;
+    }
+    
+    &__required-fields {
+      display: block;
+    }
   }
 }
 
 @media ($desktop-widths) {
   .review {
-    margin: 0 120px;
+    padding: 0 120px;
 
-      &__item--impressions &__title {
-        text-align: center;
-      }
-
-      &__item--attractions &__group {
-        justify-content: space-between;
-      }
-
-      &__item--attractions &__wrapper {
-        margin: 0 120px;
-      }
-
-      &__item--attractions label {
-        flex-basis: auto;
-        margin-bottom: 0;
-      }
-
-      &__item--personal &__title span:first-child {
-        display: none;
-      }
-
-      &__item--personal &__title span {
-        display: inline;
-      }
-
-      &__item--contacts &__wrapper {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      &__item--contacts &__title {
-        flex-basis: 100%;
-      }
-
-      &__item--contacts &__group {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-basis: 50%;
-      }
-
-      &__item--contacts &__group:first-of-type {
-        flex-basis: 0;
-        padding-right: 80px;
-        flex-grow: 1;
-      }
-
-      &__item--contacts input {
-        flex-grow: 1;
-      }
-
-      &__item--contacts label{
-        margin: 0 20px 0 0;
-      }
+    &__item--impressions &__title,
+    &__item--personal &__title {
+      text-align: left;
+      margin-left: 80px;
+    }
     
-      &__item--contacts &__title,
-      &__item--attractions &__title,
-      &__item--emotions &__title {
-        padding: 0 280px;
-      }
-    
-      &__item--contacts &__title:before,
-      &__item--attractions &__title:before,
-      &__item--emotions &__title:before {
-        width: 280px;
-      }
+    &__item--personal &__wrapper {
+      padding-left: 80px;
+    }
 
-      &__item--contacts &__title:after,
-      &__item--attractions &__title:after,
-      &__item--emotions &__title:after {
-        width: 280px;
-      }
+    &__item--attractions {
+      margin-bottom: 65px;
+    }
+    
+    &__item--attractions &__group {
+      justify-content: space-between;
+    }
+    
+    &__item--attractions &__wrapper {
+      margin: 0;
+    }
+
+    &__item--attractions label {
+      flex-basis: auto;
+      margin-bottom: 0;
+    }
+    
+    &__item--personal &__title span:first-child {
+      display: none;
+    }
+
+    &__item--personal &__title span {
+      display: inline;
+    }
+    
+    &__item--contacts {
+      margin-top: 67px;
+      margin-bottom: 52px;
+    }
+
+    &__item--contacts &__wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item--contacts &__title {
+      margin-bottom: 75px;
+    }
+
+    &__item--contacts &__group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-basis: 50%;
+      margin: 0;
+    }
+
+    &__item--contacts &__group:first-of-type {
+      flex-basis: 0;
+      padding-right: 80px;
+      flex-grow: 1;
+    }
+
+    &__item--contacts input {
+      flex-grow: 1;
+    }
+
+    &__item--contacts label {
+      margin: 0 20px 0 0;
+    }
+    
+    &__item--contacts span {
+      display: none;
+    }
+    
+    &__item--contacts &__title,
+    &__item--attractions &__title,
+    &__item--emotions &__title {
+      padding: 0 330px;
+      width: 300px;
+    }
+    
+    &__item--contacts &__title:before,
+    &__item--attractions &__title:before,
+    &__item--emotions &__title:before {
+      width: 280px;
+    }
+
+    &__item--contacts &__title:after,
+    &__item--attractions &__title:after,
+    &__item--emotions &__title:after {
+      width: 280px;
+    }
+    
+    &__btn {
+      margin-bottom: 66px;
     }
   }
+}
