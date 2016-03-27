@@ -9,11 +9,24 @@
     line-height: 26px;
     font-weight: bold;
   }
-  
+
   &__title:before {
     position: absolute;
     content: "";
-    background-color: $light-blue;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &__item--house &__title:before {
+    background-image: url("../../img/icon-house.svg");
+  }
+
+  &__item--gift &__title:before {
+    background-image: url("../../img/icon-gift.svg");
+  }
+
+  &__item--food &__title:before {
+    background-image: url("../../img/icon-burger.svg");
   }
 
   &__text {
@@ -29,11 +42,11 @@
     text-align: left;
 
     &__wrapper {
-      padding: 20px 0;
+      padding: 20px 20px;
     }
 
     &__item {
-      padding: 15px 20px 13px 70px;
+      padding: 15px 0 13px 50px;
     }
 
     &__title {
@@ -44,12 +57,25 @@
       font-weight: bold;
     }
 
-    &__title:before {
-      top: 0;
-      left: -50px;
-      width: 42px;
-      height: 48px;
-      background-color: $light-blue;
+    &__item--house &__title:before {
+      bottom: -1px;
+      left: -48px;
+      width: 37px;
+      height: 36px;
+    }
+
+    &__item--gift &__title:before {
+      bottom: -1px;
+      left: -45px;
+      width: 32px;
+      height: 38px;
+    }
+
+    &__item--food &__title:before {
+      bottom: -4px;
+      left: -52px;
+      width: 38px;
+      height: 35px;
     }
   }
 }
@@ -76,18 +102,35 @@
     }
 
     &__title:before {
-      top: 0;
       left: 50%;
-      margin-left: -39px;
-      width: 77px;
-      height: 75px;
     }
-  }  
+
+    &__item--house &__title:before {
+      top: 3px;
+      margin-left: -37px;
+      width: 75px;
+      height: 72px;
+    }
+
+    &__item--gift &__title:before {
+      top: 0;
+      margin-left: -32px;
+      width: 64px;
+      height: 76px;
+    }
+
+    &__item--food &__title:before {
+      top: 6px;
+      margin-left: -38px;
+      width: 77px;
+      height: 70px;
+    }
+  }
 }
 
 @media ($desktop-widths) {
   .features {
-    
+
     &__wrapper {
       padding: 57px 0 82px;
     }
@@ -95,5 +138,5 @@
     &__item {
       padding: 0 65px;
     }
-  }  
+  }
 }

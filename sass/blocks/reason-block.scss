@@ -3,7 +3,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  &__item {       
+  &__item {
     background-color: $light-blue;
   }
 
@@ -12,7 +12,7 @@
     line-height: 26px;
     font-weight: bold;
   }
-  
+
   &__item span {
     position: relative;
     display: inline-block;
@@ -21,7 +21,7 @@
     line-height: 21px;
     font-weight: normal;
   }
-  
+
   &__item span:before {
     display: inline-block;
     vertical-align: middle;
@@ -31,7 +31,7 @@
     height: 2px;
     background-color: #fff;
   }
-  
+
   &__item span:after {
     display: inline-block;
     vertical-align: middle;
@@ -48,11 +48,11 @@
     line-height: 21px;
     font-weight: normal;
   }
-  
+
   & img {
     display: block;
-    width: auto;
-    height: 260px;
+    max-width: 100%;
+    height: auto;
     color: #000;
     background-color: #c5cab6;
   }
@@ -70,8 +70,8 @@
 
 @media ($mobile-widths-only) {
   .reason-block {
-    
-    &__item {       
+
+    &__item {
       background-color: $light-blue;
     }
 
@@ -86,21 +86,21 @@
 
     & br {
       display: none;
-    }  
+    }
 
     &__item span {
       margin-bottom: 15px;
     }
   }
-  
+
   .reason-block--reasons .reason-block__wrapper {
     border-bottom: 1px solid #d6d6d6;
     padding: 27px 0 27px;
   }
-    
+
   .reason-block--reasons .reason-block__item:last-child .reason-block__wrapper {
     border: none;
-  } 
+  }
 }
 
 @media ($tablet-widths) {
@@ -111,21 +111,21 @@
     &__item {
       flex-basis: 256px;
     }
-    
+
     &__wrapper {
       padding: 45px 0 44px;
       margin: 0 45px;
     }
-    
+
     &__title {
       margin: 0 0 10px;
       font-size: 18px;
       line-height: 26px;
     }
-    
+
     & br {
       display: inline;
-    } 
+    }
 
     &__item span {
       margin-bottom: 21px;
@@ -145,11 +145,11 @@
       height: 256px;
     }
   }
-  
+
   .reason-block--reasons .reason-block__item:first-child {
     hyphens: auto;
   }
-  
+
   .reason-block--reasons .reason-block__wrapper {
     border:none;
   }
@@ -162,12 +162,12 @@
       flex-basis: 400px;
     }
 
-    &__wrapper {      
+    &__wrapper {
       padding: 53px 0 57px;
       margin: 0 70px;
     }
   }
-  
+
   .reason-block--reasons .reason-block__wrapper {
     padding: 45px 0 65px;
     margin: 0 70px;
