@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!--
+      Смотри на главной странице комментарии все общие
+     -->
     <div class="page-wrapper">
       <header class="main-header">
         <div class="main-header__wrapper">
@@ -50,6 +53,23 @@
               <legend class="review__title">Представьтесь<span>:</span><span>, пожалуйста:</span></legend>
               <div class="review__wrapper">
                 <div class="review__group">
+                  <!--
+                    Обсуждали что для label и input лучше задать классы
+                    review__label
+                    review__field
+
+                    Смотри, я не уверен что ты перечислил в SASS все новые типы input, их очень много, которые выглядят как текстовые поля
+                    Только в этой форме ты используешь text, email, tel. А есть еще password, number из более-менее распространенных
+                    По идее же твои стили должны применяться ко всем след типам
+                    input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="color"], input[type="date"], input[type="datetime-local"], input[type="month"], input[type="number"], input[type="tel"], input[type="time"], input[type="url"], input[type="week"], input[list]
+
+                    И есть риск что в будущем появятся новые и надо будет расширять стили
+                    Этого можно избежать просто добавив класс
+
+                    В качестве label иногда бывает необходимо использовать div, span или другой элемент
+                    Стилизуя через каскад ты лишаешься этой возможности
+
+                   -->
                   <label for="name">Имя:</label>
                   <input type="text" id="name" name="name" placeholder="Петр">
                 </div>
@@ -122,6 +142,7 @@
           <a class="main-footer__vizit-sedona" href="#">#vizitsedona</a>
           <div class="main-footer__social">
             <div class="social-links">
+
               <a class="social-link social-link--tw" href="#">Twitter</a>
               <a class="social-link social-link--fb" href="#">Facebook</a>
               <a class="social-link social-link--yt" href="#">Youtube</a>

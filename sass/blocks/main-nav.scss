@@ -4,8 +4,21 @@
     position: relative;
   }
 
+  /*
+    Списков, у которых нужно сбросить стили может быть много на проекте, поэтому можно было бы даже соорудить mixin
+
+    @mixin no-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__items {
+      @include no-list;
+    }
+  */
   &__items {
-    list-style-type: none;
+    list-style-type: none; // Используя короткую запись list-style: none; эффект будет тот же, а запись короче :)
     padding: 0;
     font-size: 0;
     margin: 0;
@@ -14,6 +27,11 @@
   &__item {
     text-align: center;
     background-color: $light-blue;
+
+    /*
+      first-child тут лучше
+      last-child - тут лучше
+    */
   }
 
   &__link {
@@ -28,16 +46,16 @@
     border-top: 1px solid #9ac2db;
     border-bottom: 1px solid #678fa8;
   }
-  
+
    &__item:first-child &__link {
     border-top: none;
   }
-  
+
   &__item:last-child &__link {
     border-bottom: none;
     box-shadow: inset 0 -7px 7px -3px rgba(0,0,0,0.2);
   }
-    
+
   &__btn {
     font-size: 0;
     background: none;
@@ -49,6 +67,36 @@
     top: 24px;
     right: 20px;
     width: 23px;
+
+    /*
+      Тут :before и after
+      У :before и :after 80% стилей одинаковые, ну так объедини их
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: -1px;
+        width: 25px;
+        height: 5px;
+
+        background-color: #fff;
+      }
+
+      А отличия запиши отдельно
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+
+      Лучший минимизатор и минификатор кода, это голова, которая на плечах
+      Плюс, в таком подходе, если поменяется дизайн - цвет, размер этой кнопки нужно будет заменить 1 цифру, а не 2 раза одну и ту же цифру
+    */
   }
 
   &__btn--close::before {
@@ -77,6 +125,10 @@
     font-size: 0;
     background: none;
     border: none;
+
+    /*
+      Модификаторы внутри
+    */
   }
 
   &__toggle--closed {
@@ -88,6 +140,10 @@
     background-color: $light-blue;
   }
 }
+
+/*
+  Проверь ниже что нет дубляжа в коде
+*/
 
 @media ($tablet-widths) {
   .main-nav {
@@ -102,7 +158,7 @@
       text-align: center;
       background-color: #fff;
     }
-    
+
     &__item:nth-child(2) {
       margin-right: 20%;
     }
@@ -119,7 +175,7 @@
       box-shadow: none;
       border: none;
     }
-    
+
     &__item:first-child &__link {
       border: none;
     }
@@ -136,9 +192,9 @@
     &__toggle {
       display: none;
     }
-  } 
+  }
 }
 
 @media ($desktop-widths) {
-  
+
 }

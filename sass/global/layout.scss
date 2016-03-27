@@ -1,3 +1,6 @@
+/*
+  Зачем делать лишний каскад из body ?
+*/
 body {
 
   & .page-wrapper {
@@ -5,12 +8,18 @@ body {
   }
 }
 
+/*
+  Серьезно нужны пустые селекторы и лишние пустые media?
+*/
 @media ($tablet-widths) {
   body {
   }
 }
 
 @media ($desktop-widths) {
+  /*
+    Зачем делать лишний каскад из body ?
+  */
   body {
 
     & .page-wrapper {

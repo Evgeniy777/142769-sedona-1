@@ -3,6 +3,11 @@
 
   &__item {
     background-color: #fff;
+
+    /*
+      Лучше здесь тег video и задать
+      А не писать ниже. Так будет более понятно, что video находится внутри video-content__item
+    */
   }
 
   &__item video {
@@ -16,7 +21,7 @@
     background-color: rgba(0,0,0,0.6);
   }
 
-  &__scale {    
+  &__scale {
     position: relative;
     height: 3px;
     background-color: rgba(255,255,255,0.2);
@@ -70,7 +75,7 @@
 @media ($mobile-widths-only) {
   .video-content {
     padding-bottom: 49px;
-    
+
     & video {
       height: 201px;
       font-size: 0;
@@ -81,7 +86,7 @@
     &__controls-bar {
       margin-top: -45px;
     }
-    
+
     &__wrapper {
       background-color: #f2f2f2;
       display: flex;
@@ -95,10 +100,10 @@
       padding-bottom: 20px;
     }
 
-    &__scale {      
+    &__scale {
       margin: 0 22px;
     }
-    
+
     &__replay {
       margin: 20px auto 20px 22px;
     }
@@ -117,9 +122,9 @@
 @media ($tablet-widths) {
   .video-content {
     padding: 0 60px 41px;
-    
+
     &__item {
-      position: relative;      
+      position: relative;
     }
 
     & video {
@@ -132,7 +137,7 @@
       bottom: 0;
       margin: 0;
     }
-    
+
     &__wrapper {
       background-color: rgba(0,0,0,0.6);
       display: flex;
@@ -141,12 +146,12 @@
       padding: 23px 41px 23px 35px;
       margin: 0;
     }
-    
+
     &__range-controls {
       flex-grow: 1;
       background: none;
     }
-    
+
     &__scale {
       margin: 0 42px;
     }

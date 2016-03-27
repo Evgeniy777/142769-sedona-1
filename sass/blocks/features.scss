@@ -8,6 +8,12 @@
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
+
+    &:before {
+      /*
+        Лучше тут стили и писать для before, а вообще, иконки лучше не к title привязывать, а к item
+      */
+    }
   }
 
   &__title:before {
@@ -16,6 +22,24 @@
     background-repeat: no-repeat;
     background-size: 100%;
   }
+
+  /*
+    Почему бы иконки не расположить для item, а не для title
+    Тогда было бы все красивее
+
+    &__item {
+
+      &:before {
+        общие стили
+      }
+
+      Обрати внимание что путь до картинки должен быть относительно СОБРАННОГО в будущем CSS, то есть в 99.9% случае такой "../img/"
+      &--house:before {
+        background-image: url("../img/icon-house.svg");
+      }
+
+    }
+  */
 
   &__item--house &__title:before {
     background-image: url("../../img/icon-house.svg");
@@ -56,6 +80,15 @@
       line-height: 26px;
       font-weight: bold;
     }
+
+    /*
+      А нельзя сделать before размерами
+      - в ширину как максимальная ширина иконки что есть
+      - в высоту как максимальная высота иконки что есть
+      - И остальное позиционирование делать через background-position ?
+
+      Зачем эти пляски то
+    */
 
     &__item--house &__title:before {
       bottom: -1px;

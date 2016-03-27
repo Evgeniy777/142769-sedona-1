@@ -14,7 +14,10 @@
     line-height: 24px;
     font-weight: normal;
   }
-
+  /*
+    Проговорили в html
+    Лучше создать отдельный файлик, типа buttons.css (можно в global)
+  */
   & button {
     width: 100%;
     margin: 0;
@@ -30,12 +33,12 @@
 }
 
 @media ($mobile-widths-only) {
-  .hotel-search {    
+  .hotel-search {
 
     &__wrapper {
       padding: 27px 20px 49px;
     }
-    
+
     &__title {
       margin: 0 0 20px;
       font-size: 21px;
@@ -49,11 +52,11 @@
 
 @media ($tablet-widths) {
   .hotel-search {
-    
+
     &__wrapper {
       padding: 56px 155px 58px;
     }
-    
+
     &__title {
       margin: 0 20px 30px;
       font-size: 30px;
@@ -67,7 +70,7 @@
 
 @media ($desktop-widths) {
   .hotel-search {
-    
+
     &__wrapper {
       padding: 56px 371px 66px;
     }

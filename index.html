@@ -26,6 +26,9 @@
                     <a class="main-nav__link" href="#">HTML Academy</a>
                   </li>
                 </ul>
+                <!--
+                  Почему нельзя это сделать одной кнопкой и менять ей классы? По сути она будет же открывать меню / закрывать меню
+                 -->
                 <button class="main-nav__btn main-nav__btn--close" type="button">Закрыть меню</button>
                 <button class="main-nav__toggle main-nav__toggle--closed" type="button">Открыть меню</button>
               </div>
@@ -39,13 +42,19 @@
       <main class="main-content">
         <div class="main-content__wrapper">
           <div class="main-intro">
+            <!--
+              Никогда не используй пустые div для оформления
+              У тебя для этого есть другие возможности, например
+              а) Псевдо-контент у блока main-intro
+              б) Фон main-intro
+             -->
             <div class="main-intro__image"></div>
             <h1 class="main-intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
             <p class="main-intro__description">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
           </div>
           <div class="reason-block">
             <div class="reason-block__item">
-              <div class="reason-block__wrapper">
+              <div class="reason-block__wrapper"> <!-- Не слишком ли много wrapperов разных для этой синей колонки? Через __item все нельзя оформить? -->
                 <h2 class="reason-block__title">Настоящий<br> городок</h2>
                 <span>№1</span>
                 <p class="reason-block__text">Седона не атракцион для туристов, там течет своя жизнь</p>
@@ -56,7 +65,7 @@
           <div class="features">
             <div class="features__wrapper">
               <div class="features__item features__item--house">
-                <h2 class="features__title">Жилье</h2>
+                <h2 class="features__title">Жилье</h2> <!-- По смыслу лучше h3. Ты же оглавляешь уже features, которые относятся к прошлому заголовку, то есть к "Настоящий городок" -->
                 <div class="features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
               </div>
               <div class="features__item features__item--gift">
@@ -106,6 +115,13 @@
             <div class="hotel-search__wrapper">
               <h2 class="hotel-search__title">Заинтересовались?</h2>
               <p class="hotel-search__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+              <!--
+                Что делает эта кнпока на странице?
+                Логично же, что раз формы нет, то лучше всего делать ее с помощью ссылки
+                Второй момент, даже если бы была форма, то лучше было бы делать ссылкой опять, чтобы в случае не работающего JS можно было бы поставить ссылку на новую страницу
+
+                Где класс у элемента? Все кнопки одинаковые в проекте (см form.html) там так же оформлена кнпока, поэтому можно было бы ввести общий класс .btn
+              -->
               <button type="button">Найти гостиницу</button>
             </div>
           </div>
@@ -119,6 +135,11 @@
           <a class="main-footer__vizit-sedona" href="#">#vizitsedona</a>
           <div class="main-footer__social">
             <div class="social-links">
+              <!-- Не лишний ли блок social-links? Реально ли надо 2 wrapper для 3х то ссылок? Нельзя сдлеать просто social-links? -->
+
+              <!--
+                Почему social-link это блок, а не элемент в social-links?
+               -->
               <a class="social-link social-link--tw" href="#">Twitter</a>
               <a class="social-link social-link--fb" href="#">Facebook</a>
               <a class="social-link social-link--yt" href="#">Youtube</a>
