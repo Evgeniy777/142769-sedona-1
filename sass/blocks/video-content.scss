@@ -47,7 +47,7 @@
     height: 20px;
     background-color: #5c6870;
     font-size: 0;
-    background: url("/img/icon-video-replay.svg") no-repeat;
+    background: url("../img/icon-video-replay.svg") no-repeat;
   }
 
   &__cc {
@@ -59,14 +59,14 @@
     text-transform: uppercase;
     border-radius: 3px;
     background-color: #fff;
-    background: url("/img/icon-video-subtitles.svg") no-repeat;
+    background: url("../img/icon-video-subtitles.svg") no-repeat;
   }
 
   &__full-screen {
     width: 20px;
     height: 20px;
     background-color: #5c6870;
-    background: url("/img/icon-video-fullscreen.svg") no-repeat;
+    background: url("../img/icon-video-fullscreen.svg") no-repeat;
   }
 }
 

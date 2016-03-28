@@ -5,7 +5,6 @@
 
   &__item {
     background-color: $light-blue;
-//    outline: 1px solid red;
     
     & span {
       margin: 0;
@@ -54,8 +53,6 @@
 
   & img {
     display: block;
-//    max-width: 100%;
-//    height: auto;
     color: #000;
     background-color: #c5cab6;
   }
