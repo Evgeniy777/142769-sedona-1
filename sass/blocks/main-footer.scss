@@ -16,7 +16,7 @@
     vertical-align: middle;
     width: 27px;
     height: 34px;
-    background: url("/img/logo-htmlacademy.svg") no-repeat;
+    background: url("../img/logo-htmlacademy.svg") no-repeat;
     font-size: 0;
   }
 }
@@ -33,10 +33,6 @@
 
     &__vizit-sedona {
       margin-bottom: 36px;
-    }
-
-    &__social {
-      margin-bottom: 40px;
     }
   }
 }
@@ -55,10 +51,6 @@
     &__vizit-sedona {
       flex-basis: 100%;
       text-align: center;
-    }
-
-    &__social {
-      flex-basis: 100%;
     }
 
     &__developers {

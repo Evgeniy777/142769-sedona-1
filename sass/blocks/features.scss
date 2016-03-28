@@ -1,56 +1,35 @@
 .features {
   text-transform: uppercase;
   background-color: #fff;
-
-  &__title {
+  
+  &__item {
     position: relative;
+    
+    &:before {    
+      position: absolute;
+      content: "";
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+            
+  &__item--house:before {
+    background-image: url("../img/icon-house.svg");
+  }
+
+  &__item--gift:before {
+    background-image: url("../img/icon-gift.svg");
+  }
+
+  &__item--food:before {
+    background-image: url("../img/icon-burger.svg");
+  }
+  
+  &__title {
     margin: 0;
     font-size: 18px;
     line-height: 26px;
     font-weight: bold;
-
-    &:before {
-      /*
-        Лучше тут стили и писать для before, а вообще, иконки лучше не к title привязывать, а к item
-      */
-    }
-  }
-
-  &__title:before {
-    position: absolute;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-
-  /*
-    Почему бы иконки не расположить для item, а не для title
-    Тогда было бы все красивее
-
-    &__item {
-
-      &:before {
-        общие стили
-      }
-
-      Обрати внимание что путь до картинки должен быть относительно СОБРАННОГО в будущем CSS, то есть в 99.9% случае такой "../img/"
-      &--house:before {
-        background-image: url("../img/icon-house.svg");
-      }
-
-    }
-  */
-
-  &__item--house &__title:before {
-    background-image: url("../../img/icon-house.svg");
-  }
-
-  &__item--gift &__title:before {
-    background-image: url("../../img/icon-gift.svg");
-  }
-
-  &__item--food &__title:before {
-    background-image: url("../../img/icon-burger.svg");
   }
 
   &__text {
@@ -72,43 +51,33 @@
     &__item {
       padding: 15px 0 13px 50px;
     }
-
-    &__title {
-      position: relative;
-      margin-bottom: 14px;
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: bold;
-    }
-
-    /*
-      А нельзя сделать before размерами
-      - в ширину как максимальная ширина иконки что есть
-      - в высоту как максимальная высота иконки что есть
-      - И остальное позиционирование делать через background-position ?
-
-      Зачем эти пляски то
-    */
-
-    &__item--house &__title:before {
-      bottom: -1px;
-      left: -48px;
+    
+    &__item--house:before {        
+      top: 6px;
+      left: 2px; 
       width: 37px;
       height: 36px;
     }
 
-    &__item--gift &__title:before {
-      bottom: -1px;
-      left: -45px;
+    &__item--gift:before {        
+      top: 4px;
+      left: 5px; 
       width: 32px;
       height: 38px;
     }
 
-    &__item--food &__title:before {
-      bottom: -4px;
-      left: -52px;
+    &__item--food:before {        
+      top: 11px;
+      left: -1px; 
       width: 38px;
       height: 35px;
+    }
+
+    &__title {
+      margin-bottom: 14px;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: bold;
     }
   }
 }
@@ -126,37 +95,37 @@
     &__item {
       padding: 0 47px;
       flex-basis: 100%;
-      text-align: center;
-    }
-
-    &__title {
-      padding-top: 102px;
-      margin-bottom: 21px;
-    }
-
-    &__title:before {
-      left: 50%;
-    }
-
-    &__item--house &__title:before {
+      text-align: center;      
+            
+      &:before {
+        left: 50%;
+      }
+    }    
+    
+    &__item--house:before {
       top: 3px;
       margin-left: -37px;
       width: 75px;
       height: 72px;
     }
 
-    &__item--gift &__title:before {
+    &__item--gift:before {
       top: 0;
       margin-left: -32px;
       width: 64px;
       height: 76px;
     }
 
-    &__item--food &__title:before {
+    &__item--food:before {
       top: 6px;
       margin-left: -38px;
       width: 77px;
       height: 70px;
+    }
+
+    &__title {
+      padding-top: 102px;
+      margin-bottom: 21px;
     }
   }
 }

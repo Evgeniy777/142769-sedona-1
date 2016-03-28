@@ -12,23 +12,6 @@
   &__text {
     font-size: 14px;
     line-height: 24px;
-    font-weight: normal;
-  }
-  /*
-    Проговорили в html
-    Лучше создать отдельный файлик, типа buttons.css (можно в global)
-  */
-  & button {
-    width: 100%;
-    margin: 0;
-    padding: 16px 0;
-    color: #fff;
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: $light-blue;
-    border: none;
   }
 }
 

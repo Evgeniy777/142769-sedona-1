@@ -2,25 +2,23 @@
   text-align: center;
   text-transform: uppercase;
   background-color: #fff;
-
-//  &__image {
-//    width: 320px;
-//    height: 389px;
-//    background-color: #e1eff8;
-//  }
+  
+  &__image {
+    max-width: auto;
+    background: #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat 50%;
+  }
 
   &__title {
     font-size: 18px;
     line-height: 26px;
-    font-weight: bold;
-    margin: 0;
+    font-weight: bold;    
+    margin: 0 auto;
   }
 
   &__description {
     font-size: 14px;
     line-height: 26px;
-    font-weight: normal; // Зачем это правило? Реально нужно? У нас что description по-умолчанию в теге каком-то у которого есть жирность что ли?
-    margin: 0;
+    margin: 0 auto;
   }
 }
 
@@ -30,17 +28,16 @@
     padding-bottom: 42px;
 
     &__image {
-      max-width: auto;
       height: 389px;
-      background: #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat 50%;
     }
 
     &__title {
-      margin: 40px 20px 27px;
+      max-width: 260px;
+      margin: 40px auto 27px;
     }
 
     &__description {
-      margin: 0 20px;
+      max-width: 260px;
     }
 
     &:after {
@@ -62,52 +59,17 @@
   .main-intro {
 
    &__image {
-      max-width: auto;
       height: 518px;
-      background: #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat 50%;
     }
-
+    
     &__title {
-      padding: 49px 135px 29px;
+      max-width: 500px;
+      margin: 49px auto 29px;
     }
 
     &__description {
-      padding: 0 135px 50px;
-    }
-  }
-}
-
-/*
-  Прочти внимательно комментарии в main-header и поймешь, что часть правил ниже лишняя просто
-
-  Что-то ты тут делаешь неправильно
-  Вот такие вещи "padding: 0 355px 50px;" прям показательны, что что-то не так
-
-  Не должно быть таких огромных padding. Ты пытаешься ими центровать контент и это плохо
-  Это плохо потому, что
-   - Ты никогда не сможешь такой подход спроецировать на все возможные экраны. У тебя будет куча media в таком случае и код будет плохим
-     То есть этот подход не скейлится, его нельзя будет легко поддерживать
-   - При смене размеров в дизайне, тебе придется пересчитывать padding и делать это еще и в 2х блоках title, description. Появится третий, придется опять задавать ему padding …
-   - Ты не сможешь сделать responsive при таком подходе никогда. Только адаптивную версию
-
-  Самое просто решение, это задать max-width и сделать margin: auto;
-  Тогда у тебя блок будет по центру, за счет max-width будет правильно увеличиваться
-  В идеале задать еще и padding, но не большой, чтобы блоки не прилипали к краям браузера на маленьких экранах
-*/
-
-@media ($desktop-widths) {
-  .main-intro {
-
-    &__image {
-      height: 518px;
-    }
-
-    &__title {
-      padding: 50px 355px 28px;
-    }
-
-    &__description {
-      padding: 0 355px 50px;
+      max-width: 500px;
+      margin-bottom: 50px;
     }
   }
 }

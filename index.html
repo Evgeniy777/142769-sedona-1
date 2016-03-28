@@ -65,15 +65,15 @@
           <div class="features">
             <div class="features__wrapper">
               <div class="features__item features__item--house">
-                <h2 class="features__title">Жилье</h2> <!-- По смыслу лучше h3. Ты же оглавляешь уже features, которые относятся к прошлому заголовку, то есть к "Настоящий городок" -->
+                <h3 class="features__title">Жилье</h3>
                 <div class="features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
               </div>
               <div class="features__item features__item--gift">
-                <h2 class="features__title">Сувениры</h2>
+                <h3 class="features__title">Сувениры</h3>
                 <div class="features__text">Не только китайского, но и местного производства!</div>
               </div>
               <div class="features__item features__item--food">
-                <h2 class="features__title">Еда</h2>
+                <h3 class="features__title">Еда</h3>
                 <div class="features__text">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</div>
               </div>
             </div>
@@ -115,35 +115,19 @@
             <div class="hotel-search__wrapper">
               <h2 class="hotel-search__title">Заинтересовались?</h2>
               <p class="hotel-search__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-              <!--
-                Что делает эта кнпока на странице?
-                Логично же, что раз формы нет, то лучше всего делать ее с помощью ссылки
-                Второй момент, даже если бы была форма, то лучше было бы делать ссылкой опять, чтобы в случае не работающего JS можно было бы поставить ссылку на новую страницу
-
-                Где класс у элемента? Все кнопки одинаковые в проекте (см form.html) там так же оформлена кнпока, поэтому можно было бы ввести общий класс .btn
-              -->
-              <button type="button">Найти гостиницу</button>
+              <a class="btn" href="#" type="button">Найти гостиницу</a>
             </div>
           </div>
-          <div class="map">
-            <img src="img/bg-map-mobile.jpg" alt="Sedona">
-          </div>
+          <div class="map"></div>
         </div>
       </main>
       <footer class="main-footer">
         <div class="main-footer__wrapper">
           <a class="main-footer__vizit-sedona" href="#">#vizitsedona</a>
-          <div class="main-footer__social">
-            <div class="social-links">
-              <!-- Не лишний ли блок social-links? Реально ли надо 2 wrapper для 3х то ссылок? Нельзя сдлеать просто social-links? -->
-
-              <!--
-                Почему social-link это блок, а не элемент в social-links?
-               -->
-              <a class="social-link social-link--tw" href="#">Twitter</a>
-              <a class="social-link social-link--fb" href="#">Facebook</a>
-              <a class="social-link social-link--yt" href="#">Youtube</a>
-            </div>
+          <div class="social-links">
+            <a class="social-links__link social-links__link--tw" href="#">Twitter</a>
+            <a class="social-links__link social-links__link--fb" href="#">Facebook</a>
+            <a class="social-links__link social-links__link--yt" href="#">Youtube</a>
           </div>
           <div class="main-footer__developers">
             Разработано

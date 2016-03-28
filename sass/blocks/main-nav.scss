@@ -4,34 +4,23 @@
     position: relative;
   }
 
-  /*
-    Списков, у которых нужно сбросить стили может быть много на проекте, поэтому можно было бы даже соорудить mixin
-
-    @mixin no-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    &__items {
-      @include no-list;
-    }
-  */
   &__items {
-    list-style-type: none; // Используя короткую запись list-style: none; эффект будет тот же, а запись короче :)
-    padding: 0;
+    @include no-list;
     font-size: 0;
-    margin: 0;
   }
 
   &__item {
     text-align: center;
     background-color: $light-blue;
+        
+    &:first-child .main-nav__link {
+      border-top: none;
+    }
 
-    /*
-      first-child тут лучше
-      last-child - тут лучше
-    */
+    &:last-child .main-nav__link {
+      border-bottom: none;
+      box-shadow: inset 0 -7px 7px -3px rgba(0,0,0,0.2);
+    }
   }
 
   &__link {
@@ -47,30 +36,16 @@
     border-bottom: 1px solid #678fa8;
   }
 
-   &__item:first-child &__link {
-    border-top: none;
-  }
-
-  &__item:last-child &__link {
-    border-bottom: none;
-    box-shadow: inset 0 -7px 7px -3px rgba(0,0,0,0.2);
-  }
-
   &__btn {
     font-size: 0;
     background: none;
     border: none;
-  }
-
-  &__btn--close {
-    position: absolute;
-    top: 24px;
-    right: 20px;
-    width: 23px;
-
-    /*
-      Тут :before и after
-      У :before и :after 80% стилей одинаковые, ну так объедини их
+    
+    &--close {
+      position: absolute;
+      top: 24px;
+      right: 20px;
+      width: 23px;
 
       &:before,
       &:after {
@@ -80,70 +55,34 @@
         right: -1px;
         width: 25px;
         height: 5px;
-
         background-color: #fff;
       }
-
-      А отличия запиши отдельно
 
       &:before {
         transform: rotate(45deg);
       }
 
       &:after {
-        transform: rotate(45deg);
+        transform: rotate(-45deg);
       }
-
-      Лучший минимизатор и минификатор кода, это голова, которая на плечах
-      Плюс, в таком подходе, если поменяется дизайн - цвет, размер этой кнопки нужно будет заменить 1 цифру, а не 2 раза одну и ту же цифру
-    */
-  }
-
-  &__btn--close::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: -1px;
-    width: 25px;
-    height: 5px;
-    background-color: #fff;
-    transform: rotate(45deg);
-  }
-
-  &__btn--close::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: -1px;
-    width: 25px;
-    height: 5px;
-    background-color: #fff;
-    transform: rotate(-45deg);
+    }
   }
 
   &__toggle {
     font-size: 0;
     background: none;
     border: none;
-
-    /*
-      Модификаторы внутри
-    */
-  }
-
-  &__toggle--closed {
-    position: absolute;
-    bottom: -38px;
-    right: 20px;
-    width: 23px;
-    height: 21px;
-    background-color: $light-blue;
+    
+    &--closed {
+      position: absolute;
+      bottom: -38px;
+      right: 20px;
+      width: 23px;
+      height: 21px;
+      background-color: $light-blue;
+    }
   }
 }
-
-/*
-  Проверь ниже что нет дубляжа в коде
-*/
 
 @media ($tablet-widths) {
   .main-nav {
@@ -157,32 +96,28 @@
       width: 20%;
       text-align: center;
       background-color: #fff;
-    }
+      
+      &:nth-child(2) {
+        margin-right: 20%;
+      }
+            
+      &:first-child .main-nav__link {
+        border: none;
+      }
 
-    &__item:nth-child(2) {
-      margin-right: 20%;
+      &:last-child .main-nav__link {
+        border: none;
+        box-shadow: none;
+      }
     }
 
     &__link {
-      display: block;
       padding: 15px 0;
       font-size: 14px;
       line-height: 26px;
-      font-weight: bold;
       color: #000;
-      text-transform: uppercase;
-      text-decoration: none;
       box-shadow: none;
       border: none;
-    }
-
-    &__item:first-child &__link {
-      border: none;
-    }
-
-    &__item:last-child &__link {
-      border: none;
-      box-shadow: none;
     }
 
     &__btn {
@@ -193,8 +128,4 @@
       display: none;
     }
   }
-}
-
-@media ($desktop-widths) {
-
 }

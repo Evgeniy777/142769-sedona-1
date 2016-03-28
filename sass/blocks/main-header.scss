@@ -1,118 +1,31 @@
-/*
-  Смотри, подход к написанию стилей, который вам показали в академии (mobile-first)
-
-  Что он означает? Что стили пишутся для мобильной версии без media (практически)
-  Все правки в существующие стили вносятся через media
-
-  На примере ниже все должно было бы выглядеть вот так
-
-
-  .main-header {
-
-    &__top-menu {
-      background: #fff;
-      position: relative;
-    }
-
-    &__logo {
-      display: block;
-      position: relative;
-      margin: 0 auto;
-      width: 102px;
-      height: 56px;
-    }
-  }
-
-  Обрати внимание я вынес общие стили (display, width, height) для лого прям сюда
-
-  Для mobile-widths-only можно в таком случае оставить теперь только &__logo img
-
-  @media ($mobile-widths-only) {
-
-    .main-header__logo img { Когда правило одно, не нужно делать 100 каскадов, это наоборот затрудняет в большинстве случаев чтение
-
-    }
-
-  }
-
-  Дальше стоит добавить другие стили для logo для планшетов и выше (читай ниже еще пояснения зачем desktop не нужен вовсе)
-  Обрати внимание что я не пишу по сто раз правила, которые уже есть (width, height, display)
-  Только те, которые меняются
-
-  @media ($tablet-widths) {
-    .main-header__logo {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: -51px;
-    }
-  }
-
-*/
-
-
 .main-header {
 
   &__top-menu {
     position: relative;
     background-color: #fff;
   }
+  
+  &__logo {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 102px;
+    height: 56px;
+  }
 }
 
 @media ($mobile-widths-only) {
-  .main-header {
-
-    &__logo {
-      position: relative;
-      display: block;
-      margin: 0 auto;
-      width: 102px;
-      height: 56px;
-    }
-
-    &__logo img {
-      position: absolute;
-      z-index: 100;
-    }
+  .main-header__logo img {
+    position: absolute;
+    z-index: 100;
   }
 }
 
 @media ($tablet-widths) {
-  .main-header {
-
-    &__logo {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      display: block;
-      margin-left: -51px;
-      width: 102px;
-      height: 56px;
-    }
-  }
-}
-
-/*
-  Смотри
-  tablet-widths у тебя сделан таким образом, что это ОТ 768px
-
-  Поэтому, стили которые работают от 768px будут работать и на десктопе, то есть ОТ 1280
-  Соответсвенно дублировать их не стоит, тем более так как у тебя, на 100%
-
-  Ты просто тупо переопределяешь стили, которые уже и так такие же
-*/
-
-@media ($desktop-widths) {
-  .main-header {
-
-    &__logo {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      display: block;
-      margin-left: -51px;
-      width: 102px;
-      height: 56px;
-    }
+  .main-header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -51px;
   }
 }
