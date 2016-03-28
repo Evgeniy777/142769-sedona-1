@@ -3,9 +3,14 @@
   text-transform: uppercase;
   background-color: #fff;
   
-  &__image {
-    max-width: auto;
-    background: #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat 50%;
+  &:before {
+    display: block;
+    content: "";
+    height: 389px;
+    width: 100%;
+    background: url("../img/text-sedona-index.svg") no-repeat 50%,
+                url("../img/text-sedona.svg") no-repeat 50%,
+                #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat 50%;
   }
 
   &__title {
@@ -27,8 +32,11 @@
     position: relative;
     padding-bottom: 42px;
 
-    &__image {
+    &:before {
       height: 389px;
+      background-size: 280px auto,
+                       280px auto,
+                       auto 100%; 
     }
 
     &__title {
@@ -60,6 +68,9 @@
 
    &__image {
       height: 518px;
+      background-size: 460px auto,
+                       460px auto,
+                       auto 100%; 
     }
     
     &__title {

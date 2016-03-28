@@ -1,29 +1,14 @@
-/*
-  Зачем делать лишний каскад из body ?
-*/
 body {
-
-  & .page-wrapper {
-    @include container;
-  }
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
-/*
-  Серьезно нужны пустые селекторы и лишние пустые media?
-*/
-@media ($tablet-widths) {
-  body {
-  }
+.page-wrapper {
+  @include container;
 }
 
 @media ($desktop-widths) {
-  /*
-    Зачем делать лишний каскад из body ?
-  */
-  body {
 
-    & .page-wrapper {
-      box-shadow: 0 0 15px 5px rgba(0,1,1,0.2);
-    }
+  .page-wrapper {
+    box-shadow: 0 0 15px 5px rgba(0,1,1,0.2);
   }
 }

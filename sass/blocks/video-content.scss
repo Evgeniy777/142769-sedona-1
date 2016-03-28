@@ -2,18 +2,16 @@
   background-color: #fff;
 
   &__item {
-    background-color: #fff;
-
-    /*
-      Лучше здесь тег video и задать
-      А не писать ниже. Так будет более понятно, что video находится внутри video-content__item
-    */
-  }
-
-  &__item video {
-    width: 100%;
-    display: block;
-    background-color: antiquewhite;
+    background-color: #fff;    
+    
+    & video {
+      width: 100%;
+      display: block;
+      font-size: 0;
+      margin: 0;
+      padding: 0;
+      background-color: antiquewhite;
+    }
   }
 
   &__range-controls {
@@ -78,9 +76,6 @@
 
     & video {
       height: 201px;
-      font-size: 0;
-      margin: 0;
-      padding: 0;
     }
 
     &__controls-bar {
