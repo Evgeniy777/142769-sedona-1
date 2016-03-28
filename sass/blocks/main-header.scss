@@ -4,8 +4,9 @@
     position: relative;
     background-color: #fff;
   }
-
+  
   &__logo {
+    position: relative;
     display: block;
     margin: 0 auto;
     width: 102px;
@@ -13,32 +14,18 @@
   }
 }
 
-@media ($tablet-widths) {
-  .main-header {
-
-    &__logo {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      display: block;
-      margin-left: -51px;
-      width: 102px;
-      height: 56px;
-    }
+@media ($mobile-widths-only) {
+  .main-header__logo img {
+    position: absolute;
+    z-index: 100;
   }
 }
 
-@media ($desktop-widths) {
-  .main-header {
-
-    &__logo {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      display: block;
-      margin-left: -51px;
-      width: 102px;
-      height: 56px;
-    }
+@media ($tablet-widths) {
+  .main-header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -51px;
   }
 }

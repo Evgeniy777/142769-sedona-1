@@ -2,37 +2,63 @@
   text-align: center;
   text-transform: uppercase;
   background-color: #fff;
-
-  &__image {
-    width: 320px;
+  
+  &:before {
+    display: block;
+    content: "";
     height: 389px;
-    background-color: #e1eff8;
+    width: 100%;
+    background: url("../img/text-sedona-index.svg") no-repeat 50%,
+                url("../img/text-sedona.svg") no-repeat 50%,
+                #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat 50%;
   }
 
   &__title {
     font-size: 18px;
     line-height: 26px;
-    font-weight: bold;
-    margin: 0;
+    font-weight: bold;    
+    margin: 0 auto;
   }
 
   &__description {
     font-size: 14px;
     line-height: 26px;
-    font-weight: normal;
-    margin: 0;
+    margin: 0 auto;
   }
 }
 
 @media ($mobile-widths-only) {
   .main-intro {
-    
-    &__title {      
-      padding: 38px 20px 25px;
+    position: relative;
+    padding-bottom: 42px;
+
+    &:before {
+      height: 389px;
+      background-size: 280px auto,
+                       280px auto,
+                       auto 100%; 
     }
-    
+
+    &__title {
+      max-width: 260px;
+      margin: 40px auto 27px;
+    }
+
     &__description {
-      padding: 0 20px 28px;
+      max-width: 260px;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: -16px;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 32px;
+      background-color: #fff;
+      background-image: linear-gradient(to right bottom, transparent 50%, $light-blue 50%),
+                        linear-gradient(to left bottom, transparent 50%, $light-blue 50%);
+      margin: 0 auto;
     }
   }
 }
@@ -40,34 +66,21 @@
 @media ($tablet-widths) {
   .main-intro {
 
-    &__image {
-      width: 100%;
-      height: 290px;
-    }
-
-    &__title {      
-      padding: 74px 163px 31px;
+   &:before {
+      height: 518px;
+      background-size: 460px auto,
+                       460px auto,
+                       auto 100%; 
     }
     
+    &__title {
+      max-width: 500px;
+      margin: 49px auto 29px;
+    }
+
     &__description {
-      padding: 0 163px 69px;
+      max-width: 500px;
+      margin-bottom: 50px;
     }
-  } 
-}
-
-@media ($desktop-widths) {
-  .main-intro {
-    
-    &__image {
-      height: 301px;
-    }
-
-    &__title {      
-      padding: 113px 378px 30px;
-    }
-    
-    &__description {
-      padding: 0 378px 71px;
-    }
-  } 
+  }
 }
