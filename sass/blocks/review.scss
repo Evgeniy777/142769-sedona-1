@@ -104,13 +104,20 @@
   
   &__item--contacts input[type="tel"],
   &__item--contacts input[type="email"] {
-    padding-right: 76px;
-//    box-shadow: inset -56px 0 0 #e6e6e6;
-    background-image: linear-gradient(#e6e6e6, #e6e6e6);
-//    background-image: #e6e6e6, url("");
-    background-size: 56px 56px;
+    padding-right: 78px;
+    background-size: 18px 18px,
+                     58px 58px;
     background-repeat: no-repeat;
-    background-position: right;
+  }
+  
+  &__item--contacts input[type="tel"] {
+    background-image: url("../../img/icon-phone.svg"),
+                      linear-gradient(#e6e6e6, #e6e6e6);
+  }
+  
+  &__item--contacts input[type="email"] {
+    background-image: url("../../img/icon-mail.svg"),
+                      linear-gradient(#e6e6e6, #e6e6e6);
   }
   
   &__item--emotions textarea {
@@ -122,18 +129,6 @@
     min-height: 120px;
     padding: 20px;
     background-color: #f2f2f2;
-  }
-
-  &__btn {
-    width: 100%;
-    padding: 16px 0;
-    color: #fff;
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: $light-blue;
-    border: none;
   }
   
   &__required-fields {
@@ -225,11 +220,6 @@
     &__item--emotions {
       margin-bottom: 51px;
     }
-        
-//    &__item--contacts input[type="tel"],
-//    &__item--contacts input[type="email"] {
-//      flex-basis: 100%;
-//    }
 
     &__item--contacts {
       padding-bottom: 28px;
@@ -238,6 +228,17 @@
     &__item--contacts label {
       margin-left: 20px;
       margin-bottom: 13px;
+    }
+    
+    &__item--contacts input[type="tel"],
+    &__item--contacts input[type="email"] {
+      background-position: 243px 50%,
+                           right;
+    }
+    
+    &__btn {
+      max-width: 280px;
+      margin: 0 auto;
     }
   }
 }
@@ -308,6 +309,12 @@
     &__item--contacts label {
       margin-bottom: 7px;
       margin-left: 20px;
+    }
+    
+    &__item--contacts input[type="tel"],
+    &__item--contacts input[type="email"] {
+      background-position: 611px 50%,
+                           right;
     }
 
     &__item--contacts &__group {
@@ -515,12 +522,14 @@
       flex-grow: 1;
     }
 
-//    &__item--contacts input {
-//      flex-grow: 1;
-//    }
-
     &__item--contacts label {
       margin: 0 20px 0 0;
+    }
+    
+    &__item--contacts input[type="tel"],
+    &__item--contacts input[type="email"] {
+      background-position: 271px 50%,
+                           right;
     }
     
     &__item--contacts span {
