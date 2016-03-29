@@ -3,12 +3,6 @@
   height: 350px;
   text-align: center;
   text-transform: uppercase;
-  background: #cadfaa url("../../img/bg-map-mobile.jpg") no-repeat;
+  background: #cadfaa url("../img/bg-map-mobile.jpg") no-repeat;
   background-size: auto;
-}
-
-@media ($mobile-widths-only) {
-  .map {
-    
-  }
 }
