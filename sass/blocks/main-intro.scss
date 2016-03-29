@@ -84,3 +84,14 @@
     }
   }
 }
+
+@media ($desktop-widths) {
+  .main-intro {
+
+   &:before {
+      background: url("../img/text-sedona-index.svg") no-repeat 50%,
+                url("../img/text-sedona.svg") no-repeat 50%,
+                #e1eff8 url("../img/bg-back-desktop.jpg") no-repeat 50%;
+    }
+  }
+}

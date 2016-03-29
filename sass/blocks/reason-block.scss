@@ -53,16 +53,12 @@
 
   &__image-wrapper {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     overflow: hidden;
     color: #000;
     background-color: #c5cab6;
     
     & img {
       position: absolute;
-      display: block;
     }
   }
       
