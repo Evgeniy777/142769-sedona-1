@@ -7,13 +7,18 @@
   text-align: center;
   text-transform: uppercase;
   background-color: #fff;
-
-  &__image {
-    width: 320px;
+  
+  &:before {
+    display: block;
+    content: "";
     height: 158px;
-    background-color: #e1eff8;
+    width: 100%;
+    background: url("../img/text-sedona.svg") no-repeat 50%,
+                #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat center bottom;
+    background-size: 280px auto,
+                     auto; 
   }
-
+  
   &__title {
     font-size: 18px;
     line-height: 26px;
@@ -31,33 +36,43 @@
 
 @media ($mobile-widths-only) {
   .page-intro {
-//    margin-bottom: 17px;
-
 
     &__wrapper {
-      margin: 37px 20px 37px;
+      max-width: 277px;
+      margin: 37px auto 37px;
     }
 
     &__title {
       margin-bottom: 27px;
     }
+    
+    &--doubt:before {
+      display: none;
+    }
 
-    &__wrapper--doubt {
-      margin: 32px 40px 35px;
+    &--doubt &__wrapper {
+      margin: 32px auto 35px;
     }
   }
 }
 
 @media ($tablet-widths) {
   .page-intro {
-
-    &__image {
-      width: 100%;
+    
+    &:before {
+      display: block;
+      content: "";
       height: 290px;
+      width: 100%;
+      background: url("../img/text-sedona.svg") no-repeat 50%,
+                  #e1eff8 url("../img/bg-back-desktop.jpg") no-repeat center bottom;
+      background-size: 458px auto,
+                       auto; 
     }
 
     &__wrapper {
-      margin: 74px 170px 69px;
+      max-width: 442px;
+      margin: 74px auto 69px;
     }
 
     &__title {
@@ -65,9 +80,13 @@
       line-height: 26px;
       margin-bottom: 31px;
     }
+    
+    &--doubt:before {
+      display: none;
+    }
 
-    &__wrapper--doubt {
-      margin: 66px 170px 73px;
+    &--doubt &__wrapper {
+      margin: 66px auto 73px;
     }
   }
 }
@@ -75,20 +94,22 @@
 @media ($desktop-widths) {
   .page-intro {
 
-    &__image {
+    &:before {
       height: 301px;
+      background-size: 460px auto,
+                       auto; 
     }
 
     &__wrapper {
-      margin: 111px 380px 71px;
+      margin: 111px auto 71px;
     }
 
     &__title {
       margin-bottom: 31px;
     }
 
-    &__wrapper--doubt {
-      margin: 70px 390px 71px;
+    &--doubt &__wrapper {
+      margin: 70px auto 71px;
     }
   }
 }

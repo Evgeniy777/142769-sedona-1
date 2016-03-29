@@ -72,26 +72,31 @@
 
 @media ($mobile-widths-only) {
   .video-content {
-    padding-bottom: 49px;
+    margin-bottom: 49px;
 
     & video {
       height: 201px;
+      background: url("../img/video-mobile.jpg") no-repeat;
     }
 
     &__controls-bar {
-      margin-top: -45px;
+      margin-top: 0;
     }
 
     &__wrapper {
+      position: relative;
       background-color: #f2f2f2;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       margin: 0 20px;
+      padding: 23px 0;
     }
 
     &__range-controls {
-      flex-basis: 100%;
+      position: absolute;
+      width: 100%;
+      top: -45px;
       padding-bottom: 20px;
     }
 
@@ -100,23 +105,23 @@
     }
 
     &__replay {
-      margin: 20px auto 20px 22px;
+      margin: 0 auto 0 22px;
     }
 
     &__cc {
       line-height: 19px;
-      margin: 20px 31px 20px 0;
+      margin: 0 31px 0 0;
     }
 
     &__full-screen {
-      margin: 20px 22px 20px 0;
+      margin: 0 22px 0 0;
     }
   }
 }
 
 @media ($tablet-widths) {
   .video-content {
-    padding: 0 60px 41px;
+    margin: 0 60px 41px;
 
     &__item {
       position: relative;
@@ -124,6 +129,7 @@
 
     & video {
       height: 499px;
+      background: url("../img/video-tablet.jpg") no-repeat;
     }
 
     &__controls-bar {
@@ -164,6 +170,10 @@
 
 @media ($desktop-widths) {
   .video-content {
-    padding: 0 200px 85px;
+    margin: 0 200px 85px;
+    
+    & video {
+      background: url("../img/video-desktop.jpg") no-repeat;
+    }
   }
 }
