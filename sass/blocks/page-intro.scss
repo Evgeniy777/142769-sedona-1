@@ -2,18 +2,14 @@
   text-align: center;
   text-transform: uppercase;
   background-color: #fff;
-  
+
   &:before {
     display: block;
     content: "";
     height: 158px;
     width: 100%;
-    background: url("../img/text-sedona.svg") no-repeat 50%,
-                #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat center bottom;
-    background-size: 280px auto,
-                     auto; 
   }
-  
+
   &__title {
     font-size: 18px;
     line-height: 26px;
@@ -32,6 +28,15 @@
 @media ($mobile-widths-only) {
   .page-intro {
 
+    &:before {
+      background: url("../img/text-sedona.svg") no-repeat 50%,
+                  url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat center bottom;
+      background-size: 280px auto,
+                       101% auto,
+                       auto;
+    }
+
     &__wrapper {
       max-width: 277px;
       margin: 37px auto 37px;
@@ -40,7 +45,7 @@
     &__title {
       margin-bottom: 27px;
     }
-    
+
     &--doubt:before {
       display: none;
     }
@@ -53,16 +58,18 @@
 
 @media ($tablet-widths) {
   .page-intro {
-    
+
     &:before {
       display: block;
       content: "";
       height: 290px;
       width: 100%;
       background: url("../img/text-sedona.svg") no-repeat 50%,
+                  url("../img/bg-intro-triangle-tablet.svg") no-repeat bottom,
                   #e1eff8 url("../img/bg-back-desktop.jpg") no-repeat center bottom;
       background-size: 458px auto,
-                       auto; 
+                       100% auto,
+                       auto;
     }
 
     &__wrapper {
@@ -75,7 +82,7 @@
       line-height: 26px;
       margin-bottom: 31px;
     }
-    
+
     &--doubt:before {
       display: none;
     }
@@ -91,8 +98,12 @@
 
     &:before {
       height: 301px;
+      background: url("../img/text-sedona.svg") no-repeat 50%,
+                  url("../img/bg-intro-triangle-desktop.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg-back-desktop.jpg") no-repeat center bottom;
       background-size: 460px auto,
-                       auto; 
+                       101% auto,
+                       auto;
     }
 
     &__wrapper {
