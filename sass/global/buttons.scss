@@ -1,7 +1,7 @@
 .btn {
   display: block;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 16px 0;
   color: #fff;
   font-size: 21px;
@@ -11,4 +11,17 @@
   text-transform: uppercase;
   background-color: $light-blue;
   border: none;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: rgba(255,255,255,0.3);
+    background-color: #5496bd;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }

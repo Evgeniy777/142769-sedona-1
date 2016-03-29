@@ -1,16 +1,23 @@
 .pop-up {
   display: block;
   position: fixed;
-  top: 50px;
   left: 50%;
   background-color: #fff;
   box-shadow: 0 7px 15px rgba(0,1,1,0.15);
   text-align: center;
   text-transform: uppercase;
   z-index: 101;
-  
+
+  &--failure {
+    top: 50px;
+  }
+
   &--success {
-    top: 450px;  
+    top: 450px;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
   }
 
   &__title {
@@ -23,22 +30,14 @@
     margin: 0;
     font-size: 14px;
     line-height: 24px;
-    font-weight: normal;
   }
 
   &__btn {
-    padding: 16px 0;
-    margin: 0 auto;
     font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
-    border: none;
-    background-color: $light-blue;
+    line-height: 26px;    
     text-align: center;
-    text-transform: uppercase;
-    color: #fff;
   }
-  
+
   &--success &__btn {
     width: 100%;
     border-color: #f2f2f2;
@@ -53,11 +52,15 @@
     margin-left: -160px;
 
     &__wrapper {
-      padding: 40px 56px 35px;
+      max-width: 220px;
     }
-        
+
+    &--failure &__wrapper {
+      padding: 40px 0 35px;
+    }
+
     &--success &__wrapper {
-      padding: 43px 50px 34px;
+      padding: 43px 0 34px;
     }
 
     &__title {
@@ -66,11 +69,11 @@
       line-height: 26px;
     }
 
-    &__text {
+    &--failure &__text {
       margin-bottom: 23px;
     }
 
-    &__btn {
+    &--failure &__btn {
       width: 180px;
     }
 
@@ -84,26 +87,28 @@
   .pop-up {
     width: 400px;
     margin-left: -200px;
- 
+
     &--success {
       width: 640px;
       margin-left: -320px;
     }
-    
-    &__wrapper {
-      padding: 56px 50px 49px;
-    }
-       
-    &--success &__wrapper {
-      padding: 62px 111px 34px;
+
+    &--failure &__wrapper {
+      max-width: 280px;
+      padding: 56px 0 49px;
     }
 
-    &__title {
-      margin: 0 0 23px;
+    &--success &__wrapper {
+      max-width: 415px;
+      padding: 63px 0 34px;
+    }
+
+    &--failure &__title {
+      margin: 0 20px 23px;
       font-size: 30px;
       line-height: 40px;
-    }   
-    
+    }
+
     &--success &__title {
       margin-bottom: 31px;
       font-size: 30px;
@@ -117,12 +122,9 @@
     &__btn {
       width: 272px;
     }
-    
+
     &--success &__btn {
-      border-top-width: 44px;
-      border-right-width: 91px;
-      border-bottom-width: 44px;
-      border-left-width: 91px;
+      border-width: 44px 91px;
     }
   }
 }

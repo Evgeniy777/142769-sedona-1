@@ -16,7 +16,7 @@
     &:last-child {
       margin-right: 0;
     }
-    
+
     &:before {
       position: absolute;
       content: "";
@@ -27,16 +27,28 @@
       background-repeat: no-repeat;
       background-position: 50% 50%;
     }
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+
+      &:before {
+        opacity: 0.3;
+      }
+    }
   }
-  
+
   &__link--tw:before {
     background-image: url("../img/icon-twitter.svg");
   }
-  
+
   &__link--fb:before {
     background-image: url("../img/icon-facebook.svg");
   }
-  
+
   &__link--yt:before {
     background-image: url("../img/icon-youtube.svg");
   }
