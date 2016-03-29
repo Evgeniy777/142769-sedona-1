@@ -1,5 +1,5 @@
 .pop-up {
-  display: block;
+  display: none;
   position: fixed;
   left: 50%;
   background-color: #fff;
@@ -34,7 +34,7 @@
 
   &__btn {
     font-size: 18px;
-    line-height: 26px;    
+    line-height: 26px;
     text-align: center;
   }
 
