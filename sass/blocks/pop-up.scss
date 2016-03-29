@@ -1,13 +1,17 @@
-.pop-up-success {
-  display: none;
+.pop-up {
+  display: block;
   position: fixed;
-  top: 450px;
+  top: 50px;
   left: 50%;
   background-color: #fff;
   box-shadow: 0 7px 15px rgba(0,1,1,0.15);
   text-align: center;
   text-transform: uppercase;
   z-index: 101;
+  
+  &--success {
+    top: 450px;  
+  }
 
   &__title {
     margin: 0;
@@ -23,7 +27,6 @@
   }
 
   &__btn {
-    width: 100%;
     padding: 16px 0;
     margin: 0 auto;
     font-size: 18px;
@@ -34,18 +37,26 @@
     text-align: center;
     text-transform: uppercase;
     color: #fff;
-    border: 20px solid ;
+  }
+  
+  &--success &__btn {
+    width: 100%;
     border-color: #f2f2f2;
     border-style: solid;
+    border-width: 20px;
   }
 }
 
 @media ($mobile-widths-only) {
-  .pop-up-success {
+  .pop-up {
     width: 320px;
     margin-left: -160px;
 
     &__wrapper {
+      padding: 40px 56px 35px;
+    }
+        
+    &--success &__wrapper {
       padding: 43px 50px 34px;
     }
 
@@ -55,28 +66,59 @@
       line-height: 26px;
     }
 
+    &__text {
+      margin-bottom: 23px;
+    }
+
     &__btn {
+      width: 180px;
+    }
+
+    &--success &__btn {
       border-width: 20px;
     }
   }
 }
 
 @media ($tablet-widths) {
-  .pop-up-success {
-    width: 640px;
-    margin-left: -320px;
-
+  .pop-up {
+    width: 400px;
+    margin-left: -200px;
+ 
+    &--success {
+      width: 640px;
+      margin-left: -320px;
+    }
+    
     &__wrapper {
+      padding: 56px 50px 49px;
+    }
+       
+    &--success &__wrapper {
       padding: 62px 111px 34px;
     }
 
     &__title {
+      margin: 0 0 23px;
+      font-size: 30px;
+      line-height: 40px;
+    }   
+    
+    &--success &__title {
       margin-bottom: 31px;
       font-size: 30px;
       line-height: 26px;
     }
 
+    &__text {
+      margin-bottom: 33px;
+    }
+
     &__btn {
+      width: 272px;
+    }
+    
+    &--success &__btn {
       border-top-width: 44px;
       border-right-width: 91px;
       border-bottom-width: 44px;
