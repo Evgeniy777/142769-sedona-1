@@ -30,20 +30,28 @@
     line-height: 24px;
     color: #333333;
   }
-  
+
   &__like-btn {
     margin-right: 10px;
     border: none;
     background: none;
     padding: 0;
   }
-    
+
   &__like-icon {
     display: inline-block;
     vertical-align: text-bottom;
     width: 24px;
     height: 22px;
     fill: rgba(0,0,0,0.3);
+  }
+
+  &__link {
+    display: block;
+  }
+
+  & picture {
+    display: block;
   }
 }
 
@@ -68,7 +76,7 @@
     &__item-info {
       background-color: #fff;
     }
-    
+
     &__author {
       margin-bottom: 8px;
     }
@@ -77,6 +85,12 @@
       display: flex;
       flex-direction: column;
       padding: 14px 20px 17px;
+    }
+
+    &__link {
+      display: block;
+      margin: 0 20px;
+      padding: 0;
     }
   }
 }
@@ -109,15 +123,15 @@
     &__item-info {
       background-color: #f2f2f2;
     }
-    
+
     &__wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 20px 17px;
     }
-    
-    &__author {      
+
+    &__author {
       margin-bottom: 0;
     }
   }
@@ -162,7 +176,7 @@
     &__like {
       color: #fff;
     }
-    
+
     &__like-icon {
       fill: #fff;
     }
