@@ -9,15 +9,18 @@
     position: relative;
     display: block;
     margin: 0 auto;
-    width: 102px;
-    height: 56px;
+    
+    & img {      
+      position: absolute;
+      z-index: 100;  
+    }
   }
 }
 
 @media ($mobile-widths-only) {
-  .main-header__logo img {
-    position: absolute;
-    z-index: 100;
+  .main-header__logo {    
+    width: 102px;
+    height: 56px;
   }
 }
 
@@ -27,5 +30,11 @@
     top: 0;
     left: 50%;
     margin-left: -51px;
+  }
+}
+
+@media ($desktop-widths) {
+  .main-header__logo {
+    margin-left: -93px;
   }
 }

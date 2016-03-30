@@ -1,17 +1,13 @@
-/*
-  Опять смущают большие margin
-  Проверь-подумай, может и без них можно?
-*/
-
 .page-intro {
   text-align: center;
   text-transform: uppercase;
   background-color: #fff;
 
-  &__image {
-    width: 320px;
+  &:before {
+    display: block;
+    content: "";
     height: 158px;
-    background-color: #e1eff8;
+    width: 100%;
   }
 
   &__title {
@@ -31,19 +27,31 @@
 
 @media ($mobile-widths-only) {
   .page-intro {
-//    margin-bottom: 17px;
 
+    &:before {
+      background: url("../img/text-sedona.svg") no-repeat 50%,
+                  url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat center bottom;
+      background-size: 280px auto,
+                       101% auto,
+                       auto;
+    }
 
     &__wrapper {
-      margin: 37px 20px 37px;
+      max-width: 277px;
+      margin: 37px auto 37px;
     }
 
     &__title {
       margin-bottom: 27px;
     }
 
-    &__wrapper--doubt {
-      margin: 32px 40px 35px;
+    &--doubt:before {
+      display: none;
+    }
+
+    &--doubt &__wrapper {
+      margin: 32px auto 35px;
     }
   }
 }
@@ -51,13 +59,22 @@
 @media ($tablet-widths) {
   .page-intro {
 
-    &__image {
-      width: 100%;
+    &:before {
+      display: block;
+      content: "";
       height: 290px;
+      width: 100%;
+      background: url("../img/text-sedona.svg") no-repeat 50%,
+                  url("../img/bg-intro-triangle-tablet.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg-back-desktop.jpg") no-repeat center bottom;
+      background-size: 458px auto,
+                       100% auto,
+                       auto;
     }
 
     &__wrapper {
-      margin: 74px 170px 69px;
+      max-width: 442px;
+      margin: 74px auto 69px;
     }
 
     &__title {
@@ -66,8 +83,12 @@
       margin-bottom: 31px;
     }
 
-    &__wrapper--doubt {
-      margin: 66px 170px 73px;
+    &--doubt:before {
+      display: none;
+    }
+
+    &--doubt &__wrapper {
+      margin: 66px auto 73px;
     }
   }
 }
@@ -75,20 +96,26 @@
 @media ($desktop-widths) {
   .page-intro {
 
-    &__image {
+    &:before {
       height: 301px;
+      background: url("../img/text-sedona.svg") no-repeat 50%,
+                  url("../img/bg-intro-triangle-desktop.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg-back-desktop.jpg") no-repeat center bottom;
+      background-size: 460px auto,
+                       101% auto,
+                       auto;
     }
 
     &__wrapper {
-      margin: 111px 380px 71px;
+      margin: 111px auto 71px;
     }
 
     &__title {
       margin-bottom: 31px;
     }
 
-    &__wrapper--doubt {
-      margin: 70px 390px 71px;
+    &--doubt &__wrapper {
+      margin: 70px auto 71px;
     }
   }
 }

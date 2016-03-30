@@ -1,14 +1,23 @@
 .map {
-  width: 100%;
   height: 350px;
   text-align: center;
   text-transform: uppercase;
-  background: #cadfaa url("../../img/bg-map-mobile.jpg") no-repeat;
-  background-size: auto;
 }
 
 @media ($mobile-widths-only) {
   .map {
-    
+    background: #cadfaa url("../img/bg-map-mobile.jpg") no-repeat;
+  }
+}
+
+@media ($tablet-widths) {
+  .map {
+    background: #cadfaa url("../img/bg-map-tablet.jpg") no-repeat;
+  }
+}
+
+@media ($desktop-widths) {
+  .map {
+    background: #cadfaa url("../img/bg-map-desktop.jpg") no-repeat;
   }
 }
