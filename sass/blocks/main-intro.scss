@@ -39,6 +39,14 @@
                        280px auto,
                        101% auto,
                        auto 100%;
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        background: url("../img/text-sedona-index.svg") no-repeat 50%,
+                    url("../img/text-sedona.svg") no-repeat 50%,
+                    url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
+                    #e1eff8 url("../img/bg-back-mobile@2x.jpg") no-repeat 50%;
+      }
+
     }
 
     &__title {
@@ -64,7 +72,7 @@
     }
   }
 }
-
+/*
 @media ($mobile-widths-only) and (min-resolution: 1.5dppx) {
   .main-intro:before {
     background: url("../img/text-sedona-index.svg") no-repeat 50%,
@@ -73,6 +81,19 @@
                 #e1eff8 url("../img/bg-back-mobile@2x.jpg") no-repeat 50%;
   }
 }
+*/
+/* Выбираем только ретину от 1.5
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+}
+
+Только для мобильных экранов у которых "ретина" = 2
+@media ($mobile-widths-only) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+*/
 
 @media ($tablet-widths) {
   .main-intro {
@@ -113,12 +134,3 @@
                      auto 100%;
   }
 }
-
-//@media ($desktop-widths) and (min-resolution: 1.5dppx) {
-//  .main-intro:before {
-//    background: url("../img/text-sedona-index.svg") no-repeat 50%,
-//                url("../img/text-sedona.svg") no-repeat 50%,
-//                #e1eff8 url("../img/bg-back-desktop@2x.jpg") no-repeat 50%;
-//  }
-//}
-
