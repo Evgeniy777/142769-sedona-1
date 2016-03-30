@@ -55,18 +55,17 @@
       padding: 36px 0;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
     }
 
     &__vizit-sedona {
       flex-basis: 100%;
-      text-align: center;
     }
 
     &__developers {
       flex-basis: 100%;
-      text-align: center;
+      text-align: right;
     }
   }
 }
@@ -80,6 +79,10 @@
 
     &__developers-link {
       margin-right: 44px;
+    }
+    
+    &__vizit-sedona {
+      text-align: center;
     }
   }
 }

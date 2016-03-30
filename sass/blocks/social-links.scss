@@ -59,3 +59,9 @@
     margin-bottom: 40px;
   }
 }
+
+@media ($tablet-widths) {
+  .social-links {
+    flex-basis: 100%;
+  }
+}
