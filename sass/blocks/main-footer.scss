@@ -16,8 +16,19 @@
     vertical-align: middle;
     width: 27px;
     height: 34px;
-    background: url("../img/logo-htmlacademy.svg") no-repeat;
     font-size: 0;
+    
+    & .main-footer__developers-icon {
+      fill: #000;
+    }
+    
+    &:hover .main-footer__developers-icon {
+      fill: $light-blue;
+    }
+    
+    &:active .main-footer__developers-icon {
+      fill: rgba(0,0,0,0.3);
+    }
   }
 }
 

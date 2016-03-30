@@ -29,16 +29,21 @@
     font-size: 14px;
     line-height: 24px;
     color: #333333;
+  }
+  
+  &__like-btn {
+    margin-right: 10px;
+    border: none;
+    background: none;
+    padding: 0;
+  }
     
-    &:before {
-      display: inline-block;
-      vertical-align: text-bottom;
-      margin-right: 15px;
-      content: "";
-      width: 24px;
-      height: 22px;
-      background: url("../img/icon-like.svg") no-repeat;
-    }
+  &__like-icon {
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 24px;
+    height: 22px;
+    fill: rgba(0,0,0,0.3);
   }
 }
 
@@ -156,6 +161,10 @@
 
     &__like {
       color: #fff;
+    }
+    
+    &__like-icon {
+      fill: #fff;
     }
   }
 }
