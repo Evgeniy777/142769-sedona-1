@@ -22,7 +22,7 @@
     border: 0;
   }
 
-  & label {
+  &__label {
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
@@ -35,9 +35,7 @@
     display: none;
   }
 
-  & input[type="text"],
-  & input[type="email"],
-  & input[type="tel"] {
+  &__field {
     min-width: 50px;
     padding: 16px 20px;
     font-size: 18px;
@@ -47,8 +45,8 @@
     background-color: #f2f2f2;
   }
 
-  &__item--impressions label,
-  &__item--attractions label {
+  &__item--impressions &__label,
+  &__item--attractions &__label {
     position: relative;
     padding: 15px 0 15px 80px;
     font-size: 18px;
@@ -58,13 +56,13 @@
     color: #000;
   }
 
-  &__item--impressions label:last-child,
-  &__item--attractions label:last-child {
+  &__item--impressions &__label:last-child,
+  &__item--attractions &__label:last-child {
     margin-bottom: 0;
   }
 
-  &__item--impressions label::before,
-  &__item--attractions label::before {
+  &__item--impressions &__label:before,
+  &__item--attractions &__label:before {
     position: absolute;
     content: "";
     top: 0;
@@ -76,20 +74,20 @@
     background-color: #f2f2f2;
   }
 
-  &__item--impressions label::before {
+  &__item--impressions &__label:before {
     border-radius: 50%;
   }
 
-  &__item--attractions label::before {
+  &__item--attractions &__label:before {
     border-radius: 5px;
   }
 
-  &__item--impressions input[type="radio"]:checked + label::before,
-  &__item--attractions input[type="checkbox"]:checked + label::before {
+  &__item--impressions &__field:checked + &__label:before,
+  &__item--attractions &__field:checked + &__label:before {
     background-color: #333333;
   }
 
-  &__item--personal label {
+  &__item--personal &__label {
     margin-right: 20px;
   }
 
@@ -102,8 +100,7 @@
     margin-bottom: 0;
   }
   
-  &__item--contacts input[type="tel"],
-  &__item--contacts input[type="email"] {
+  &__item--contacts &__field {
     padding-right: 78px;
     background-size: 18px 18px,
                      58px 58px;
@@ -170,6 +167,10 @@
       min-width: 50px;
     }
 
+    &__item--personal {
+      padding-bottom: 25px;
+    }
+    
     &__item--personal &__group {
       align-items: center;
     }
@@ -181,10 +182,6 @@
     &__item--personal &__title span {
       display: inline-block;
     }    
-    
-    &__item--personal {
-      padding-bottom: 25px;
-    }
 
     &__item--contacts &__group,
     &__item--impressions &__group,
@@ -192,8 +189,8 @@
       flex-direction: column;
     }
 
-    &__item--impressions label,
-    &__item--attractions label {
+    &__item--impressions &__label,
+    &__item--attractions &__label {
       flex-grow: 1;
     }
     
@@ -205,11 +202,11 @@
       margin-bottom: 25px;
     }
 
-    &__item--attractions label {
+    &__item--attractions &__label {
       margin-bottom: 24px;
     }
 
-    &__item--impressions label {
+    &__item--impressions &__label {
       margin-bottom: 13px;
     }
 
@@ -225,7 +222,7 @@
       padding-bottom: 28px;
     }
 
-    &__item--contacts label {
+    &__item--contacts &__label {
       margin-left: 20px;
       margin-bottom: 13px;
     }
@@ -265,7 +262,7 @@
       flex-basis: 50%;
     }
 
-    &__item--impressions label {
+    &__item--impressions &__label {
       margin-bottom: 20px;
     }
 
@@ -274,7 +271,7 @@
       flex-basis: 50%;
     }
     
-    &__item--personal::before {
+    &__item--personal:before {
       position: absolute;
       content: "";
       bottom: 0;
@@ -306,13 +303,12 @@
       margin-bottom: 58px;
     }
 
-    &__item--contacts label {
+    &__item--contacts &__label {
       margin-bottom: 7px;
       margin-left: 20px;
     }
     
-    &__item--contacts input[type="tel"],
-    &__item--contacts input[type="email"] {
+    &__item--contacts &__field {
       background-position: 611px 50%,
                            right;
     }
@@ -336,16 +332,13 @@
       padding-left: 60px;
     }
 
-    &__item--personal input {
+    &__item--personal &__field {
       width: 60px;
       flex-grow: 1;
     }
 
-    &__item--personal label {
+    &__item--personal &__label {
       flex-shrink: 0;
-    }
-    
-        &__item--personal &__wrapper {
     }
 
     &__item--personal &__title {
@@ -380,28 +373,28 @@
       margin: 0 95px;
     }
 
-    &__item--attractions label {
+    &__item--attractions &__label {
       margin-bottom: 32px;
       flex-basis: 125px;
     }
 
-    &__item--attractions label:nth-of-type(2n) {
+    &__item--attractions &__label:nth-of-type(2n) {
       margin-bottom: 0;
     }
 
-    &__item--attractions label[for="slide-park"] {
+    &__item--attractions &__label[for="slide-park"] {
       order: 2;
     }
 
-    &__item--attractions label[for="devils-bridge"] {
+    &__item--attractions &__label[for="devils-bridge"] {
       order: -1;
     }
 
-    &__item--attractions label[for="bell-mountain"] {
+    &__item--attractions &__label[for="bell-mountain"] {
       order: 1;
     }
 
-    &__item--attractions label[for="red-rocks"] {
+    &__item--attractions &__label[for="red-rocks"] {
       order: 3;
     }
 
@@ -479,7 +472,7 @@
       margin: 0;
     }
 
-    &__item--attractions label {
+    &__item--attractions &__label {
       flex-basis: auto;
       margin-bottom: 0;
     }
@@ -522,12 +515,11 @@
       flex-grow: 1;
     }
 
-    &__item--contacts label {
+    &__item--contacts &__label {
       margin: 0 20px 0 0;
     }
     
-    &__item--contacts input[type="tel"],
-    &__item--contacts input[type="email"] {
+    &__item--contacts &__field {
       background-position: 271px 50%,
                            right;
     }
