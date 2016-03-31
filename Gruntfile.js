@@ -53,6 +53,21 @@ module.exports = function(grunt) {
       options: {
         spawn: false
       }
+    },
+
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            "fonts/**/*.{woff,woff2}",
+            "img/**",
+            "js/**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      }
     }
   });
 
