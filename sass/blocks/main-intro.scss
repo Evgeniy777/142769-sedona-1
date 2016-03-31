@@ -6,8 +6,22 @@
   &:before {
     display: block;
     content: "";
-    height: 389px;
     width: 100%;
+    background: url("../img/text-sedona-index.svg") no-repeat 50%,
+                url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
+                #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat 50%;
+    background-size: 280px auto,
+                     101% auto,
+                     cover;
+
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      background: url("../img/text-sedona-index.svg") no-repeat 50%,
+                  url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg-back-mobile@2x.jpg") no-repeat 50%;
+      background-size: 280px auto,
+                       101% auto,
+                       cover;
+    }
   }
 
   &__title {
@@ -31,22 +45,6 @@
 
     &:before {
       height: 389px;
-      background: url("../img/text-sedona-index.svg") no-repeat 50%,
-                  url("../img/text-sedona.svg") no-repeat 50%,
-                  url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
-                  #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat 50%;
-      background-size: 280px auto,
-                       280px auto,
-                       101% auto,
-                       auto 100%;
-
-      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        background: url("../img/text-sedona-index.svg") no-repeat 50%,
-                    url("../img/text-sedona.svg") no-repeat 50%,
-                    url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
-                    #e1eff8 url("../img/bg-back-mobile@2x.jpg") no-repeat 50%;
-      }
-
     }
 
     &__title {
@@ -100,14 +98,9 @@
 
    &:before {
       height: 518px;
-      background: url("../img/text-sedona-index.svg") no-repeat 50%,
-                  url("../img/text-sedona.svg") no-repeat 50%,
-                  url("../img/bg-intro-triangle-tablet.svg") no-repeat bottom,
-                  #e1eff8 url("../img/bg-back-mobile@2x.jpg") no-repeat 50%;
       background-size: 460px auto,
-                       460px auto,
-                       100% auto,
-                       auto 100%;
+                       101% auto,
+                       cover;
     }
 
     &__title {
@@ -125,12 +118,19 @@
 @media ($desktop-widths) {
   .main-intro:before {
     background: url("../img/text-sedona-index.svg") no-repeat 50%,
-                url("../img/text-sedona.svg") no-repeat 50%,
                 url("../img/bg-intro-triangle-desktop.svg") no-repeat bottom,
                 #e1eff8 url("../img/bg-back-desktop.jpg") no-repeat 50%;
     background-size: 460px auto,
-                     460px auto,
                      101% auto,
-                     auto 100%;
+                     cover;
+    
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      background: url("../img/text-sedona-index.svg") no-repeat 50%,
+                  url("../img/bg-intro-triangle-desktop.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg-back-desktop@2x.jpg") no-repeat 50%;
+      background-size: 460px auto,
+                       101% auto,
+                       cover;
+    }
   }
 }
