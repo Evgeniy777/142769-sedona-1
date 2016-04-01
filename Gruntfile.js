@@ -81,12 +81,12 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            "*.html",
-            "css/*.css"
+            "build/*.html",
+            "build/css/*.css"
           ]
         },
         options: {
-          server: ".",
+          server: "./build",
           watchTask: true,
           notify: false,
           open: true,
@@ -96,10 +96,15 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: ["sass/**/*.{scss,sass}"],
-      tasks: ["sass", "postcss"],
-      options: {
-        spawn: false
+      html: {
+        files: ["*.html"],
+        tasks: ["copy:html"],
+        options: {spawn: false}
+      },
+      style: {
+        files: ["sass/**/*.scss"],
+        tasks: ["sass", "postcss", "csso"],
+        options: {spawn: false}
       }
     },
 
