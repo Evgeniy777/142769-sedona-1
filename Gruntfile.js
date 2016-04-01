@@ -11,6 +11,51 @@ module.exports = function(grunt) {
         }
       }
     },
+    
+    csso: {
+      style: {
+        options: {
+          report: "gzip"
+        },
+        files: {
+          "css/style.min.css": ["css/style.css"]
+        }
+      }
+    },
+    
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["img/**/*.{png,jpg,gif}"]
+        }]
+      }
+    },
+    
+    svgstore: {
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      symbols: {
+        files: {
+          "img/symbols.svg": ["img/icons/*.svg"]
+        }
+      }
+    },
+    
+    svgmin: {
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["img/icons/*.svg"]
+        }]
+      }
+    },
 
     postcss: {
       options: {
@@ -21,7 +66,10 @@ module.exports = function(grunt) {
             "last 2 Firefox versions",
             "last 2 Opera versions",
             "last 2 Edge versions"
-          ]})
+          ]}),
+          require("css-mqpacker")({
+            sort: true
+          })
         ]
       },
       style: {
@@ -72,4 +120,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+//  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
 };
