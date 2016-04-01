@@ -12,20 +12,20 @@ module.exports = function(grunt) {
       },
       symbols: {
         files: {
-          "img/symbols.svg": ["build/img/icons/*.svg"]
+          "img/symbols.svg": ["build/img/*.svg"]
         }
       }
     },
-    
+
     svgmin: {
       symbols: {
         files: [{
           expand: true,
-          src: ["build/img/icons/*.svg"]
+          src: ["build/img/*.svg"]
         }]
       }
     },
-        
+
     sass: {
       style: {
         files: {
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     csso: {
       style: {
         options: {
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     imagemin: {
       images: {
         options: {
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         }]
       }
     },
-   
+
     postcss: {
       options: {
         processors: [
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
         }]
       }
     },
-    
+
     clean: {
       build: ["build"]
     }
