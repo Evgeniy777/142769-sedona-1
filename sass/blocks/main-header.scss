@@ -4,21 +4,21 @@
     position: relative;
     background-color: #fff;
   }
-  
+
   &__logo {
     position: relative;
     display: block;
     margin: 0 auto;
-    
-    & img {      
+
+    & img {
       position: absolute;
-      z-index: 100;  
+      z-index: 100;
     }
   }
 }
 
 @media ($mobile-widths-only) {
-  .main-header__logo {    
+  .main-header__logo {
     width: 102px;
     height: 56px;
   }
