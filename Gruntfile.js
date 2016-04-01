@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       },
       symbols: {
         files: {
-          "img/symbols.svg": ["img/icons/*.svg"]
+          "img/symbols.svg": ["build/img/icons/*.svg"]
         }
       }
     },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
       symbols: {
         files: [{
           expand: true,
-          src: ["img/icons/*.svg"]
+          src: ["build/img/icons/*.svg"]
         }]
       }
     },
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     sass: {
       style: {
         files: {
-          "css/style.css": "sass/style.scss"
+          "build/css/style.css": "sass/style.scss"
         }
       }
     },
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
           report: "gzip"
         },
         files: {
-          "css/style.min.css": ["css/style.css"]
+          "build/css/style.min.css": ["build/css/style.css"]
         }
       }
     },
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["img/**/*.{png,jpg,gif}"]
+          src: ["build/img/**/*.{png,jpg,gif}"]
         }]
       }
     },
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
         ]
       },
       style: {
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
     },
 
@@ -116,12 +116,18 @@ module.exports = function(grunt) {
           dest: "build"
         }]
       }
+    },
+    
+    clean: {
+      build: ["build"]
     }
   });
 
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("build", [
+    "clean",
+    "copy",
     "sass",
     "postcss",
     "csso",
