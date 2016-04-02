@@ -8,7 +8,7 @@ var mobileMenuBtn = document.querySelector(".main-nav__btn");
 mobileMenuToggle.addEventListener("click", function (event) {
     event.preventDefault();
     mobileMenu.classList.add("main-nav__items--show");
-    mobileMenu.classList.remove("main__items--hide");
+    mobileMenu.classList.remove("main-nav__items--hide");
     mobileMenuBtn.classList.add("main-nav__btn--show");
     mobileMenuBtn.classList.remove("main-nav__btn--hide");
 });
