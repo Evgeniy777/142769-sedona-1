@@ -11,7 +11,7 @@
                 url("../img/bg/bg-intro-triangle-mobile.svg") no-repeat bottom,
                 #e1eff8 url("../img/bg/bg-back-mobile.jpg") no-repeat 50%;
     background-size: 280px auto,
-                     101% auto,
+                     103% auto,
                      cover;
 
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
@@ -19,7 +19,7 @@
                   url("../img/bg/bg-intro-triangle-mobile.svg") no-repeat bottom,
                   #e1eff8 url("../img/bg/bg-back-mobile@2x.jpg") no-repeat 50%;
       background-size: 280px auto,
-                       101% auto,
+                       103% auto,
                        cover;
     }
   }
@@ -99,7 +99,7 @@
    &:before {
       height: 518px;
       background-size: 460px auto,
-                       101% auto,
+                       103% auto,
                        cover;
     }
 
@@ -121,7 +121,7 @@
                 url("../img/bg/bg-intro-triangle-desktop.svg") no-repeat bottom,
                 #e1eff8 url("../img/bg/bg-back-desktop.jpg") no-repeat 50%;
     background-size: 460px auto,
-                     101% auto,
+                     103% auto,
                      cover;
 
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
@@ -129,7 +129,7 @@
                   url("../img/bg/bg-intro-triangle-desktop.svg") no-repeat bottom,
                   #e1eff8 url("../img/bg/bg-back-desktop@2x.jpg") no-repeat 50%;
       background-size: 460px auto,
-                       101% auto,
+                       103% auto,
                        cover;
     }
   }
