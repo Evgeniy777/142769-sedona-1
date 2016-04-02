@@ -29,9 +29,9 @@
   .page-intro {
 
     &:before {
-      background: url("../img/text-sedona.svg") no-repeat 50%,
-                  url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
-                  #e1eff8 url("../img/bg-back-mobile.jpg") no-repeat center bottom;
+      background: url("../img/logo/text-sedona.svg") no-repeat 50%,
+                  url("../img/bg/bg-intro-triangle-mobile.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg/bg-back-mobile.jpg") no-repeat center bottom;
       background-size: 280px auto,
                        101% auto,
                        auto;
@@ -64,9 +64,9 @@
       content: "";
       height: 290px;
       width: 100%;
-      background: url("../img/text-sedona.svg") no-repeat 50%,
-                  url("../img/bg-intro-triangle-tablet.svg") no-repeat bottom,
-                  #e1eff8 url("../img/bg-back-desktop.jpg") no-repeat center bottom;
+      background: url("../img/logo/text-sedona.svg") no-repeat 50%,
+                  url("../img/bg/bg-intro-triangle-tablet.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg/bg-back-desktop.jpg") no-repeat center bottom;
       background-size: 458px auto,
                        100% auto,
                        auto;
@@ -98,9 +98,9 @@
 
     &:before {
       height: 301px;
-      background: url("../img/text-sedona.svg") no-repeat 50%,
-                  url("../img/bg-intro-triangle-desktop.svg") no-repeat bottom,
-                  #e1eff8 url("../img/bg-back-desktop.jpg") no-repeat center bottom;
+      background: url("../img/logo/text-sedona.svg") no-repeat 50%,
+                  url("../img/bg/bg-intro-triangle-desktop.svg") no-repeat bottom,
+                  #e1eff8 url("../img/bg/bg-back-desktop.jpg") no-repeat center bottom;
       background-size: 460px auto,
                        101% auto,
                        auto;

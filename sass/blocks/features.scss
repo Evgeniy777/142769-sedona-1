@@ -1,30 +1,30 @@
 .features {
   text-transform: uppercase;
   background-color: #fff;
-  
+
   &__item {
     position: relative;
-    
-    &:before {    
+
+    &:before {
       position: absolute;
       content: "";
       background-repeat: no-repeat;
       background-size: 100%;
     }
   }
-            
+
   &__item--house:before {
-    background-image: url("../img/icon-house.svg");
+    background-image: url("../img/icons/icon-house.svg");
   }
 
   &__item--gift:before {
-    background-image: url("../img/icon-gift.svg");
+    background-image: url("../img/icons/icon-gift.svg");
   }
 
   &__item--food:before {
-    background-image: url("../img/icon-burger.svg");
+    background-image: url("../img/icons/icon-burger.svg");
   }
-  
+
   &__title {
     margin: 0;
     font-size: 18px;
@@ -51,24 +51,24 @@
     &__item {
       padding: 15px 0 13px 50px;
     }
-    
-    &__item--house:before {        
+
+    &__item--house:before {
       top: 6px;
-      left: 2px; 
+      left: 2px;
       width: 37px;
       height: 36px;
     }
 
-    &__item--gift:before {        
+    &__item--gift:before {
       top: 4px;
-      left: 5px; 
+      left: 5px;
       width: 32px;
       height: 38px;
     }
 
-    &__item--food:before {        
+    &__item--food:before {
       top: 11px;
-      left: -1px; 
+      left: -1px;
       width: 38px;
       height: 35px;
     }
@@ -95,13 +95,13 @@
     &__item {
       padding: 0 47px;
       flex-basis: 100%;
-      text-align: center;      
-            
+      text-align: center;
+
       &:before {
         left: 50%;
       }
-    }    
-    
+    }
+
     &__item--house:before {
       top: 3px;
       margin-left: -37px;
