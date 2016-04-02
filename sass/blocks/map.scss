@@ -6,18 +6,18 @@
 
 @media ($mobile-widths-only) {
   .map {
-    background: #cadfaa url("../img/bg-map-mobile.jpg") no-repeat;
+    background: #cadfaa url("../img/bg/bg-map-mobile.jpg") no-repeat center;
   }
 }
 
 @media ($tablet-widths) {
   .map {
-    background: #cadfaa url("../img/bg-map-tablet.jpg") no-repeat;
+    background: #cadfaa url("../img/bg/bg-map-tablet.jpg") no-repeat center;
   }
 }
 
 @media ($desktop-widths) {
   .map {
-    background: #cadfaa url("../img/bg-map-desktop.jpg") no-repeat;
+    background: #cadfaa url("../img/bg/bg-map-desktop.jpg") no-repeat center;
   }
 }

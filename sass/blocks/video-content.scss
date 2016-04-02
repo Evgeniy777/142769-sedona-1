@@ -2,8 +2,8 @@
   background-color: #fff;
 
   &__item {
-    background-color: #fff;    
-    
+    background-color: #fff;
+
     & video {
       width: 100%;
       display: block;
@@ -41,18 +41,18 @@
     border-radius: 50%;
     background-color: #fff;
   }
-  
+
   &__btn {
     height: 20px;
     border: none;
     font-size: 0;
     padding: 0;
     background: none;
-        
+
     &--replay {
       width: 16px;
     }
-    
+
     &--subtitles {
       width: 32px;
       border-radius: 3px;
@@ -61,11 +61,11 @@
     &--full-screen {
       width: 20px;
     }
-    
+
     &:hover &-icon {
       fill: #333333;
     }
-    
+
     &:active &-icon {
       fill: rgba(51,51,51,0.3);
     }
@@ -78,7 +78,7 @@
 
     & video {
       height: 201px;
-      background: url("../img/video-mobile.jpg") no-repeat;
+      background: url("../img/video/video-mobile.jpg") no-repeat;
     }
 
     &__controls-bar {
@@ -105,7 +105,7 @@
     &__scale {
       margin: 0 22px;
     }
-    
+
     &__btn {
 
       &--replay {
@@ -120,7 +120,7 @@
         margin: 0 22px 0 0;
       }
     }
-      
+
     &__btn-icon {
       fill: #5c6870;
     }
@@ -137,7 +137,7 @@
 
     & video {
       height: 499px;
-      background: url("../img/video-tablet.jpg") no-repeat;
+      background: url("../img/video/video-tablet.jpg") no-repeat;
     }
 
     &__controls-bar {
@@ -164,7 +164,7 @@
     &__scale {
       margin: 0 42px;
     }
-    
+
     &__btn {
 
       &--replay {
@@ -175,7 +175,7 @@
         margin-right: 31px;
       }
     }
-    
+
     &__btn-icon {
       fill: #fff;
     }
@@ -185,9 +185,9 @@
 @media ($desktop-widths) {
   .video-content {
     margin: 0 200px 85px;
-    
+
     & video {
-      background: url("../img/video-desktop.jpg") no-repeat;
+      background: url("../img/video/video-desktop.jpg") no-repeat;
     }
   }
 }

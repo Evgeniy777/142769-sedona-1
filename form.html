@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!--
-      Смотри на главной странице комментарии все общие
-     -->
     <div class="page-wrapper">
       <header class="main-header">
         <div class="main-header__wrapper">
@@ -34,11 +31,11 @@
                 <button class="main-nav__toggle main-nav__toggle--closed" type="button">Открыть меню</button>
               </div>
             </nav>
-            <a class="main-header__logo" href="#">
+            <a class="main-header__logo" href="index.html">
               <picture>
-                <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
-                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-                <img src="img/logo-sedona-mobile.svg" alt="Sedona">
+                <source media="(min-width: 1280px)" srcset="img/logo/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo/logo-sedona-tablet.svg">
+                <img src="img/logo/logo-sedona-mobile.svg" alt="Sedona">
               </picture>
             </a>
           </div>
@@ -59,15 +56,15 @@
               <div class="review__wrapper">
                 <div class="review__group">
                   <label class="review__label" for="name">Имя:</label>
-                  <input class="review__field" type="text" id="name" name="name" placeholder="Петр">
+                  <input class="review__field" type="text" id="name" name="name" placeholder="Петр *">
                 </div>
                 <div class="review__group">
                   <label class="review__label" for="surname">Фамилия:</label>
-                  <input class="review__field" type="text" id="surname" name="surname" placeholder="Иванов">
+                  <input class="review__field" type="text" id="surname" name="surname" placeholder="Иванов *">
                 </div>
                 <div class="review__group">
                   <label class="review__label" for="middle-name">Отчество:</label>
-                  <input class="review__field" type="text" id="middle-name" name="middle-name" placeholder="Александрович">
+                  <input class="review__field" type="text" id="middle-name" name="middle-name" placeholder="Александрович *">
                 </div>
               </div>
             </fieldset>
@@ -76,11 +73,16 @@
               <div class="review__wrapper">
                 <div class="review__group">
                   <label class="review__label" for="tel"><span>Контактный</span> телефон</label>
-                  <input class="review__field" type="tel" id="tel" placeholder="Введите телефон" name="tel">
+                  <div class="review__phone">
+                    <div class="review__phone-error review__phone-error--hidden">Ошибка, перепроверьте номер</div>
+                    <input class="review__field" type="tel" id="tel" placeholder="Введите телефон" name="tel">
+                  </div>
                 </div>
                 <div class="review__group">
                   <label class="review__label" for="email">Электронная почта:</label>
-                  <input class="review__field" type="email" id="email" placeholder="Введите email" name="email">
+                  <div class="review__email">
+                    <input class="review__field" type="email" id="email" placeholder="Введите email" name="email">
+                  </div>
                 </div>
               </div>
             </fieldset>
