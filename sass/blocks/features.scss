@@ -102,6 +102,10 @@
       }
     }
 
+    &__item--house {
+      order: -1;
+    }
+
     &__item--house:before {
       top: 3px;
       margin-left: -37px;
@@ -109,11 +113,19 @@
       height: 72px;
     }
 
+    &__item--gift {
+      order: 1;
+    }
+
     &__item--gift:before {
       top: 0;
       margin-left: -32px;
       width: 64px;
       height: 76px;
+    }
+
+    &__item--food {
+      order: 0;
     }
 
     &__item--food:before {

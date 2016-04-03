@@ -7,6 +7,14 @@
   &__items {
     @include no-list;
     font-size: 0;
+
+    &--hide {
+      display: none;
+    }
+
+    &--show {
+      display: block;
+    }
   }
 
   &__link {
@@ -69,27 +77,37 @@
     }
 
     &__btn {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      width: 23px;
+      height: 22px;
+      z-index: 1000;
+      background: url("../img/icons/icon-cross.svg") no-repeat center;
 
-      &--close {
-        position: absolute;
-        top: 16px;
-        right: 20px;
-        width: 23px;
-        height: 22px;
-        z-index: 1000;
-        background: url("../img/icons/icon-cross.svg") no-repeat center;
+      &--hide {
+        display: none;
+      }
+
+      &--show {
+        display: block;
       }
     }
 
     &__toggle {
+      position: absolute;
+      bottom: -38px;
+      right: 20px;
+      width: 23px;
+      height: 22px;
+      background: url("../img/icons/icon-menu.svg") no-repeat 50% 50%;
 
-      &--closed {
-        position: absolute;
-        bottom: -38px;
-        right: 20px;
-        width: 23px;
-        height: 22px;
-        background: url("../img/icons/icon-menu.svg") no-repeat 50% 50%;
+      &--hide {
+        display: none;
+      }
+
+      &--show {
+        display: block;
       }
     }
   }
