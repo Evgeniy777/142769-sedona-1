@@ -1,3 +1,17 @@
+.no-js {
+  .main-nav {
+    display: block;
+
+    &__btn {
+      display: none;
+    }
+
+    &__toggle {
+      display: none;
+    }
+  }
+}
+
 .main-nav {
 
   &__wrapper {

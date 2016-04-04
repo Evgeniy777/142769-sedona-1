@@ -30,11 +30,21 @@
     top: 0;
     left: 50%;
     margin-left: -51px;
+
+    & img {
+      width: 102px;
+      height: 84px;
+    }
   }
 }
 
 @media ($desktop-widths) {
   .main-header__logo {
     margin-left: -93px;
+
+    & img {
+      width: 187px;
+      height: 96px;
+    }
   }
 }
