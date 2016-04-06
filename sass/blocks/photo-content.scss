@@ -131,6 +131,10 @@
       padding: 15px 20px 17px;
     }
 
+    &__group {
+      flex-basis: 200px;
+    }
+
     &__author {
       margin-bottom: 0;
     }
@@ -163,6 +167,10 @@
       position: absolute;
       bottom: 0;
       background-color: rgba(0,0,0,0.2);
+    }
+
+    &__group {
+      flex-basis: 75%;
     }
 
     &__title {
