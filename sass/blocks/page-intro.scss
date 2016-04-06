@@ -6,7 +6,6 @@
   &:before {
     display: block;
     content: "";
-    height: 158px;
     width: 100%;
   }
 
@@ -29,12 +28,30 @@
   .page-intro {
 
     &:before {
+      height: 158px;
       background: url("../img/logo/text-sedona.svg") no-repeat 50%,
                   url("../img/bg/bg-intro-triangle-mobile.svg") no-repeat bottom,
-                  #e1eff8 url("../img/bg/bg-back-mobile.jpg") no-repeat center bottom;
+                  #e1eff8 url("../img/bg/bg-back-mobile.jpg") no-repeat 50%;
       background-size: 280px auto,
                        105% auto,
-                       auto;
+                       cover;
+      background-repeat: no-repeat;
+      background-position: 50%,
+                           bottom -1px center,
+                           50%;
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        background: url("../img/logo/text-sedona.svg") no-repeat 50%,
+                    url("../img/bg/bg-intro-triangle-mobile.svg") no-repeat bottom,
+                    #e1eff8 url("../img/bg/bg-back-mobile@2x.jpg") no-repeat 50%;
+        background-size: 280px auto,
+                         105% auto,
+                         cover;
+        background-repeat: no-repeat;
+        background-position: 50%,
+                             bottom -1px center,
+                             50%;
+      }
     }
 
     &__wrapper {
@@ -60,16 +77,30 @@
   .page-intro {
 
     &:before {
-      display: block;
-      content: "";
       height: 290px;
-      width: 100%;
-      background: url("../img/logo/text-sedona.svg") no-repeat 50%,
-                  url("../img/bg/bg-intro-triangle-tablet.svg") no-repeat bottom,
-                  #e1eff8 url("../img/bg/bg-back-desktop.jpg") no-repeat center bottom;
-      background-size: 458px auto,
+      background: url("../img/logo/text-sedona.svg"),
+                  url("../img/bg/bg-intro-triangle-tablet.svg"),
+                  #e1eff8 url("../img/bg/bg-back-desktop.jpg");
+      background-size: 460px auto,
                        103% auto,
-                       auto;
+                       cover;
+      background-repeat: no-repeat;
+      background-position: 50%,
+                           bottom -1px center,
+                           50%;
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        background: url("../img/logo/text-sedona.svg"),
+                    url("../img/bg/bg-intro-triangle-tablet.svg"),
+                    #e1eff8 url("../img/bg/bg-back-desktop@2x.jpg");
+        background-size: 460px auto,
+                         103% auto,
+                         cover;
+        background-repeat: no-repeat;
+        background-position: 50%,
+                             bottom -1px center,
+                             50%;
+      }
     }
 
     &__wrapper {
@@ -98,12 +129,29 @@
 
     &:before {
       height: 301px;
-      background: url("../img/logo/text-sedona.svg") no-repeat 50%,
-                  url("../img/bg/bg-intro-triangle-desktop.svg") no-repeat bottom,
-                  #e1eff8 url("../img/bg/bg-back-desktop.jpg") no-repeat center bottom;
+      background: url("../img/logo/text-sedona.svg"),
+                  url("../img/bg/bg-intro-triangle-desktop.svg"),
+                  #e1eff8 url("../img/bg/bg-back-desktop.jpg");
       background-size: 460px auto,
                        103% auto,
-                       auto;
+                       cover;
+      background-repeat: no-repeat;
+      background-position: 50%,
+                           bottom -1px center,
+                           50%;
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        background: url("../img/logo/text-sedona.svg"),
+                    url("../img/bg/bg-intro-triangle-desktop.svg"),
+                    #e1eff8 url("../img/bg/bg-back-desktop@2x.jpg");
+        background-size: 460px auto,
+                         103% auto,
+                         cover;
+        background-repeat: no-repeat;
+        background-position: 50%,
+                             bottom -1px center,
+                             50%;
+      }
     }
 
     &__wrapper {
