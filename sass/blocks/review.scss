@@ -247,11 +247,11 @@
       align-items: center;
     }
 
-    &__item--personal &__title span:first-child {
+    &__item--personal span:first-child {
       display: none;
     }
 
-    &__item--personal &__title span {
+    &__item--personal span {
       display: inline-block;
       vertical-align: baseline;
     }
@@ -421,11 +421,11 @@
       margin-left: 60px;
     }
 
-    &__item--personal &__title span:first-child {
+    &__item--personal span:first-child {
       display: inline;
     }
 
-    &__item--personal &__title span {
+    &__item--personal span {
       display: none;
     }
 
@@ -558,11 +558,11 @@
       margin-bottom: 0;
     }
 
-    &__item--personal &__title span:first-child {
+    &__item--personal span:first-child {
       display: none;
     }
 
-    &__item--personal &__title span {
+    &__item--personal span {
       display: inline;
     }
 
