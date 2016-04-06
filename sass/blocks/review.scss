@@ -430,7 +430,7 @@
     }
 
     &__item--attractions  {
-      margin-bottom: 68px;
+      margin-bottom: 36px;
     }
 
     &__item--attractions &__title {
@@ -454,9 +454,6 @@
       flex-basis: 125px;
     }
 
-    &__item--attractions &__label:nth-last-child(-n+3) {
-      margin-bottom: 0;
-    }
 
     &__item--attractions &__label[for="slide-park"] {
       order: 2;
@@ -542,7 +539,7 @@
     }
 
     &__item--attractions {
-      margin-bottom: 65px;
+      margin-bottom: 33px;
     }
 
     &__item--attractions &__group {
@@ -555,7 +552,6 @@
 
     &__item--attractions &__label {
       flex-grow: 130px;
-      margin-bottom: 0;
     }
 
     &__item--personal span:first-child {
