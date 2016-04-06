@@ -11,6 +11,8 @@ mobileMenuToggle.addEventListener("click", function (event) {
     mobileMenu.classList.remove("main-nav__items--hide");
     mobileMenuBtn.classList.add("main-nav__btn--show");
     mobileMenuBtn.classList.remove("main-nav__btn--hide");
+    mobileMenuToggle.classList.remove("main-nav__toggle--show");
+    mobileMenuToggle.classList.add("main-nav__toggle--hide");
 });
 
 mobileMenuBtn.addEventListener("click", function (event) {
@@ -19,5 +21,7 @@ mobileMenuBtn.addEventListener("click", function (event) {
     mobileMenu.classList.add("main-nav__items--hide");
     mobileMenuBtn.classList.add("main-nav__btn--hide");
     mobileMenuBtn.classList.remove("main-nav__btn--show");
+    mobileMenuToggle.classList.remove("main-nav__toggle--hide");
+    mobileMenuToggle.classList.add("main-nav__toggle--show");
 });
 

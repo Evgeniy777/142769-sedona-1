@@ -93,7 +93,8 @@
     }
 
     &__item {
-      padding: 0 47px;
+      max-width: 170px;
+      margin: 0 auto;
       flex-basis: 100%;
       text-align: center;
 
@@ -150,7 +151,7 @@
     }
 
     &__item {
-      padding: 0 65px;
+      max-width: 293px;
     }
   }
 }

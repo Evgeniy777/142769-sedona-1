@@ -52,7 +52,7 @@
   .main-footer {
 
     &__wrapper {
-      padding: 36px 0;
+      padding: 36px 60px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -72,6 +72,10 @@
 
 @media ($desktop-widths) {
   .main-footer {
+    
+    &__wrapper {
+      padding: 36px 0;
+    }
     
     &__developers {
       text-align: right;
