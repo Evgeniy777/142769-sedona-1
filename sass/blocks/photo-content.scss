@@ -1,7 +1,7 @@
 .photo-content {
   background-color: #fff;
 
-  & img {
+  &__image {
     display: block;
     text-align: center;
     background-color: antiquewhite;
@@ -49,10 +49,6 @@
   &__link {
     display: block;
   }
-
-  & picture {
-    display: block;
-  }
 }
 
 @media ($mobile-widths-only) {
@@ -67,7 +63,7 @@
       border-bottom: 1px solid #e5e5e5;
     }
 
-    & img {
+    &__image {
       width: 280px;
       height: 280px;
       margin: 0 auto;
@@ -111,12 +107,12 @@
       flex-basis: 100%;
     }
 
-    & img {
+    &__image {
       width: 100%;
       height: 267px;
     }
 
-    &__item:first-child img {
+    &__item:first-child &__image {
       height: 400px;
     }
 
@@ -153,11 +149,11 @@
       flex-basis: 400px;
     }
 
-    & img {
+    &__image {
       height: 267px;
     }
 
-    &__item:first-child img {
+    &__item:first-child &__image {
       height: 400px;
     }
 

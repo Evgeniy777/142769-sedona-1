@@ -9,11 +9,11 @@
     position: relative;
     display: block;
     margin: 0 auto;
+  }
 
-    & img {
-      position: absolute;
-      z-index: 100;
-    }
+  &__logo-icon {
+    position: absolute;
+    z-index: 100;
   }
 }
 
@@ -25,13 +25,16 @@
 }
 
 @media ($tablet-widths) {
-  .main-header__logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -51px;
+  .main-header {
 
-    & img {
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -51px;
+    }
+
+    &__logo-icon {
       width: 102px;
       height: 84px;
     }
@@ -39,10 +42,13 @@
 }
 
 @media ($desktop-widths) {
-  .main-header__logo {
-    margin-left: -93px;
+  .main-header {
 
-    & img {
+    &__logo {
+      margin-left: -93px;
+    }
+
+    &__logo-icon {
       width: 187px;
       height: 96px;
     }

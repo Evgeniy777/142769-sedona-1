@@ -12,7 +12,7 @@
 
   &__title {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -65,6 +65,11 @@
     font-weight: bold;
     text-transform: none;
     color: #000;
+  }
+
+  &__item--impressions &__label {
+    margin-right: 20px;
+    hyphens: auto;
   }
 
   &__item--impressions &__label:last-child,
@@ -221,7 +226,6 @@
 
 @media ($mobile-widths-only) {
   .review {
-    padding-bottom: 36px;
 
     &__wrapper {
       @include container;
@@ -305,8 +309,8 @@
     }
 
     &__btn {
-      max-width: 280px;
-      margin: 0 auto;
+      width: 280px;
+      margin: 0 auto 47px;
     }
 
     &__phone,
@@ -336,6 +340,7 @@
 
     &__title {
       position: relative;
+      font-size: 21px;
     }
 
     &__item--impressions {
@@ -357,8 +362,9 @@
       content: "";
       bottom: 0;
       left: 0;
+      padding-top: 78px;
       width: 1px;
-      height: 292px;
+      height: 100%;
       background-color: #dbdbdb;
     }
 

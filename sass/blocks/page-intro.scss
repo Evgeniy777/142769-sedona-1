@@ -29,28 +29,28 @@
 
     &:before {
       height: 158px;
-      background: url("../img/logo/text-sedona.svg") no-repeat 50%,
-                  url("../img/bg/bg-intro-triangle-mobile.svg") no-repeat bottom,
-                  #e1eff8 url("../img/bg/bg-back-mobile.jpg") no-repeat 50%;
-      background-size: 280px auto,
+      background: url("../img/logo/text-sedona.svg"),
+                  url("../img/bg/bg-intro-triangle-mobile.svg"),
+                  #e1eff8 url("../img/bg/bg-back-mobile.jpg");
+      background-size: 229px auto,
                        105% auto,
-                       cover;
+                       auto;
       background-repeat: no-repeat;
-      background-position: 50%,
+      background-position: top 52px center,
                            bottom -1px center,
-                           50%;
+                           bottom center;
 
       @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        background: url("../img/logo/text-sedona.svg") no-repeat 50%,
-                    url("../img/bg/bg-intro-triangle-mobile.svg") no-repeat bottom,
-                    #e1eff8 url("../img/bg/bg-back-mobile@2x.jpg") no-repeat 50%;
-        background-size: 280px auto,
+        background: url("../img/logo/text-sedona.svg"),
+                    url("../img/bg/bg-intro-triangle-mobile.svg"),
+                    #e1eff8 url("../img/bg/bg-back-mobile@2x.jpg");
+        background-size: 229px auto,
                          105% auto,
-                         cover;
+                         auto;
         background-repeat: no-repeat;
-        background-position: 50%,
+        background-position: top 52px center,
                              bottom -1px center,
-                             50%;
+                             bottom center;
       }
     }
 
@@ -70,6 +70,10 @@
     &--doubt &__wrapper {
       margin: 32px auto 35px;
     }
+
+    &--review &__wrapper {
+      margin: 37px auto 17px;
+    }
   }
 }
 
@@ -81,25 +85,25 @@
       background: url("../img/logo/text-sedona.svg"),
                   url("../img/bg/bg-intro-triangle-tablet.svg"),
                   #e1eff8 url("../img/bg/bg-back-desktop.jpg");
-      background-size: 460px auto,
+      background-size: 458px auto,
                        103% auto,
-                       cover;
+                       auto;
       background-repeat: no-repeat;
-      background-position: 50%,
+      background-position: top 95px center,
                            bottom -1px center,
-                           50%;
+                           bottom center;
 
       @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
         background: url("../img/logo/text-sedona.svg"),
                     url("../img/bg/bg-intro-triangle-tablet.svg"),
                     #e1eff8 url("../img/bg/bg-back-desktop@2x.jpg");
-        background-size: 460px auto,
+        background-size: 458px auto,
                          103% auto,
-                         cover;
+                         auto;
         background-repeat: no-repeat;
-        background-position: 50%,
+        background-position: top 95px center,
                              bottom -1px center,
-                             50%;
+                             bottom center;
       }
     }
 
@@ -134,11 +138,11 @@
                   #e1eff8 url("../img/bg/bg-back-desktop.jpg");
       background-size: 460px auto,
                        103% auto,
-                       cover;
+                       auto;
       background-repeat: no-repeat;
-      background-position: 50%,
+      background-position: top 102px center,
                            bottom -1px center,
-                           50%;
+                           bottom center;
 
       @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
         background: url("../img/logo/text-sedona.svg"),
@@ -146,11 +150,11 @@
                     #e1eff8 url("../img/bg/bg-back-desktop@2x.jpg");
         background-size: 460px auto,
                          103% auto,
-                         cover;
+                         auto;
         background-repeat: no-repeat;
-        background-position: 50%,
+        background-position: top 102px center,
                              bottom -1px center,
-                             50%;
+                             bottom center;
       }
     }
 
@@ -164,6 +168,10 @@
 
     &--doubt &__wrapper {
       margin: 70px auto 71px;
+    }
+
+    &--photo &__wrapper {
+      margin: 111px auto 72px;
     }
   }
 }

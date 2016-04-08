@@ -39,9 +39,9 @@
             </nav>
             <a class="main-header__logo" href="index.html">
               <picture>
-                <source media="(min-width: 1280px)" srcset="img/logo/logo-sedona-desktop.svg">
+                <source media="(min-width: 1200px)" srcset="img/logo/logo-sedona-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo/logo-sedona-tablet.svg">
-                <img src="img/logo/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84">
+                <img class="main-header__logo-icon" src="img/logo/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84">
               </picture>
             </a>
           </div>
@@ -56,7 +56,7 @@
           <div class="reason-block">
             <div class="reason-block__item">
               <h2 class="reason-block__title">Настоящий<br> городок</h2>
-              <span>№1</span>
+              <span class="reason-block__number">№1</span>
               <p class="reason-block__text">Седона не атракцион для туристов, там течет своя жизнь</p>
             </div>
             <div class="reason-block__image reason-block__image--city"></div>
@@ -77,28 +77,28 @@
               </div>
             </div>
           </div>
-          <div class="reason-block">
+          <div class="reason-block reason-block--bridge">
             <div class="reason-block__image reason-block__image--bridge"></div>
             <div class="reason-block__item">
               <h2 class="reason-block__title">Там есть<br> мост дьявола</h2>
-              <span>№2</span>
+              <span class="reason-block__number">№2</span>
               <p class="reason-block__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
           </div>
           <div class="reason-block reason-block--reasons">
             <div class="reason-block__item">
               <h2 class="reason-block__title">Небольшая<br> площадь</h2>
-              <span>№3</span>
+              <span class="reason-block__number">№3</span>
               <p class="reason-block__text">Все достопримечательности находятся очень близко</p>
             </div>
             <div class="reason-block__item">
               <h2 class="reason-block__title">Красивая<br> дорога</h2>
-              <span>№4</span>
+              <span class="reason-block__number">№4</span>
               <p class="reason-block__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
             <div class="reason-block__item">
               <h2 class="reason-block__title">Мало<br> туристов</h2>
-              <span>№5</span>
+              <span class="reason-block__number">№5</span>
               <p class="reason-block__text">Большинство едет в гранд каньон и толпится там</p>
             </div>
           </div>
@@ -109,12 +109,14 @@
               <a class="btn" href="#">Найти гостиницу</a>
             </div>
           </div>
-          <div class="map"></div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d373061.73110569344!2d-111.8560155135109!3d34.91984961250726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1460125662371" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
         </div>
       </main>
       <footer class="main-footer">
         <div class="main-footer__wrapper">
-          <a class="main-footer__vizit-sedona" href="#">&#35;vizitsedona</a>
+          <a class="main-footer__vizit-sedona" href="#">&#35;visitsedona</a>
           <div class="social-links">
             <a class="social-links__link social-links__link--tw" href="#">Twitter</a>
             <a class="social-links__link social-links__link--fb" href="#">Facebook</a>
@@ -124,7 +126,7 @@
             Разработано
             <a class="main-footer__developers-link" href="#">
               HTML Academy
-              <svg class="main-footer__developers-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <svg class="main-footer__developers-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943" height="34.09" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
                 <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334
                 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5
                 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787

@@ -10,22 +10,28 @@
     font-weight: bold;
     text-decoration: none;
   }
-  
+
+  &__developers {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
   &__developers-link {
     display: inline-block;
     vertical-align: middle;
+    margin-left: 7px;
     width: 27px;
     height: 34px;
     font-size: 0;
-    
+
     & .main-footer__developers-icon {
       fill: #000;
     }
-    
+
     &:hover .main-footer__developers-icon {
       fill: $light-blue;
     }
-    
+
     &:active .main-footer__developers-icon {
       fill: rgba(0,0,0,0.3);
     }
@@ -72,11 +78,11 @@
 
 @media ($desktop-widths) {
   .main-footer {
-    
+
     &__wrapper {
       padding: 36px 0;
     }
-    
+
     &__developers {
       text-align: right;
     }
@@ -84,7 +90,7 @@
     &__developers-link {
       margin-right: 44px;
     }
-    
+
     &__vizit-sedona {
       text-align: center;
     }

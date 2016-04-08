@@ -5,32 +5,32 @@
   &__item {
     text-align: center;
     background-color: $light-blue;
+  }
 
-    & span {
-      margin: 0;
-      position: relative;
+  &__number {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 21px;
+
+    &:before,
+    &:after {
       display: inline-block;
-      vertical-align: top;
-      font-size: 14px;
-      line-height: 21px;
+      vertical-align: middle;
+      content: "";
+      width: 9px;
+      height: 2px;
+      background-color: #fff;
+    }
 
-      &:before,
-      &:after {
-        display: inline-block;
-        vertical-align: middle;
-        content: "";
-        width: 9px;
-        height: 2px;
-        background-color: #fff;
-      }
+    &:before {
+      margin-right: 6px;
+    }
 
-      &:before {
-        margin-right: 6px;
-      }
-
-      &:after {
-        margin-left: 6px;
-      }
+    &:after {
+      margin-left: 6px;
     }
   }
 
@@ -86,8 +86,8 @@
     background-color: #eeeeee;
   }
 
-  &--reasons span:before,
-  &--reasons span:after {
+  &--reasons &__number:before,
+  &--reasons &__number:after {
     background-color: #000;
   }
 }
@@ -98,10 +98,10 @@
     &__item {
       padding: 40px 20px 40px;
       background-color: $light-blue;
+    }
 
-      & span {
-        margin-bottom: 15px;
-      }
+    &__number {
+      margin-bottom: 15px;
     }
 
     &__title {
@@ -129,6 +129,11 @@
         border: none;
       }
     }
+
+    &--bridge {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -140,10 +145,10 @@
     &__item {
       flex-basis: 256px;
       padding: 45px 0 44px;
+    }
 
-      & span {
-        margin-bottom: 21px;
-      }
+    &__number {
+      margin-bottom: 21px;
     }
 
     &__title {
