@@ -20,7 +20,7 @@
 @media ($mobile-widths-only) {
   .hotel-search {
     max-width: 280px;
-    
+
     &__wrapper {
       padding: 27px 0 49px;
     }
@@ -32,10 +32,10 @@
 
     &__text {
       margin-bottom: 35px;
-      
-      & br {
-        display: none;
-      }
+    }
+
+    &__br {
+      display: none;
     }
   }
 }
@@ -43,7 +43,7 @@
 @media ($tablet-widths) {
   .hotel-search {
     max-width: 458px;
-    
+
     &__wrapper {
       padding: 56px 0 58px;
     }

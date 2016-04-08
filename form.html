@@ -41,7 +41,7 @@
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/logo/logo-sedona-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo/logo-sedona-tablet.svg">
-                <img src="img/logo/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84">
+                <img class="main-header__logo-icon" src="img/logo/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84">
               </picture>
             </a>
           </div>
@@ -57,7 +57,7 @@
           </div>
           <form action="https://echo.htmlacademy.ru" class="review" method="post">
             <fieldset class="review__item review__item--personal">
-              <legend class="review__title">Представьтесь<span>:</span><span>, пожалуйста:</span></legend>
+              <div class="review__title">Представьтесь<span>:</span><span>, пожалуйста:</span></div>
               <div class="review__wrapper">
                 <div class="review__group">
                   <label class="review__label" for="name">Имя:</label>
@@ -74,7 +74,7 @@
               </div>
             </fieldset>
             <fieldset class="review__item review__item--contacts">
-              <legend class="review__title">Контактная информация:</legend>
+              <div class="review__title">Контактная информация:</div>
               <div class="review__wrapper">
                 <div class="review__group">
                   <label class="review__label" for="tel"><span>Контактный</span> телефон:</label>
@@ -92,7 +92,7 @@
               </div>
             </fieldset>
             <fieldset class="review__item review__item--impressions">
-              <legend class="review__title">Ваше общее впечатление:</legend>
+              <div class="review__title">Ваше общее впечатление:</div>
               <div class="review__wrapper">
                 <div class="review__group">
                   <input class="review__field" type="radio" id="positive" name="radio" value="positive">
@@ -105,7 +105,7 @@
               </div>
             </fieldset>
             <fieldset class="review__item review__item--attractions">
-              <legend class="review__title">Посещенные достопримечательности:</legend>
+              <div class="review__title">Посещенные достопримечательности:</div>
               <div class="review__wrapper">
                 <div class="review__group">
                   <input class="review__field" type="checkbox" id="devils-bridge" name="checkbox" value="Devils Bridge">
@@ -120,7 +120,7 @@
               </div>
             </fieldset>
             <fieldset class="review__item review__item--emotions">
-              <legend class="review__title">Опишите свои эмоции:</legend>
+              <div class="review__title">Опишите свои эмоции:</div>
               <div class="review__wrapper">
                 <div class="review__group">
                   <textarea name="review-text" placeholder="Опишите подробно все свои восторги"></textarea>

@@ -31,8 +31,8 @@
     color: #333333;
   }
 
-  & input[type="checkbox"],
-  & input[type="radio"] {
+  input[type="checkbox"],
+  input[type="radio"] {
     display: none;
   }
 
@@ -349,7 +349,6 @@
       hyphens: auto;
     }
 
-
     &__item--personal {
       position: relative;
       flex-basis: 50%;
@@ -358,9 +357,8 @@
     &__item--personal:before {
       position: absolute;
       content: "";
-      bottom: 0;
+      top: 0;
       left: 0;
-      padding-top: 78px;
       width: 1px;
       height: 100%;
       background-color: #dbdbdb;

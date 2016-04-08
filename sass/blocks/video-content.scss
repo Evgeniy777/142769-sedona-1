@@ -4,7 +4,7 @@
   &__item {
     background-color: #fff;
 
-    & video {
+    video {
       width: 100%;
       display: block;
       font-size: 0;
@@ -76,7 +76,7 @@
   .video-content {
     margin-bottom: 49px;
 
-    & video {
+    video {
       height: 201px;
       background: url("../img/video/video-mobile.jpg") no-repeat;
     }
@@ -135,7 +135,7 @@
       position: relative;
     }
 
-    & video {
+    video {
       height: 499px;
       background: url("../img/video/video-tablet.jpg") no-repeat;
     }
@@ -186,7 +186,7 @@
   .video-content {
     margin: 0 200px 85px;
 
-    & video {
+    video {
       background: url("../img/video/video-desktop.jpg") no-repeat;
     }
   }
